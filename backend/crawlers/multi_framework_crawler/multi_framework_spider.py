@@ -62,11 +62,11 @@ class MultiFrameworkSpider(scrapy.Spider):
             "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
         }
 
-        # Load seed URLs from chatbot_data.json
-        f = open("chatbot_data.json", "r+")
-        f.seek(0)
-        # to erase all data  
-        f.truncate()
+        # # Load seed URLs from chatbot_data.json
+        # f = open("chatbot_data.json", "r+")
+        # f.seek(0)
+        # # to erase all data  
+        # f.truncate()
 
         yield metadata
         # try:
