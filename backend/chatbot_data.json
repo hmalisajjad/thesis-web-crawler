@@ -1,0 +1,100 @@
+[
+{
+    "url": "https://commoncrawl.org/",
+    "title": "Common Crawl - Open Repository of Web Crawl Data",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "Commoncrawl"
+    ],
+    "date_collected": "2024-11-10 18:54:02"
+},
+{
+    "url": "https://www.tidio.com/",
+    "title": "Accelerate Your Growth With #1 AI Customer Service | Tidio",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "live chat",
+        "customer support",
+        "Zendesk",
+        "Intercom"
+    ],
+    "date_collected": "2024-11-10 18:54:03"
+},
+{
+    "url": "https://botsonic.com/",
+    "title": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "customer support",
+        "Zendesk",
+        "Intercom",
+        "ChatGPT"
+    ],
+    "date_collected": "2024-11-10 18:54:03"
+},
+{
+    "url": "https://www.google.com",
+    "title": "Google",
+    "detected_chatbots": [],
+    "keywords_detected": [],
+    "date_collected": "2024-11-10 18:54:03"
+},
+{
+    "url": "https://www.youtube.com",
+    "title": "YouTube",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "Drift"
+    ],
+    "date_collected": "2024-11-10 18:54:03"
+},
+{
+    "url": "https://wotnot.io/",
+    "title": "WotNot | The easy and no-code chatbot platform and partner ",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "live chat",
+        "customer support",
+        "ChatGPT"
+    ],
+    "date_collected": "2024-11-10 18:54:04"
+},
+{
+    "url": "https://landbot.io/",
+    "title": "AI Chatbot Generator for Conversational Experiences | Landbot",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "customer support",
+        "ChatGPT"
+    ],
+    "date_collected": "2024-11-10 18:54:04"
+},
+{
+    "url": "https://www.amazon.com",
+    "title": "Amazon.com. Spend less. Smile more.",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "customer support"
+    ],
+    "date_collected": "2024-11-10 18:54:04"
+},
+{
+    "url": "https://www.wikipedia.org",
+    "title": "Wikipedia",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "Bard"
+    ],
+    "date_collected": "2024-11-10 18:54:06"
+}
+]
