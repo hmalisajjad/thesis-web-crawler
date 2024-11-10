@@ -15,6 +15,11 @@ import os
 import json
 from idna.core import InvalidCodepoint  # Import InvalidCodepoint for specific error handling
 
+from twisted.internet.defer import inlineCallbacks
+from twisted.internet.task import react
+
+import threading
+
 class MultiFrameworkSpider(scrapy.Spider):
     name = "multi_framework_spider"
     custom_settings = {
@@ -26,6 +31,7 @@ class MultiFrameworkSpider(scrapy.Spider):
     }
 
     def __init__(self, *args, **kwargs):
+        logging.info("Hello There")
         super(MultiFrameworkSpider, self).__init__(*args, **kwargs)
         
         # Load seed URLs from seed_urls.txt
@@ -42,10 +48,7 @@ class MultiFrameworkSpider(scrapy.Spider):
 
     def parse(self, response):
         url = response.url
-        logging.info("Hello There")
-        logging.info("Url: " + url)
         title = response.css('title::text').get()
-        logging.info("Title: " + title)
         soup = BeautifulSoup(response.text, 'html.parser')
         
         # chatbot_elements = ""
@@ -138,13 +141,9 @@ def run_crawler():
         return None
 
 
-def run_crawler_test():
-        # Configure logging for Scrapy
-    configure_logging()
-
-    try:
-        # Initialize CrawlerRunner
-        runner = CrawlerRunner({
+def run_crawler_in_thread():
+    def run():
+        process = CrawlerRunner({
             'FEEDS': {
                 'chatbot_data.json': {
                     'format': 'json',
@@ -155,26 +154,24 @@ def run_crawler_test():
             },
         })
 
-        # Function to start the crawl
-        @defer.inlineCallbacks
+        @inlineCallbacks
         def crawl():
-            yield runner.crawl(MultiFrameworkSpider)
+            yield process.crawl(MultiFrameworkSpider)
             reactor.stop()
 
-        # Run the crawl
         crawl()
-        reactor.run()  # This will block until the crawling is finished
+        reactor.run()
 
-        # Verify if data was written to chatbot_data.json
-        data_path = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
-        if os.path.exists(data_path):
-            with open(data_path, "r") as f:
-                data = json.load(f)
-            return data
-        else:
-            logging.error("chatbot_data.json not found after crawling.")
-            return None
+    thread = threading.Thread(target=run)
+    thread.start()
+    thread.join()
 
-    except Exception as e:
-        logging.error(f"Error running the crawler: {e}", exc_info=True)
+    # Load data from the output file
+    data_path = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
+    if os.path.exists(data_path):
+        with open(data_path, "r") as f:
+            data = json.load(f)
+        return data
+    else:
+        logging.error("chatbot_data.json not found after crawling.")
         return None
