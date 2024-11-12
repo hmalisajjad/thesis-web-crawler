@@ -14,10 +14,8 @@ import logging
 import os
 import json
 from idna.core import InvalidCodepoint  # Import InvalidCodepoint for specific error handling
-
 from twisted.internet.defer import inlineCallbacks
 from twisted.internet.task import react
-
 import threading
 
 class MultiFrameworkSpider(scrapy.Spider):
@@ -31,7 +29,6 @@ class MultiFrameworkSpider(scrapy.Spider):
     }
 
     def __init__(self, *args, **kwargs):
-        logging.info("Hello There")
         super(MultiFrameworkSpider, self).__init__(*args, **kwargs)
         
         # Load seed URLs from seed_urls.txt
@@ -65,12 +62,6 @@ class MultiFrameworkSpider(scrapy.Spider):
             "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
         }
 
-        # # Load seed URLs from chatbot_data.json
-        # f = open("chatbot_data.json", "r+")
-        # f.seek(0)
-        # # to erase all data  
-        # f.truncate()
-
         yield metadata
         # try:
         #     options = webdriver.ChromeOptions()
@@ -99,46 +90,46 @@ class MultiFrameworkSpider(scrapy.Spider):
         # except Exception as e:
         #     logging.error(f"Error in Selenium for {url}: {e}")
 
-def run_crawler():
-    # Configure logging for Scrapy
-    configure_logging()
+# def run_crawler():
+#     # Configure logging for Scrapy
+#     configure_logging()
 
-    try:
-        # Initialize CrawlerRunner
-        runner = CrawlerRunner({
-            'FEEDS': {
-                'chatbot_data.json': {
-                    'format': 'json',
-                    'encoding': 'utf8',
-                    'store_empty': False,
-                    'indent': 4,
-                },
-            },
-        })
+#     try:
+#         # Initialize CrawlerRunner
+#         runner = CrawlerRunner({
+#             'FEEDS': {
+#                 'chatbot_data.json': {
+#                     'format': 'json',
+#                     'encoding': 'utf8',
+#                     'store_empty': False,
+#                     'indent': 4,
+#                 },
+#             },
+#         })
 
-        # Function to start the crawl
-        @defer.inlineCallbacks
-        def crawl():
-            yield runner.crawl(MultiFrameworkSpider)
-            reactor.stop()
+#         # Function to start the crawl
+#         @defer.inlineCallbacks
+#         def crawl():
+#             yield runner.crawl(MultiFrameworkSpider)
+#             reactor.stop()
 
-        # Run the crawl
-        crawl()
-        reactor.run()  # This will block until the crawling is finished
+#         # Run the crawl
+#         crawl()
+#         reactor.run()  # This will block until the crawling is finished
 
-        # Verify if data was written to chatbot_data.json
-        data_path = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
-        if os.path.exists(data_path):
-            with open(data_path, "r") as f:
-                data = json.load(f)
-            return data
-        else:
-            logging.error("chatbot_data.json not found after crawling.")
-            return None
+#         # Verify if data was written to chatbot_data.json
+#         data_path = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
+#         if os.path.exists(data_path):
+#             with open(data_path, "r") as f:
+#                 data = json.load(f)
+#             return data
+#         else:
+#             logging.error("chatbot_data.json not found after crawling.")
+#             return None
 
-    except Exception as e:
-        logging.error(f"Error running the crawler: {e}", exc_info=True)
-        return None
+#     except Exception as e:
+#         logging.error(f"Error running the crawler: {e}", exc_info=True)
+#         return None
 
 
 def run_crawler_in_thread():

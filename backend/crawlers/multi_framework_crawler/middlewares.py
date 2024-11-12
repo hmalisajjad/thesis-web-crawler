@@ -1,5 +1,3 @@
-# backend/crawlers/multi_framework_crawler/middlewares.py
-
 import os
 
 class ScraperAPIMiddleware:

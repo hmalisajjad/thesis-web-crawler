@@ -1,5 +1,3 @@
-# backend/crawlers/multi_framework_crawler/settings.py
-
 import os
 import logging
 logging.info("Settings loaded successfully.")

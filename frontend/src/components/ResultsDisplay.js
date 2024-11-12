@@ -1,5 +1,3 @@
-// frontend/src/components/ResultsDisplay.js
-
 import React from "react";
 
 function ResultsDisplay({ results }) {

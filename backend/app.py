@@ -1,4 +1,3 @@
-# app.py
 import os
 import asyncio
 
@@ -8,7 +7,7 @@ if os.name == 'nt':
 
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from crawlers.multi_framework_crawler.multi_framework_spider import run_crawler, run_crawler_in_thread  # Import your function here
+from crawlers.multi_framework_crawler.multi_framework_spider import run_crawler_in_thread  # Import your function here
 from db.database import save_to_json, load_from_json
 
 app = Flask(__name__)

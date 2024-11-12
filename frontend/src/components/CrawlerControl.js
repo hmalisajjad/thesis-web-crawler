@@ -1,5 +1,3 @@
-// frontend/src/components/CrawlerControl.js
-
 import React from "react";
 
 function CrawlerControl({ onStartCrawl, loading, message }) {

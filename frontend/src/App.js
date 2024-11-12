@@ -1,5 +1,3 @@
-// frontend/src/App.js
-
 import React, { useState } from "react";
 import CrawlerControl from "./components/CrawlerControl";
 import ResultsDisplay from "./components/ResultsDisplay";
