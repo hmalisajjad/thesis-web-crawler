@@ -1,9 +1,15 @@
-https://www.zendesk.de/#
 https://commoncrawl.org/
 https://wotnot.io/
-https://www.adidas.de/en/help/contact-us
 https://landbot.io/
 https://botsonic.com/
 https://www.tidio.com/
 https://www.google.com
+https://www.facebook.com
 https://www.amazon.com
+https://www.wikipedia.org
+https://www.reddit.com
+https://www.youtube.com
+https://www.twitter.com
+https://www.linkedin.com
+https://www.instagram.com
+https://www.netflix.com

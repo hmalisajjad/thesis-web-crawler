@@ -90,6 +90,47 @@ class MultiFrameworkSpider(scrapy.Spider):
         # except Exception as e:
         #     logging.error(f"Error in Selenium for {url}: {e}")
 
+# def run_crawler():
+#     # Configure logging for Scrapy
+#     configure_logging()
+
+#     try:
+#         # Initialize CrawlerRunner
+#         runner = CrawlerRunner({
+#             'FEEDS': {
+#                 'chatbot_data.json': {
+#                     'format': 'json',
+#                     'encoding': 'utf8',
+#                     'store_empty': False,
+#                     'indent': 4,
+#                 },
+#             },
+#         })
+
+#         # Function to start the crawl
+#         @defer.inlineCallbacks
+#         def crawl():
+#             yield runner.crawl(MultiFrameworkSpider)
+#             reactor.stop()
+
+#         # Run the crawl
+#         crawl()
+#         reactor.run()  # This will block until the crawling is finished
+
+#         # Verify if data was written to chatbot_data.json
+#         data_path = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
+#         if os.path.exists(data_path):
+#             with open(data_path, "r") as f:
+#                 data = json.load(f)
+#             return data
+#         else:
+#             logging.error("chatbot_data.json not found after crawling.")
+#             return None
+
+#     except Exception as e:
+#         logging.error(f"Error running the crawler: {e}", exc_info=True)
+#         return None
+
 
 def run_crawler_in_thread():
     def run():
