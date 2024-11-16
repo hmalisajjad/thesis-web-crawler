@@ -1,36 +1,22 @@
 [
 {
-    "url": "https://commoncrawl.org/",
-    "title": "Common Crawl - Open Repository of Web Crawl Data",
-    "detected_chatbots": [],
-    "keywords_detected": [
-        "Commoncrawl"
-    ],
-    "date_collected": "2024-11-12 11:12:51"
-},
-{
-    "url": "https://www.youtube.com",
-    "title": "YouTube",
+    "url": "https://landbot.io/",
+    "title": "AI Chatbot Generator for Conversational Experiences | Landbot",
     "detected_chatbots": [],
     "keywords_detected": [
         "chat",
         "chatbot",
-        "Drift"
-    ],
-    "date_collected": "2024-11-12 11:12:51"
-},
-{
-    "url": "https://wotnot.io/",
-    "title": "WotNot | The easy and no-code chatbot platform and partner ",
-    "detected_chatbots": [],
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
         "customer support",
         "ChatGPT"
     ],
-    "date_collected": "2024-11-12 11:12:51"
+    "date_collected": "2024-11-15 23:49:43"
+},
+{
+    "url": "https://www.google.com",
+    "title": "Google",
+    "detected_chatbots": [],
+    "keywords_detected": [],
+    "date_collected": "2024-11-15 23:49:43"
 },
 {
     "url": "https://botsonic.com/",
@@ -44,19 +30,29 @@
         "Intercom",
         "ChatGPT"
     ],
-    "date_collected": "2024-11-12 11:12:51"
+    "date_collected": "2024-11-15 23:49:44"
 },
 {
-    "url": "https://landbot.io/",
-    "title": "AI Chatbot Generator for Conversational Experiences | Landbot",
+    "url": "https://wotnot.io/",
+    "title": "WotNot | The easy and no-code chatbot platform and partner ",
     "detected_chatbots": [],
     "keywords_detected": [
         "chat",
         "chatbot",
+        "live chat",
         "customer support",
         "ChatGPT"
     ],
-    "date_collected": "2024-11-12 11:12:52"
+    "date_collected": "2024-11-15 23:49:44"
+},
+{
+    "url": "https://commoncrawl.org/",
+    "title": "Common Crawl - Open Repository of Web Crawl Data",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "Commoncrawl"
+    ],
+    "date_collected": "2024-11-15 23:49:44"
 },
 {
     "url": "https://www.tidio.com/",
@@ -70,14 +66,7 @@
         "Zendesk",
         "Intercom"
     ],
-    "date_collected": "2024-11-12 11:12:52"
-},
-{
-    "url": "https://www.google.com",
-    "title": "Google",
-    "detected_chatbots": [],
-    "keywords_detected": [],
-    "date_collected": "2024-11-12 11:12:52"
+    "date_collected": "2024-11-15 23:49:45"
 },
 {
     "url": "https://www.amazon.com",
@@ -86,7 +75,25 @@
     "keywords_detected": [
         "customer support"
     ],
-    "date_collected": "2024-11-12 11:12:52"
+    "date_collected": "2024-11-15 23:49:45"
+},
+{
+    "url": "https://www.youtube.com",
+    "title": "YouTube",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "chat",
+        "chatbot",
+        "Drift"
+    ],
+    "date_collected": "2024-11-15 23:49:45"
+},
+{
+    "main_url": "https://wotnot.io/",
+    "iframe_url": "https://www.googletagmanager.com/ns.html?id=GTM-NDFQZXW",
+    "detected_chatbots": [],
+    "keywords_detected": [],
+    "date_collected": "2024-11-15 23:49:47"
 },
 {
     "url": "https://www.wikipedia.org",
@@ -95,6 +102,22 @@
     "keywords_detected": [
         "Bard"
     ],
-    "date_collected": "2024-11-12 11:12:55"
+    "date_collected": "2024-11-15 23:49:48"
+},
+{
+    "main_url": "https://www.tidio.com/",
+    "iframe_url": "https://www.googletagmanager.com/ns.html?id=GTM-TFKGCT9",
+    "detected_chatbots": [],
+    "keywords_detected": [],
+    "date_collected": "2024-11-15 23:49:50"
+},
+{
+    "main_url": "https://www.youtube.com",
+    "iframe_url": "https://accounts.google.com/v3/signin/identifier?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252Fsignin_passive%26feature%3Dpassive&hl=en&ifkv=AcMMx-dvrklQ4ORqwUp7YJPKG07WadLoq91JWAoDho7OCfUuibgSL6MEzYCALZKOzfKLUDh9E_HY&passive=true&service=youtube&uilel=3&flowName=WebLiteSignIn&flowEntry=ServiceLogin&dsh=S1327938245%3A1731710989250914",
+    "detected_chatbots": [],
+    "keywords_detected": [
+        "Bard"
+    ],
+    "date_collected": "2024-11-15 23:49:53"
 }
 ]

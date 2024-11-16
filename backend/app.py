@@ -1,26 +1,25 @@
 import os
-import asyncio
-
-# Set SelectorEventLoop on Windows
-if os.name == 'nt':
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify
 from flask_cors import CORS
-from crawlers.multi_framework_crawler.multi_framework_spider import run_crawler_in_thread  # Import your function here
-from db.database import save_to_json, load_from_json
+from crawlers.multi_framework_crawler.multi_framework_spider import run_crawler
+from db.database import load_from_json
+import logging
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
+logging.basicConfig(level=logging.INFO)
+
 @app.route('/start-crawl', methods=['POST'])
 def start_crawl():
     try:
-        result = run_crawler_in_thread()
+        logging.info("Received request to start crawling.")
+        result = run_crawler()
         if result:
-            # save_to_json(result, 'chatbot_data.json')  # Save to backend directory
+            logging.info("Crawling completed successfully.")
             return jsonify({'status': 'Crawling completed', 'data': result}), 200
         else:
+            logging.error("Crawling failed or no data found.")
             return jsonify({'status': 'Crawling failed'}), 500
     except Exception as e:
         app.logger.error(f"Crawling error: {e}")
