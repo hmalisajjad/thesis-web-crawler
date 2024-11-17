@@ -53,12 +53,30 @@ class MultiFrameworkSpider(scrapy.Spider):
 
     def parse(self, response):
         self.logger.debug(f"Starting to parse URL: {response.url}")
+
+        # Detect keywords in the main HTML content
+        keywords_detected = [
+            keyword for keyword in self.keywords if keyword.lower() in response.text.lower()
+        ]
+
+        # Log detected keywords
+        if keywords_detected:
+            self.logger.info(f"Keywords detected on main page: {keywords_detected}")
+
+        # Process iframes for further chatbot detection
         iframes = response.xpath("//iframe/@src").extract()
+
         if not iframes:
             self.logger.warning(f"No iframes found on {response.url}")
+
         for iframe_url in iframes:
+            if any(skip in iframe_url for skip in ["googletagmanager", "analytics"]):
+                self.logger.debug(f"Skipping iframe URL: {iframe_url}")
+                continue
+
             absolute_url = response.urljoin(iframe_url)
             self.logger.debug(f"Found iframe URL: {absolute_url}")
+
             yield scrapy.Request(
                 url=absolute_url,
                 callback=self.parse_iframe,
@@ -66,16 +84,36 @@ class MultiFrameworkSpider(scrapy.Spider):
                 dont_filter=True
             )
 
+        # Yield main page results if keywords are detected
+        yield {
+            "main_url": response.url,
+            "iframe_url": None,
+            "detected_chatbots": None,
+            "keywords_detected": keywords_detected,
+            "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
+        }
+
     def parse_iframe(self, response):
-        """Parse iFrame content using Selenium."""
+        """Parse iframe content using Selenium and Scrapy."""
         try:
             self.driver.get(response.url)
             WebDriverWait(self.driver, 10).until(
                 EC.presence_of_element_located((By.TAG_NAME, "body"))
             )
 
+            # Extract content using BeautifulSoup
             soup = BeautifulSoup(self.driver.page_source, "html.parser")
-            detected_chatbots = [iframe.get("src") for iframe in soup.find_all("iframe") if "chatbot" in iframe.get("src", "").lower()]
+
+            # Enhanced chatbot detection
+            detected_chatbots = []
+            iframe_sources = [iframe.get("src", "") for iframe in soup.find_all("iframe")]
+
+            for iframe_src in iframe_sources:
+                for keyword in ["chat", "chatbot", "live chat", "customer support", "virtual assistant", "Zendesk", "Intercom", "Drift", "Tawk.to", "LiveChat", "LivePerson", "OpenAI", "ChatGPT", "GPT-3", "Bard", "dialogflow", "bot", "AI assistant"]:
+                    if keyword.lower() in iframe_src.lower():
+                        detected_chatbots.append(iframe_src)
+
+            # Check page source for additional keywords
             keywords_detected = [
                 keyword for keyword in self.keywords if keyword.lower() in self.driver.page_source.lower()
             ]
