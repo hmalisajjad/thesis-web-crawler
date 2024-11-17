@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CrawlerControl from "./components/CrawlerControl";
 import ResultsDisplay from "./components/ResultsDisplay";
 import axios from "axios";
@@ -9,13 +9,16 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
 
+  useEffect(() => {
+    fetchResults();
+  }, []);
+
   const handleStartCrawl = async () => {
     setLoading(true);
     setMessage("");
     try {
       const response = await axios.post("http://localhost:5000/start-crawl");
-
-      if (response.data.status === "Crawling completed") {
+      if (response.data.success == true) {
         setMessage("Crawling completed successfully!");
         fetchResults(); // Fetch updated results after crawling
       } else {

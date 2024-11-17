@@ -1,184 +1,6 @@
 [
 {
     "main_url": "https://www.zendesk.de/service/ai/live-chat/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "Zendesk"
-    ],
-    "date_collected": "2024-11-17 01:15:00"
-},
-{
-    "main_url": "https://www.intercom.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "Zendesk",
-        "Intercom"
-    ],
-    "date_collected": "2024-11-17 01:15:00"
-},
-{
-    "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat"
-    ],
-    "date_collected": "2024-11-17 01:15:00"
-},
-{
-    "main_url": "https://outgrow.co/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "Intercom"
-    ],
-    "date_collected": "2024-11-17 01:15:00"
-},
-{
-    "main_url": "https://www.livechat.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "customer support"
-    ],
-    "date_collected": "2024-11-17 01:15:00"
-},
-{
-    "main_url": "https://ua.puma.com/uk/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://www.onepeloton.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "live chat",
-        "Drift"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://chat360.io/blog/website-chatbot-examples/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "customer support"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://www.lg.com/in/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://wotnot.io/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "customer support",
-        "ChatGPT"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://www.hubspot.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "customer support"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://landbot.io/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "customer support",
-        "ChatGPT"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://www.tawk.to/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "live chat",
-        "virtual assistant"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://botsonic.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "customer support",
-        "Zendesk",
-        "Intercom",
-        "ChatGPT"
-    ],
-    "date_collected": "2024-11-17 01:15:01"
-},
-{
-    "main_url": "https://www.tidio.com/",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "chat",
-        "chatbot",
-        "live chat",
-        "customer support",
-        "Zendesk",
-        "Intercom"
-    ],
-    "date_collected": "2024-11-17 01:15:02"
-},
-{
-    "main_url": "https://www.zendesk.de/service/ai/live-chat/",
     "iframe_url": "https://www.youtube.com/embed/QtMfoVUNn54?si=QbW_vyPC4yFDUu3G",
     "detected_chatbots": [],
     "keywords_detected": [
@@ -186,15 +8,13 @@
         "Zendesk",
         "Drift"
     ],
-    "date_collected": "2024-11-17 01:15:15"
+    "date_collected": "2024-11-17 13:37:47"
 },
 {
-    "main_url": "https://www.amazon.com",
-    "iframe_url": null,
-    "detected_chatbots": null,
-    "keywords_detected": [
-        "customer support"
-    ],
-    "date_collected": "2024-11-17 01:15:15"
+    "main_url": "https://hiverhq.com/blog/live-chat-widget",
+    "iframe_url": "https://hiverhq.com/blog/live-chat-widget",
+    "detected_chatbots": [],
+    "keywords_detected": [],
+    "date_collected": "2024-11-17 13:37:49"
 }
 ]

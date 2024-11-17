@@ -17,10 +17,10 @@ def start_crawl():
         result = run_crawler()
         if result:
             logging.info("Crawling completed successfully.")
-            return jsonify({'status': 'Crawling completed', 'data': result}), 200
+            return jsonify({"success": True, 'status': 'Crawling completed', 'data': result}), 200
         else:
             logging.error("Crawling failed or no data found.")
-            return jsonify({'status': 'Crawling failed'}), 500
+            return jsonify({"success": False, 'status': 'Crawling failed'}), 500
     except Exception as e:
         app.logger.error(f"Crawling error: {e}")
         return jsonify({'status': 'Crawling encountered an error', 'error': str(e)}), 500
