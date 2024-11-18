@@ -31,7 +31,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         # Load seed URLs from seed_urls.txt
         seed_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "seed_urls.txt"))
         if os.path.exists(seed_path):
-            with open(seed_path, 'r') as f:
+            with open(seed_path, 'r', encoding="utf-8") as f:
                 self.start_urls = [url.strip() for url in f.readlines() if url.strip()]
             self.logger.info(f"Loaded {len(self.start_urls)} seed URLs from {seed_path}")
         else:
@@ -41,8 +41,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         # Define keywords to look for on the pages
         self.keywords = [
             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
-            "Zendesk", "Intercom", "Drift", "LivePerson", "OpenAI", "ChatGPT",
-            "GPT-3", "Bard", "Commoncrawl"
+            "Zendesk", "Intercom", "Drift", "LivePerson", "OpenAI"
         ]
 
         # Initialize Selenium WebDriver
@@ -53,6 +52,14 @@ class MultiFrameworkSpider(scrapy.Spider):
 
     def parse(self, response):
         self.logger.debug(f"Starting to parse URL: {response.url}")
+
+        try:
+            # Extract title using CSS selector
+            title = response.css('title::text').get(default="No Title").strip()
+            title = title.encode('utf-8', 'ignore').decode('utf-8')  # Clean up encoding issues
+        except Exception as e:
+            self.logger.error(f"Error extracting title from {response.url}: {e}")
+            title = "No Title"
 
         # Detect keywords in the main HTML content
         keywords_detected = [
@@ -88,6 +95,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         yield {
             "main_url": response.url,
             "iframe_url": None,
+            "title": title,
             "detected_chatbots": None,
             "keywords_detected": keywords_detected,
             "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
@@ -109,7 +117,7 @@ class MultiFrameworkSpider(scrapy.Spider):
             iframe_sources = [iframe.get("src", "") for iframe in soup.find_all("iframe")]
 
             for iframe_src in iframe_sources:
-                for keyword in ["chat", "chatbot", "live chat", "customer support", "virtual assistant", "Zendesk", "Intercom", "Drift", "Tawk.to", "LiveChat", "LivePerson", "OpenAI", "ChatGPT", "GPT-3", "Bard", "dialogflow", "bot", "AI assistant"]:
+                for keyword in ["chat", "chatbot", "live chat", "customer support", "virtual assistant", "Zendesk", "Intercom", "Drift", "Tawk", "LiveChat", "LivePerson", "dialogflow", "bot", "AI assistant"]:
                     if keyword.lower() in iframe_src.lower():
                         detected_chatbots.append(iframe_src)
 

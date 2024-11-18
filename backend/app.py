@@ -30,8 +30,12 @@ def get_results():
     data = load_from_json('chatbot_data.json')  # Load from backend directory
     if data:
         return jsonify({'status': 'Success', 'data': data}), 200
-    else:
+    elif os.path.exists('chatbot_data.json'):
+        # File exists but is empty or invalid
         return jsonify({'status': 'No data found'}), 404
+    else:
+        # File does not exist
+        return jsonify({'status': 'File not found'}), 404
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
