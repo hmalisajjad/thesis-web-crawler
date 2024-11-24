@@ -1,7 +1,11 @@
 import scrapy
-from scrapy.crawler import CrawlerProcess
+from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from bs4 import BeautifulSoup
+from twisted.internet import reactor, defer
+from twisted.internet.task import react
+from twisted.internet.threads import deferToThread
+import threading
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -11,6 +15,7 @@ import logging
 import os
 import json
 import time
+import queue
 
 from webdriver_manager.chrome import ChromeDriverManager
 print(ChromeDriverManager().install())
@@ -145,42 +150,115 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.driver.quit()
         self.logger.info(f"Spider closed: {reason}")
 
+def run_crawler_in_thread():
+    """
+    Run the Scrapy spider in a separate thread, merge new crawled data with existing data,
+    and avoid duplicates based on 'main_url' and 'iframe_url'.
+    """
+    data_file = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
+    temp_file = os.path.join(os.path.dirname(__file__), "..", "..", "temp_chatbot_data.json")  # Temporary file for new data
 
-def run_crawler():
-    """Run the spider and handle output."""
-    configure_logging()
+    result_queue = queue.Queue()  # Thread-safe queue to store the result
 
-    # Define output file path
-    data_file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json"))
-    logging.info(f"Data will be saved to: {data_file_path}")
-
-    # Configure and start the crawl
-    process = CrawlerProcess({
-        'FEEDS': {
-            data_file_path: {
-                'format': 'json',
-                'encoding': 'utf8',
-                'store_empty': False,
-                'indent': 4,
-            },
-        },
-    })
-
-    logging.info("Starting the crawl process.")
-    process.crawl(MultiFrameworkSpider)
-    process.start()  # Blocks until crawling is finished
-    logging.info("Crawl process completed.")
-
-    # Load and return scraped data
-    if os.path.exists(data_file_path):
-        with open(data_file_path, "r") as f:
+    def merge_data(new_data):
+        """Merge new crawled data with existing data, avoiding duplicates."""
+        if os.path.exists(data_file):
             try:
-                data = json.load(f)
-                logging.info("Data successfully loaded from file.")
-                return data
-            except json.JSONDecodeError as e:
-                logging.error(f"Error loading JSON data: {e}")
-                return None
+                with open(data_file, "r", encoding="utf-8") as f:
+                    existing_data = json.load(f)
+            except json.JSONDecodeError:
+                logging.error("Invalid JSON file detected, resetting the file.")
+                existing_data = []  # Reset if JSON is invalid
+        else:
+            existing_data = []
+
+        # Avoid duplicates based on 'main_url' and 'iframe_url'
+        existing_urls = {(item["main_url"], item.get("iframe_url")) for item in existing_data}
+        new_data_filtered = [
+            item for item in new_data
+            if (item["main_url"], item.get("iframe_url")) not in existing_urls
+        ]
+
+        # Merge new data into the existing data
+        merged_data = existing_data + new_data_filtered
+
+        # Write the merged data back to the file
+        with open(data_file, "w", encoding="utf-8") as f:
+            json.dump(merged_data, f, ensure_ascii=False, indent=4)
+
+        logging.info(f"Data merged successfully. Total records: {len(merged_data)}")
+        return merged_data
+
+    def run_spider():
+        """Run the Scrapy spider and merge the data."""
+        try:
+            # Configure Scrapy logging
+            configure_logging()
+
+            # Define a CrawlerRunner with feed export settings
+            runner = CrawlerRunner({
+                'FEEDS': {
+                    temp_file: {  # Save new crawled data to a temporary file
+                        'format': 'json',
+                        'encoding': 'utf8',
+                        'store_empty': False,
+                        'indent': 4,
+                    },
+                },
+            })
+
+            @defer.inlineCallbacks
+            def crawl():
+                yield runner.crawl(MultiFrameworkSpider)
+                reactor.stop()
+
+            # Start the reactor if it's not already running
+            if not reactor.running:
+                reactor.callWhenRunning(crawl)
+                reactor.run()
+
+            # Read newly crawled data from the temporary file
+            if os.path.exists(temp_file):
+                try:
+                    with open(temp_file, "r", encoding="utf-8") as f:
+                        new_data = json.load(f)
+
+                    # Merge new data with existing data
+                    merged_data = merge_data(new_data)
+
+                    # Clean up the temporary file only after successful merging
+                    os.remove(temp_file)
+
+                    # Pass the result back via the queue
+                    result_queue.put(merged_data)
+                except json.JSONDecodeError as e:
+                    logging.error(f"Failed to read newly crawled data: {e}")
+                    result_queue.put(None)
+            else:
+                logging.error("Temporary data file not found after crawling.")
+                result_queue.put(None)
+
+        except Exception as e:
+            logging.error(f"Error during crawling: {e}")
+            result_queue.put(None)
+
+    # Run the spider in a separate thread
+    thread = threading.Thread(target=run_spider)
+    thread.start()
+    thread.join()  # Wait for the thread to complete
+
+    # Retrieve the result from the queue
+    try:
+        result = result_queue.get(timeout=10)  # Wait for up to 10 seconds for the result
+    except queue.Empty:
+        logging.error("Crawling thread did not return a result.")
+        result = None
+
+    # Ensure the result is not `None`
+    if result:
+        logging.info("Crawling completed successfully.")
     else:
-        logging.error("chatbot_data.json not found after crawling.")
-        return None
+        logging.error("Crawl failed or no data found.")
+
+    return result
+

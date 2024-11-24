@@ -8,21 +8,38 @@ function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
+  const [crawlInProgress, setCrawlInProgress] = useState(false);
 
   useEffect(() => {
-    fetchResults();
+    // Poll crawl status every 5 seconds
+    const interval = setInterval(() => {
+      checkCrawlStatus();
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
+
+  const checkCrawlStatus = async () => {
+    try {
+      const response = await axios.get("http://localhost:5000/crawl-status");
+      setCrawlInProgress(response.data.in_progress);
+      if (!response.data.in_progress) {
+        fetchResults(); // Fetch results once the crawl is completed
+      }
+    } catch (error) {
+      console.error("Error checking crawl status:", error);
+    }
+  };
 
   const handleStartCrawl = async () => {
     setLoading(true);
     setMessage("");
     try {
       const response = await axios.post("http://localhost:5000/start-crawl");
-      if (response.data.success == true) {
-        setMessage("Crawling completed successfully!");
-        fetchResults(); // Fetch updated results after crawling
+      if (response.data.success) {
+        setMessage("Crawling started successfully!");
       } else {
-        setMessage("Crawling failed.");
+        setMessage(response.data.status);
       }
     } catch (error) {
       setMessage("An error occurred while starting the crawl.");
@@ -35,7 +52,15 @@ function App() {
   const fetchResults = async () => {
     try {
       const response = await axios.get("http://localhost:5000/results");
-      setResults(response.data.data);
+      if (response.data.status === "Success" && response.data.data.length > 0) {
+        setResults(response.data.data);
+        setMessage("");
+      } else if (response.data.status === "No data found") {
+        setMessage("No crawl results available yet.");
+        setResults([]);
+      } else {
+        setMessage("Failed to fetch results.");
+      }
     } catch (error) {
       setMessage("Failed to fetch results.");
       console.error("Error fetching results:", error);
@@ -47,7 +72,7 @@ function App() {
       <h1>Chatbot Detection Web Crawler</h1>
       <CrawlerControl
         onStartCrawl={handleStartCrawl}
-        loading={loading}
+        loading={loading || crawlInProgress}
         message={message}
       />
       <ResultsDisplay results={results} />
