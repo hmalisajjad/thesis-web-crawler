@@ -3,8 +3,6 @@ from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 from bs4 import BeautifulSoup
 from twisted.internet import reactor, defer
-from twisted.internet.task import react
-from twisted.internet.threads import deferToThread
 import threading
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -16,12 +14,25 @@ import os
 import json
 import time
 import queue
+from urllib.parse import urlparse, urlunparse
 
 from webdriver_manager.chrome import ChromeDriverManager
-print(ChromeDriverManager().install())
 
-class MultiFrameworkSpider(scrapy.Spider):
-    name = "multi_framework_spider"
+
+def normalize_url(url):
+    """Normalize a URL by removing query parameters and fragments."""
+    try:
+        parsed = urlparse(url)
+        # Remove query and fragment
+        normalized = urlunparse(parsed._replace(query="", fragment=""))
+        return normalized
+    except Exception as e:
+        logging.error(f"Error normalizing URL {url}: {e}")
+        return url
+
+
+class ChatbotDetectionSpider(scrapy.Spider):
+    name = "chatbot_detection_spider"
     custom_settings = {
         'ROBOTSTXT_OBEY': True,
         'USER_AGENT': 'ChatbotCrawler (+http://localhost)',
@@ -31,8 +42,8 @@ class MultiFrameworkSpider(scrapy.Spider):
     }
 
     def __init__(self, *args, **kwargs):
-        super(MultiFrameworkSpider, self).__init__(*args, **kwargs)
-        
+        super(ChatbotDetectionSpider, self).__init__(*args, **kwargs)
+
         # Load seed URLs from seed_urls.txt
         seed_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "seed_urls.txt"))
         if os.path.exists(seed_path):
@@ -46,96 +57,108 @@ class MultiFrameworkSpider(scrapy.Spider):
         # Define keywords to look for on the pages
         self.keywords = [
             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
-            "Zendesk", "Intercom", "Drift", "LivePerson", "OpenAI"
+            "Zendesk", "Intercom", "Drift", "OpenAI", "Tawk", "LiveChat", "Tawk.to", "Botpress", "Dialogflow", "Watson Assistant", "HubSpot", "Kommunicate", "Communication", "conversational bot", "Microsoft Bot Framework","bot.js", "chatbot.js", "chat-widget", "livechat.min.js", "webchat"
         ]
 
         # Initialize Selenium WebDriver
-        chrome_service = Service("C:\\WebDrivers\\chromedriver-win64\\chromedriver.exe")  
+        chrome_service = Service(ChromeDriverManager().install())
         options = webdriver.ChromeOptions()
-        options.add_argument("--headless")  # Run in headless mode
+        options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("--disable-dev-shm-usage")
         self.driver = webdriver.Chrome(service=chrome_service, options=options)
 
+        # Set to store processed iframe URLs
+        self.processed_iframe_urls = set()
+
     def parse(self, response):
-        self.logger.debug(f"Starting to parse URL: {response.url}")
+        """Main page parsing logic with Selenium."""
+        self.logger.debug(f"Parsing URL: {response.url}")
+        self.driver.get(response.url)
 
         try:
-            # Extract title using CSS selector
-            title = response.css('title::text').get(default="No Title").strip()
-            title = title.encode('utf-8', 'ignore').decode('utf-8')  # Clean up encoding issues
+            WebDriverWait(self.driver, 15).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            page_source = self.driver.page_source
+            soup = BeautifulSoup(page_source, "html.parser")
+
+            title = soup.title.string.strip() if soup.title else "No Title"
+
+            # Detect keywords in the page content
+            keywords_detected = [
+                keyword for keyword in self.keywords if keyword.lower() in page_source.lower()
+            ]
+
+            # Detect chatbots in iframes and script tags
+            detected_chatbots = []
+            iframes = soup.find_all("iframe")
+            scripts = soup.find_all("script")
+
+            for iframe in iframes:
+                src = iframe.get("src", "")
+                if any(keyword.lower() in src.lower() for keyword in self.keywords):
+                    detected_chatbots.append(src)
+
+            for script in scripts:
+                src = script.get("src", "")
+                if any(keyword.lower() in src.lower() for keyword in self.keywords):
+                    detected_chatbots.append(src)
+
+            # Yield main page data
+            yield {
+                "main_url": response.url,
+                "title": title,
+                "iframe_url": None,
+                "detected_chatbots": detected_chatbots,
+                "keywords_detected": keywords_detected,
+                "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
+            }
+
+            # Process iframes for chatbot detection
+            for iframe in iframes:
+                iframe_src = iframe.get("src", "")
+                if iframe_src:
+                    normalized_src = normalize_url(iframe_src)
+                    if normalized_src in self.processed_iframe_urls:
+                        self.logger.debug(f"Duplicate iframe skipped: {iframe_src}")
+                        continue
+                    self.processed_iframe_urls.add(normalized_src)
+
+                    absolute_url = response.urljoin(iframe_src)
+                    yield scrapy.Request(
+                        url=absolute_url,
+                        callback=self.parse_iframe,
+                        meta={"main_url": response.url, "main_title": title},
+                        dont_filter=True
+                    )
+
         except Exception as e:
-            self.logger.error(f"Error extracting title from {response.url}: {e}")
-            title = "No Title"
-
-        # Detect keywords in the main HTML content
-        keywords_detected = [
-            keyword for keyword in self.keywords if keyword.lower() in response.text.lower()
-        ]
-
-        # Log detected keywords
-        if keywords_detected:
-            self.logger.info(f"Keywords detected on main page: {keywords_detected}")
-
-        # Process iframes for further chatbot detection
-        iframes = response.xpath("//iframe/@src").extract()
-
-        if not iframes:
-            self.logger.warning(f"No iframes found on {response.url}")
-
-        for iframe_url in iframes:
-            if any(skip in iframe_url for skip in ["googletagmanager", "analytics"]):
-                self.logger.debug(f"Skipping iframe URL: {iframe_url}")
-                continue
-
-            absolute_url = response.urljoin(iframe_url)
-            self.logger.debug(f"Found iframe URL: {absolute_url}")
-
-            yield scrapy.Request(
-                url=absolute_url,
-                callback=self.parse_iframe,
-                meta={"main_url": response.url},
-                dont_filter=True
-            )
-
-        # Yield main page results if keywords are detected
-        yield {
-            "main_url": response.url,
-            "iframe_url": None,
-            "title": title,
-            "detected_chatbots": None,
-            "keywords_detected": keywords_detected,
-            "date_collected": time.strftime("%Y-%m-%d %H:%M:%S")
-        }
+            self.logger.error(f"Error parsing {response.url}: {e}")
 
     def parse_iframe(self, response):
-        """Parse iframe content using Selenium and Scrapy."""
+        """Parse iframe content with Selenium."""
+        self.logger.debug(f"Parsing iframe: {response.url}")
         try:
             self.driver.get(response.url)
-            WebDriverWait(self.driver, 10).until(
-                EC.presence_of_element_located((By.TAG_NAME, "body"))
-            )
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            page_source = self.driver.page_source
+            soup = BeautifulSoup(page_source, "html.parser")
 
-            # Extract content using BeautifulSoup
-            soup = BeautifulSoup(self.driver.page_source, "html.parser")
-
-            # Enhanced chatbot detection
+            # Detect chatbots and keywords in the iframe
             detected_chatbots = []
             iframe_sources = [iframe.get("src", "") for iframe in soup.find_all("iframe")]
 
             for iframe_src in iframe_sources:
-                for keyword in ["chat", "chatbot", "live chat", "customer support", "virtual assistant", "Zendesk", "Intercom", "Drift", "Tawk", "LiveChat", "LivePerson", "dialogflow", "bot", "AI assistant"]:
+                for keyword in self.keywords:
                     if keyword.lower() in iframe_src.lower():
                         detected_chatbots.append(iframe_src)
 
-            # Check page source for additional keywords
             keywords_detected = [
-                keyword for keyword in self.keywords if keyword.lower() in self.driver.page_source.lower()
+                keyword for keyword in self.keywords if keyword.lower() in page_source.lower()
             ]
-
-            self.logger.info(f"Detected chatbots: {detected_chatbots}")
-            self.logger.info(f"Keywords detected: {keywords_detected}")
 
             yield {
                 "main_url": response.meta.get("main_url"),
+                "title": response.meta.get("main_title"),
                 "iframe_url": response.url,
                 "detected_chatbots": detected_chatbots,
                 "keywords_detected": keywords_detected,
@@ -143,122 +166,83 @@ class MultiFrameworkSpider(scrapy.Spider):
             }
 
         except Exception as e:
-            self.logger.error(f"Error in iframe {response.url}: {e}")
+            self.logger.error(f"Error parsing iframe {response.url}: {e}")
 
     def closed(self, reason):
-        """Close the Selenium WebDriver when the spider is closed."""
+        """Close Selenium WebDriver when the spider stops."""
         self.driver.quit()
         self.logger.info(f"Spider closed: {reason}")
 
-def run_crawler_in_thread():
-    """
-    Run the Scrapy spider in a separate thread, merge new crawled data with existing data,
-    and avoid duplicates based on 'main_url' and 'iframe_url'.
-    """
+
+def merge_data(new_data):
+    """Merge new crawled data with existing data, avoiding duplicates."""
     data_file = os.path.join(os.path.dirname(__file__), "..", "..", "chatbot_data.json")
-    temp_file = os.path.join(os.path.dirname(__file__), "..", "..", "temp_chatbot_data.json")  # Temporary file for new data
-
-    result_queue = queue.Queue()  # Thread-safe queue to store the result
-
-    def merge_data(new_data):
-        """Merge new crawled data with existing data, avoiding duplicates."""
-        if os.path.exists(data_file):
-            try:
-                with open(data_file, "r", encoding="utf-8") as f:
-                    existing_data = json.load(f)
-            except json.JSONDecodeError:
-                logging.error("Invalid JSON file detected, resetting the file.")
-                existing_data = []  # Reset if JSON is invalid
-        else:
+    if os.path.exists(data_file):
+        try:
+            with open(data_file, "r", encoding="utf-8") as f:
+                existing_data = json.load(f)
+        except json.JSONDecodeError:
+            logging.error("Invalid JSON file detected, resetting the file.")
             existing_data = []
+    else:
+        existing_data = []
 
-        # Avoid duplicates based on 'main_url' and 'iframe_url'
-        existing_urls = {(item["main_url"], item.get("iframe_url")) for item in existing_data}
-        new_data_filtered = [
-            item for item in new_data
-            if (item["main_url"], item.get("iframe_url")) not in existing_urls
-        ]
+    # Normalize URLs for deduplication
+    existing_urls = {(normalize_url(item["main_url"]), normalize_url(item.get("iframe_url"))) for item in existing_data}
+    new_data_filtered = [
+        item for item in new_data
+        if (normalize_url(item["main_url"]), normalize_url(item.get("iframe_url"))) not in existing_urls
+    ]
 
-        # Merge new data into the existing data
-        merged_data = existing_data + new_data_filtered
+    merged_data = existing_data + new_data_filtered
+    with open(data_file, "w", encoding="utf-8") as f:
+        json.dump(merged_data, f, ensure_ascii=False, indent=4)
 
-        # Write the merged data back to the file
-        with open(data_file, "w", encoding="utf-8") as f:
-            json.dump(merged_data, f, ensure_ascii=False, indent=4)
+    logging.info(f"Data merged successfully. Total records: {len(merged_data)}")
+    return merged_data
 
-        logging.info(f"Data merged successfully. Total records: {len(merged_data)}")
-        return merged_data
+
+def run_crawler_in_thread():
+    """Run the Scrapy spider in a separate thread with data merging."""
+    temp_file = os.path.join(os.path.dirname(__file__), "..", "..", "temp_chatbot_data.json")
+    result_queue = queue.Queue()
 
     def run_spider():
-        """Run the Scrapy spider and merge the data."""
-        try:
-            # Configure Scrapy logging
-            configure_logging()
+        configure_logging()
+        runner = CrawlerRunner({'FEEDS': {temp_file: {'format': 'json', 'encoding': 'utf8', 'store_empty': False}}})
 
-            # Define a CrawlerRunner with feed export settings
-            runner = CrawlerRunner({
-                'FEEDS': {
-                    temp_file: {  # Save new crawled data to a temporary file
-                        'format': 'json',
-                        'encoding': 'utf8',
-                        'store_empty': False,
-                        'indent': 4,
-                    },
-                },
-            })
+        @defer.inlineCallbacks
+        def crawl():
+            yield runner.crawl(ChatbotDetectionSpider)
+            reactor.stop()
 
-            @defer.inlineCallbacks
-            def crawl():
-                yield runner.crawl(MultiFrameworkSpider)
-                reactor.stop()
+        if not reactor.running:
+            reactor.callWhenRunning(crawl)
+            reactor.run()
 
-            # Start the reactor if it's not already running
-            if not reactor.running:
-                reactor.callWhenRunning(crawl)
-                reactor.run()
-
-            # Read newly crawled data from the temporary file
-            if os.path.exists(temp_file):
-                try:
-                    with open(temp_file, "r", encoding="utf-8") as f:
-                        new_data = json.load(f)
-
-                    # Merge new data with existing data
-                    merged_data = merge_data(new_data)
-
-                    # Clean up the temporary file only after successful merging
-                    os.remove(temp_file)
-
-                    # Pass the result back via the queue
-                    result_queue.put(merged_data)
-                except json.JSONDecodeError as e:
-                    logging.error(f"Failed to read newly crawled data: {e}")
-                    result_queue.put(None)
-            else:
-                logging.error("Temporary data file not found after crawling.")
+        if os.path.exists(temp_file):
+            try:
+                with open(temp_file, "r", encoding="utf-8") as f:
+                    new_data = json.load(f)
+                merged_data = merge_data(new_data)
+                os.remove(temp_file)
+                result_queue.put(merged_data)
+            except Exception as e:
+                logging.error(f"Error processing temp data: {e}")
                 result_queue.put(None)
-
-        except Exception as e:
-            logging.error(f"Error during crawling: {e}")
+        else:
             result_queue.put(None)
 
-    # Run the spider in a separate thread
     thread = threading.Thread(target=run_spider)
     thread.start()
-    thread.join()  # Wait for the thread to complete
+    thread.join()
 
-    # Retrieve the result from the queue
     try:
-        result = result_queue.get(timeout=10)  # Wait for up to 10 seconds for the result
+        return result_queue.get(timeout=10)
     except queue.Empty:
-        logging.error("Crawling thread did not return a result.")
-        result = None
+        logging.error("Crawling thread timed out.")
+        return None
 
-    # Ensure the result is not `None`
-    if result:
-        logging.info("Crawling completed successfully.")
-    else:
-        logging.error("Crawl failed or no data found.")
 
-    return result
-
+if __name__ == "__main__":
+    run_crawler_in_thread()
