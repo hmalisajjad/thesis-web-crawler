@@ -33,15 +33,7 @@ function ResultsDisplay({ results }) {
                 </td>
                 <td>{item.title}</td>
                 <td>
-                  {item.detected_chatbots?.length > 0 ? (
-                    <ul>
-                      {item.detected_chatbots.map((chatbot, idx) => (
-                        <li key={idx}>Chatbot {idx + 1}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    "None"
-                  )}
+                  {item.detected_chatbots?.length > 0 ? "Detected" : "None"}
                 </td>
                 <td>{item.keywords_detected.join(", ") || "None"}</td>
                 <td>{item.date_collected}</td>

@@ -2,6 +2,8 @@ import os
 import logging
 logging.info("Settings loaded successfully.")
 
+TWISTED_REACTOR = 'twisted.internet.asyncioreactor.AsyncioSelectorReactor'
+
 BOT_NAME = 'chatbot_crawler'
 SPIDER_MODULES = ['crawlers.multi_framework_crawler']
 NEWSPIDER_MODULE = 'crawlers.multi_framework_crawler'
