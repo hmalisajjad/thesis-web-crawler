@@ -62,8 +62,8 @@ class MultiFrameworkSpider(scrapy.Spider):
 
         # Define keywords
         self.keywords = [
-            "chat", "chatbot", "live chat", "customer support", "virtual assistant",
-            "Zendesk", "Intercom", "Drift", "LivePerson", "OpenAI", "Tawk", "LiveChat"
+             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
+            "Zendesk", "Intercom", "Drift", "OpenAI", "Tawk", "LiveChat", "Tawk.to", "Botpress", "Dialogflow", "Watson Assistant", "HubSpot", "Kommunicate", "Communication", "conversational bot", "Microsoft Bot Framework","bot.js", "chatbot.js", "chat-widget", "livechat.min.js", "webchat"
         ]
         self.visited_urls = set()  # Track visited URLs for deduplication
 
