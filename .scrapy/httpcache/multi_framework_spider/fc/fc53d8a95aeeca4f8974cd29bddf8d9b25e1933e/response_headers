@@ -1,0 +1,32 @@
+Content-Length: 33292
+Server: IKEA Server
+Content-Type: text/html; charset=utf-8
+Set-Cookie: ikea_geo=DE; path=/de/de/; secure
+Set-Cookie: ikexp_id=b136268d-1e78-4295-8e2b-231c61b86dde; expires=Mon, 01-Dec-2025 22:24:47 GMT; path=/; domain=.ikea.com; secure
+Set-Cookie: _abck=D027D9A6354956C1F007FD941B472996~-1~YAAQHgEQAhbaiIKTAQAAtYhThAw97Sw/dBu8eCuYR5QX7fiuGgedowfBl7CdkaBA0GVhoR789hgabHn9IXui/alTjs49o3Y7J4HfjrhFN3TPX/wRtYtgglmgoevDdjzyg8CO1T/weBAjlzPgFVIEKw1C+uIk392iKGzgV/SDlcHE34aR8H9fWYhEskoSyFq4lo33diJmMeF7na92/l4qZTOLrrzcHJSBIyWUdmEvD+q9cEuAd44XamOuJaGaQNFgsDOG4miOhXD/oQvUrw03MedgegkIaHChXLohBkV+rxonBSlMhBDhm2ESPpbm2VkhftngdhUPTFMxpssIubVKeqTqu3i6D4V5ZE6irIMqZpdafw8Yqxnccvag606GbIf731Mak9y2ggAstGi8cpUYmSWTRowO0fDV~-1~-1~-1; Domain=.ikea.com; Path=/; Expires=Mon, 01 Dec 2025 22:24:47 GMT; Max-Age=31536000; Secure
+Set-Cookie: bm_sz=5A4D9B6A3BB3A34A1F6C23280F0A2D35~YAAQHgEQAhfaiIKTAQAAtYhThBms1YwRM8jKDIT7Dj9taGzDVpNMPjYhsUF8Yz1y9n6Iy+RGETSoBi/slgLU9G9zbR3TNkU6YgpDij/tvOHeT8Q+Fasa5R/XX0lhOw/APi1cSd3rYco7EyiP7NVKvSVTXVkKC2D7syb5XrcjKvWIMtSZ8b6lLjlo8xmbsHqPSquM1lvz7l0a802ybiVF7a8T5HQ+xlnwEITFfFPjK4OmyfoZGsjna4I6da0jx+0YrBjoYy92UymJPgc/027+A5dUOcw6pTahBc0C2IqH5IStzKGVDdt+ZvEVlh9fpJ7j0v0e3KcPe6cU+vUZz9Cw2b3Z5UPBKWnpyTvodqfexsbp89/z/efIibIzj1tx22E7IceqgJ0=~3486020~3158577; Domain=.ikea.com; Path=/; Expires=Mon, 02 Dec 2024 02:24:47 GMT; Max-Age=14400
+X-Amz-Id-2: RMmm0kPIoKKks7ACosClmMV4MM8nwCpAn53qnJsgmVqWZ2C4BkDXvG3pIXr7+15K2xj7eZyIx0w=
+Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval' *.ikea.com v4.ai.ingka.ikea.net api.addressy.com google.com *.google.com *.gstatic.com translate.googleapis.com translate-pa.googleapis.com www.youtube-nocookie.com www.youtube.com www.paypal.com blob: data: wss://web-api.ikea.com https://storage.googleapis.com/learnwithikeavideos/ unicorn-rainbow-flower.edgecompute.app *.ingka.com *.cdtapps.com *.ctfassets.net *.ipex-insights.com api.o-c.io lf.o-c.io *.ikea.de *.ikea-lsp.de ikeaplanningcalendar.inwebs.com *.parcellab.com *.taskrabbit.com *.adform.net insight.adsrvr.org js.adsrvr.org *.bing.com *.doubleclick.net googleads.g.doubleclick.net *.facebook.com *.facebook.net www.googleadservices.com *.googlesyndication.com *.google.de www.google.de *.pinterest.com s.pinimg.com *.realperson.de wss://*.realperson.de d.ratepay.com *.cookielaw.org *.onetrust.com *.contentsquare.net app.contentsquare.com *.google-analytics.com www.googletagmanager.com *.optimizely.com sentry.io *.sentry.io *.avo.app oppwa.com *.oppwa.com mpsnare.iesnare.com *.iesnare.com maps.googleapis.com fonts.googleapis.com www.googleapis.com *.bambuser.com firestore.googleapis.com liveshopping-widgets.firebaseapp.com d.lemonpi.io *.syndeo.cx *.production.syndeo.cx wss://web.production.syndeo.cx icsp.ingka.ikea.com wss://icsp.ingka.ikea.com wss://web-api.ikea.com/cschatbot/; img-src * blob: data:; frame-src *; frame-ancestors *.ikea.com *.ikea.de; object-src 'self'; font-src 'self' www.ikea.com blob: fonts.gstatic.com cloud80.realperson.de cdn.parcellab.com data:; report-uri https://csp.ikea.com
+Permissions-Policy: interest-cohort=()
+Akamai-Grn: 0.1e011002.1733091887.1d71220
+Strict-Transport-Security: max-age=31536000
+X-Content-Type-Options: nosniff
+X-Amz-Version-Id: rhq7OclqYz_4bzQmqwZOeu1b2tv7fNv0
+X-Amz-Meta-Esi: true
+X-Amz-Meta-Prioritized: false
+X-Amz-Meta-Surrogate-Key: evs evs-de evs-customer-service evs-de-customer-service evs-customer-service-contact-us evs-de-customer-service-contact-us de-de-customer-service-contact-us-index-html
+X-Amz-Meta-Edge-Cache-Tag: pub-de-de-customer-service,pub-de-de-customer-service-contact-us
+X-Amz-Meta-Md5: 24146b887fdd6b3ee935920d952eab09
+X-Amz-Server-Side-Encryption: AES256
+X-Amz-Tagging-Count: 2
+Etag: "24146b887fdd6b3ee935920d952eab09"
+X-Amz-Replication-Status: COMPLETED
+X-Amz-Request-Id: 3T3VMX3EESD1GTQ1
+X-Akamai-Transformed: 9 169878 0 pmb=mTOE,1
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Expires: Sun, 01 Dec 2024 22:24:47 GMT
+Cache-Control: max-age=0, no-cache, private
+Pragma: no-cache
+Date: Sun, 01 Dec 2024 22:24:47 GMT
+Akamai-Cache-Status: Hit from child

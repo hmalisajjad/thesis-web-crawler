@@ -1,0 +1,13 @@
+Content-Length: 56816
+Alt-Svc: h3=":443"; ma=2592000
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: br
+Content-Type: text/html
+Date: Sun, 01 Dec 2024 22:23:23 GMT
+Etag: "b447977c989f8c6256c7ad198cda9035"
+Last-Modified: Fri, 29 Nov 2024 08:37:56 GMT
+Link: <https://framerusercontent.com>; rel="preconnect", <https://framerusercontent.com>; rel="preconnect"; crossorigin=""
+Server: Framer/e6d6447
+Server-Timing: region;desc="eu-west-1", cache;desc="cached", ssg-status;desc="optimized", version;desc="e6d6447"
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding

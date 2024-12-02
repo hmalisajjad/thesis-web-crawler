@@ -1,0 +1,22 @@
+Date: Sun, 01 Dec 2024 22:22:23 GMT
+Content-Type: text/plain; charset=utf-8
+Cf-Ray: 8eb679c4b99c4534-TXL
+Cf-Cache-Status: DYNAMIC
+Cache-Control: s-maxage=10800, max-age=0
+Content-Encoding: gzip
+Etag: W/"a4a5fbf3b592f7cf04ff024bedae32b3"
+Last-Modified: Tue, 26 Nov 2024 07:20:13 GMT
+Set-Cookie: _cfuvid=dfXG1FVB.nNsD66eAG02ki0uJpnmhg2fJC1vtn3kbDo-1733091743551-0.0.1.1-604800000; path=/; domain=.www.hubspot.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: laboratory-anonymous-id=anona2362cc281d92ab34290130b90b4; Domain=hubspot.com; SameSite=Strict; Secure; HttpOnly; Path=/
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Vary: Accept-Encoding
+Content-Security-Policy: upgrade-insecure-requests
+Edge-Cache-Tag: P-53,SS-50437,PGS-ALL,SW-0
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=IMw5x8z%2FZm0OpwdM2UPxcN%2F6paT8gPzfIqFWGfnhg3OQMlM03eYHPAyFaZD0cccgM32BVjChb3lPbkv4Z%2F%2FxYqDSbaPQKmGMo%2B3VN5djzpzcs1jvjCysOjVxAx82oWVV2A%3D%3D"}],"group":"cf-nel","max_age":604800}
+X-Content-Type-Options: nosniff
+X-Hs-Cache-Control: s-maxage=10800, max-age=0
+X-Hs-Cf-Cache-Status: HIT
+X-Hs-Hub-Id: 53
+X-Hs-Prerendered: Tue, 26 Nov 2024 07:20:13 GMT
+Server: cloudflare

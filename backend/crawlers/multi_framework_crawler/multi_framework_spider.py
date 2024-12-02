@@ -12,6 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import logging
+from html import unescape
 import os
 import json
 import time
@@ -23,15 +24,16 @@ def normalize_url(url):
     parsed = urlparse(url)
     return urlunparse((parsed.scheme, parsed.netloc, parsed.path, '', '', ''))
 
-
 class MultiFrameworkSpider(scrapy.Spider):
     name = "multi_framework_spider"
     custom_settings = {
-        'ROBOTSTXT_OBEY': False,
+        'ROBOTSTXT_OBEY': True,
         'USER_AGENT': 'ChatbotCrawler (+http://localhost)',
-        'DOWNLOAD_DELAY': 2,
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 2,
+        'DOWNLOAD_DELAY': 0.2,  # Reduced delay for faster crawling
+        'CONCURRENT_REQUESTS': 8,  # Increased concurrency
+        'CONCURRENT_REQUESTS_PER_DOMAIN': 8,
         'DEPTH_LIMIT': 3,
+        'HTTPCACHE_ENABLED': True,  # Enable HTTP caching to reduce duplicate requests
         'LOG_LEVEL': 'INFO',
     }
 
@@ -48,6 +50,10 @@ class MultiFrameworkSpider(scrapy.Spider):
             options.add_argument("--disable-dev-shm-usage")
             options.add_argument("--disable-extensions")
             options.add_argument("--disable-blink-features=AutomationControlled")
+            options.add_argument("--ignore-ssl-errors")  # Ignore SSL errors
+            options.add_argument("--ignore-certificate-errors")  # Ignore certificate errors
+            options.add_argument("--disable-software-rasterizer")  # Fix pixel format errors
+            options.add_argument("--enable-unsafe-swiftshader")  # Swiftshader fallback for rendering
             self.driver = webdriver.Chrome(service=chrome_service, options=options)
         except Exception as e:
             self.logger.error("Failed to initialize ChromeDriver", exc_info=True)
@@ -75,7 +81,6 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.visited_urls = set()
 
     def parse(self, response):
-        """Parse main page content with deduplication."""
         normalized_url = normalize_url(response.url)
         if normalized_url in self.visited_urls:
             self.logger.info(f"Skipping already visited URL: {normalized_url}")
@@ -85,18 +90,25 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.logger.info(f"Parsing URL: {normalized_url}")
         try:
             self.driver.get(response.url)
-            WebDriverWait(self.driver, 15).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             page_source = self.driver.page_source
             soup = BeautifulSoup(page_source, "html.parser")
 
-            title = soup.title.string.strip() if soup.title else "No Title"
+            title = unescape(soup.title.string.strip()) if soup.title else "No Title"
             keywords_detected = [keyword for keyword in self.keywords if keyword.lower() in page_source.lower()]
             detected_chatbots = []
 
             for iframe in soup.find_all("iframe", src=True):
-                iframe_src = normalize_url(iframe["src"])
+                iframe_src = iframe.get("src", "").strip()
+                if iframe_src.startswith("javascript:"):
+                    self.logger.warning(f"Ignoring invalid iframe src: {iframe_src}")
+                    continue
+                iframe_src = normalize_url(iframe_src)
                 if any(keyword.lower() in iframe_src.lower() for keyword in self.keywords):
                     detected_chatbots.append(iframe_src)
+
+            self.logger.debug(f"Detected keywords: {keywords_detected}")
+            self.logger.debug(f"Detected chatbots in {normalized_url}: {detected_chatbots}")
 
             yield {
                 "main_url": normalized_url,
@@ -106,23 +118,10 @@ class MultiFrameworkSpider(scrapy.Spider):
                 "keywords_detected": keywords_detected,
                 "date_collected": time.strftime("%Y-%m-%d %H:%M:%S"),
             }
-
-            for iframe in soup.find_all("iframe", src=True):
-                iframe_src = normalize_url(iframe["src"])
-                if iframe_src not in self.visited_urls:
-                    self.visited_urls.add(iframe_src)
-                    yield scrapy.Request(
-                        url=iframe_src,
-                        callback=self.parse_iframe,
-                        meta={"main_url": normalized_url, "main_title": title},
-                        dont_filter=False,
-                    )
-
         except Exception as e:
             self.logger.error(f"Error parsing {normalized_url}: {e}")
 
     def parse_iframe(self, response):
-        """Parse iframe content with deduplication."""
         normalized_url = normalize_url(response.url)
         if normalized_url in self.visited_urls:
             self.logger.info(f"Skipping already visited iframe: {normalized_url}")
@@ -137,12 +136,20 @@ class MultiFrameworkSpider(scrapy.Spider):
             soup = BeautifulSoup(page_source, "html.parser")
 
             detected_chatbots = []
-            iframe_sources = [normalize_url(iframe.get("src", "")) for iframe in soup.find_all("iframe", src=True)]
+            iframe_sources = [iframe.get("src", "").strip() for iframe in soup.find_all("iframe", src=True)]
+            
             for iframe_src in iframe_sources:
-                if any(keyword.lower() in iframe_src.lower() for keyword in self.keywords):
-                    detected_chatbots.append(iframe_src)
+                if not iframe_src or iframe_src.startswith("javascript:"):
+                    self.logger.warning(f"Ignoring invalid or incomplete iframe URL: {iframe_src}")
+                    continue
+                normalized_iframe_src = normalize_url(iframe_src)
+                if any(keyword.lower() in normalized_iframe_src.lower() for keyword in self.keywords):
+                    detected_chatbots.append(normalized_iframe_src)
 
             keywords_detected = [keyword for keyword in self.keywords if keyword.lower() in page_source.lower()]
+
+            self.logger.debug(f"Detected keywords in iframe {normalized_url}: {keywords_detected}")
+            self.logger.debug(f"Detected chatbots in iframe {normalized_url}: {detected_chatbots}")
 
             yield {
                 "main_url": response.meta.get("main_url"),
@@ -160,7 +167,6 @@ class MultiFrameworkSpider(scrapy.Spider):
         """Close WebDriver when the spider stops."""
         self.driver.quit()
         self.logger.info(f"Spider closed: {reason}")
-
 
 reactor_lock = Lock()
 

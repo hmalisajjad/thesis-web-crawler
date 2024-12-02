@@ -4,6 +4,13 @@ import ResultsDisplay from "./components/ResultsDisplay";
 import axios from "axios";
 import "./App.css";
 
+// Add a decodeHTML function to handle decoding of HTML entities.
+function decodeHTML(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
 function App() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -53,7 +60,12 @@ function App() {
     try {
       const response = await axios.get("http://localhost:5000/results");
       if (response.data.status === "Success" && response.data.data.length > 0) {
-        setResults(response.data.data);
+        // Decode HTML entities before setting the results
+        const decodedResults = response.data.data.map((result) => ({
+          ...result,
+          title: decodeHTML(result.title), // Decode the title for HTML entities
+        }));
+        setResults(decodedResults);
         setMessage("");
       } else if (response.data.status === "No data found") {
         setMessage("No crawl results available yet.");

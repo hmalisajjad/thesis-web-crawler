@@ -1,0 +1,17 @@
+Content-Length: 1787
+Content-Type: text/plain
+Last-Modified: Thu, 31 Oct 2024 04:14:00 GMT
+Etag: "67230408-1803"
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET, HEAD, OPTIONS
+Access-Control-Allow-Headers: Pragma
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Cache-Control: max-age=558
+Expires: Sun, 01 Dec 2024 22:33:59 GMT
+Date: Sun, 01 Dec 2024 22:24:41 GMT
+Vary: Accept-Encoding
+Set-Cookie: AKA_A2=A; expires=Sun, 01-Dec-2024 23:24:41 GMT; path=/; domain=lg.com; secure; HttpOnly
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=1
+Server-Timing: ak_p; desc="1733091881832_3088707485_483655737_50_12322_12_15_-";dur=1

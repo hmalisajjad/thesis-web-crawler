@@ -1,0 +1,19 @@
+X-Frame-Options: SAMEORIGIN
+Last-Modified: Sun, 01 Dec 2024 21:58:29 GMT
+Etag: W/"8cf05-6283c8848d285-gzip"
+X-Vhost: lge-publish
+Content-Type: text/html;charset=utf-8
+X-Content-Type-Options: nosniff
+Accept-Ranges: bytes
+Strict-Transport-Security: max-age=31557600
+X-Served-By: cache-fra-etou8220106-FRA
+X-Timer: S1733090308.516887,VS0,VS0,VE2404
+X-Akamai-Transformed: 9 - 0 pmb=mRUM,2
+Content-Encoding: gzip
+Cache-Control: private, max-age=10800
+Expires: Mon, 02 Dec 2024 01:22:23 GMT
+Date: Sun, 01 Dec 2024 22:22:23 GMT
+Vary: Accept-Encoding
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=1
+Server-Timing: ak_p; desc="1733091743932_3088707485_483267567_306_14894_11_0_-";dur=1

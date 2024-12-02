@@ -1,0 +1,17 @@
+Content-Length: 34205
+Accept-Ranges: bytes
+Cache-Control: public,max-age=0,must-revalidate
+Cache-Status: "Netlify Edge"; hit
+Content-Type: text/html; charset=UTF-8
+Etag: "d1997ed052086a054775daf5a2d71834-ssl-df"
+Netlify-Vary: query
+Server: Netlify
+Vary: Accept-Encoding
+X-Nf-Request-Id: 01JE2538XEANZ0T7A268KV016M
+X-Akamai-Transformed: 9 32097 0 pmb=mRUM,1
+Content-Encoding: gzip
+Date: Sun, 01 Dec 2024 22:22:43 GMT
+Server-Timing: cdn-cache; desc=MISS
+Server-Timing: edge; dur=33
+Server-Timing: origin; dur=2
+Server-Timing: ak_p; desc="1733091763090_34739990_794677049_3470_7142_15_0_-";dur=1

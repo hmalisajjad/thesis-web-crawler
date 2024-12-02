@@ -1,0 +1,15 @@
+Date: Sun, 01 Dec 2024 22:23:23 GMT
+Content-Type: text/html
+Cache-Control: public, max-age=432000
+Strict-Transport-Security: max-age=31536000
+Etag: W/"673fb64a-38c"
+Surrogate-Key: botsonic.com
+Content-Encoding: gzip
+Cf-Cache-Status: HIT
+Age: 206964
+Set-Cookie: __cf_bm=nZBFzJYWACNVqa7efIyuMBIMJoETWazDpq5XES8Dyd0-1733091803-1.0.1.1-QFNuWzupegIbYX2qXJKUCxXC0B2bkMiHQvSjWB96D6Yc6zXKx76T.Ad8uzD2ksLUpblQME6hRJ.X0YhB16dFfg; path=/; expires=Sun, 01-Dec-24 22:53:23 GMT; domain=.cdn.webflow.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: _cfuvid=jkPs1OENPxy4DebdhsnJQDRfcxIVlmnytQUlpmeqisE-1733091803453-0.0.1.1-604800000; path=/; domain=.cdn.webflow.com; HttpOnly; Secure; SameSite=None
+Vary: Accept-Encoding
+Cf-Ray: 8eb67b3b889bbaf7-MXP
+Alt-Svc: h3=":443"; ma=86400
+X-Cluster-Name: eu-south-1-prod-hosting-red

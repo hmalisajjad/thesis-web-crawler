@@ -1,0 +1,17 @@
+[
+    {
+        "main_url": "https://outgrow.co/",
+        "expected_keywords": ["chat", "chatbot", "live chat", "Intercom"],
+        "expected_chatbots": []
+    },
+    {
+        "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
+        "expected_keywords": ["chat", "chatbot"],
+        "expected_chatbots": []
+    },
+    {
+        "main_url": "https://www.intercom.com/",
+        "expected_keywords": ["chat", "chatbot", "live chat", "Zendesk", "Intercom", "HubSpot"],
+        "expected_chatbots": []
+    }
+]

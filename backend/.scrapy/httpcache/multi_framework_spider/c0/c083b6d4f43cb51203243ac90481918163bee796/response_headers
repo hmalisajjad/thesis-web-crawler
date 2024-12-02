@@ -1,0 +1,20 @@
+Content-Type: text/html
+Last-Modified: Tue, 26 Nov 2024 12:10:08 GMT
+Server: AmazonS3
+Region: DE
+Strict-Transport-Security: max-age=31536000; includeSubdomains; preload
+Permissions-Policy: interest-cohort=()
+X-Content-Type-Options: nosniff
+X-Frame-Options: sameorigin
+X-Xss-Protection: 1; mode=block
+Referrer-Policy: same-origin
+Content-Security-Policy: frame-ancestors 'none'; base-uri 'none'; form-action 'self'; block-all-mixed-content
+Content-Encoding: gzip
+Date: Sun, 01 Dec 2024 22:22:24 GMT
+Cache-Control: max-age=0
+Etag: W/"ac5848e548b91a091dba627a37d3830e"
+Vary: Accept-Encoding
+X-Cache: RefreshHit from cloudfront
+Via: 1.1 c630c028c0123d2a5e8fa36e68049386.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: FRA60-P10
+X-Amz-Cf-Id: 8ghn0xLGImVBWLFCgJPdhrqw2_8SPMxDXuvj2p1QXTYGjK6gb_svjg==

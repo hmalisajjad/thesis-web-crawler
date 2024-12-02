@@ -1,0 +1,24 @@
+Date: Sun, 01 Dec 2024 22:22:24 GMT
+Content-Type: text/html; charset=UTF-8
+Permissions-Policy: geolocation=(), midi=(),sync-xhr=(),accelerometer=(), gyroscope=(), magnetometer=(), camera=(), fullscreen=(self)
+Cache-Control: no-cache, private, max-age=172800
+Set-Cookie: XSRF-TOKEN=eyJpdiI6ImhWaEloR1JQMW5vaFoxSkpCMjcyWGc9PSIsInZhbHVlIjoiYVRIWGp0cFQzL0s2Nk5uOHZkMVRqUEZxbkdDK1dhZzZvOXZ5bWRvM292U2NuMW5SSmtMcmc0eHBmV2xkaDlKRjVYZUdxajE4WUpFWjJZUDF1Z2QwUnhQM0VLN1NnbU9pS1kyVmVRSE1HTVd6QkxuUzNwVXE1bmRGT3BGdEZoQ2oiLCJtYWMiOiJhNzFkNzQyZjg1YzllNGRhYmUxZWU4NzkyYjdjMTAxNmQ3YzI4NzI2Y2RhN2MxM2M0YmIxNDkwODdkMmJlN2FjIiwidGFnIjoiIn0%3D; expires=Mon, 02-Dec-2024 00:22:24 GMT; Max-Age=7200; path=/; secure; httponly; samesite=lax
+Set-Cookie: laravel_session=eyJpdiI6InBXWDBlZkhGRnNYRW85dW50UGdoSkE9PSIsInZhbHVlIjoiQVZLZFpPam1jMHhJMnBkRFBkM0tST3kxYU1ZTlRUYkJ5Ry9ZNFdBZzBqSGJTUTUzRGtsZ01URkJzZXhieFY5VW9uRzNCamF0NXVkeVRhRWIzSXMvWkNPd0tDZEJON0ZLMGlSOXFULzQ5ZWVzNE44Q1ZaZnVRRlZHSzV4TVBZcWgiLCJtYWMiOiI1Zjc4MGIxOTFkYWY3NzU0NmUxMzVlZGVkOTA4NDg3ODQ3MzFkNmM5N2M4NDg4YWY5YjdjYThjYjk4NTk1ODBiIiwidGFnIjoiIn0%3D; expires=Mon, 02-Dec-2024 00:22:24 GMT; Max-Age=7200; path=/; secure; httponly
+Expires: Tue, 03 Dec 2024 22:22:24 GMT
+Vary: Accept-Encoding
+Cf-Cache-Status: DYNAMIC
+Server-Timing: cfCacheStatus;desc="DYNAMIC"
+Server-Timing: cfL4;desc="?proto=TCP&rtt=15828&min_rtt=15631&rtt_var=4778&sent=8&recv=7&lost=0&retrans=0&sent_bytes=5422&recv_bytes=1102&delivery_rate=261594&cwnd=256&unsent_bytes=0&cid=18ef7cd67e661af0&ts=1107&x=0"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=PhW6A4%2FPnidqEAK3kvYRzWzcYVMEN44PLV7kMREztFhw97h8rgYfSoQ0wfahPsha%2Fsm2zQTrE35lNoDRGGOPKQS3xC1U328rHk04ZtI7HmuftbsGbAn5uHz9%2FQD0Cg%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Content-Security-Policy: frame-ancestors 'self' https://mail.google.com chrome-extension://fcinnggknmdfkilogcndkgpojpfojeem;     style-src 'self' 'unsafe-inline' http://*.hiver.space/css/app.css https://cdn.hiverhq.com https://cdnjs.cloudflare.com https://rsms.me https://a.omappapi.com    https://hiverhq.com https://use.typekit.net/pbs3hxh.css https://web-sdk.aptrinsic.com     https://p.typekit.net/p.css https://fonts.googleapis.com https://static.olark.com https://js.chilipiper.com https://static.zohocdn.com https://webfonts.zoho.com;
+Referrer-Policy: strict-origin-when-cross-origin
+X-Access-Control-Allow-Origin: https://mail.google.com
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Cf-Ray: 8eb679c71fbadc9c-FRA
+Content-Encoding: br
+Alt-Svc: h3=":443"; ma=86400

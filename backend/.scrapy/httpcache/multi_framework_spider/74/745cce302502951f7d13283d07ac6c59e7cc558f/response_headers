@@ -1,0 +1,15 @@
+Date: Sun, 01 Dec 2024 22:22:23 GMT
+Content-Type: text/plain
+Last-Modified: Wed, 20 Nov 2024 09:33:04 GMT
+Etag: W/"673dacd0-1d8"
+Content-Security-Policy: default-src * wss://*.zopim.com 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'self' app.optimizely.com *.zendesk.com *.zendesk.co.jp *.zendesk.co.uk *.zendesk.com.br *.zendesk.com.mx *.zendesk.de *.zendesk.es *.zendesk.fr *.zendesk.kr *.zendesk.nl *.zendesk.tw *.zendesk.hk; font-src * data:; img-src * data:; media-src * blob:;worker-src 'self' blob:
+Cf-Cache-Status: HIT
+Age: 1985
+Expires: Sun, 01 Dec 2024 23:22:23 GMT
+Cache-Control: public, max-age=3600
+Set-Cookie: __cf_bm=RNsx1PcPDj9I8Cqzj1uWu3GcQNJ0oY2JryPxe2yYhM8-1733091743-1.0.1.1-pEJTsq6ZLWO6Cx0EG_xYm91g9DAlMn9MOR8r9BcLs9V1Y9TOdexIxv9dA3MSOx_BTDyWawZpeVuQmApFwu66bA; path=/; expires=Sun, 01-Dec-24 22:52:23 GMT; domain=.zendesk.de; HttpOnly; Secure; SameSite=None
+Set-Cookie: __cfruid=f054d6a3a2973332623ad8b5fa1aceed498f2d8b-1733091743; path=/; domain=.zendesk.de; HttpOnly; Secure; SameSite=None
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 8eb679c71df1e52b-TXL
+Content-Encoding: br

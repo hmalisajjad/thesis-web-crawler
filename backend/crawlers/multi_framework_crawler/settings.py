@@ -11,7 +11,7 @@ NEWSPIDER_MODULE = 'crawlers.multi_framework_crawler'
 
 USER_AGENT = 'Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Googlebot/2.1; +https://www.google.com/bot.html) Safari/537.36'
 
-ROBOTSTXT_OBEY = False
+ROBOTSTXT_OBEY = True
 DOWNLOAD_DELAY = 2
 CONCURRENT_REQUESTS_PER_DOMAIN = 2
 DEPTH_LIMIT = 3

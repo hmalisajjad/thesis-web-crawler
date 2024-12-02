@@ -1,5 +1,12 @@
 import React from "react";
 
+// Add a decodeHTML function to handle decoding of HTML entities.
+function decodeHTML(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
+
 function ResultsDisplay({ results }) {
   console.log(results);
 
@@ -31,7 +38,8 @@ function ResultsDisplay({ results }) {
                     {item.main_url}
                   </a>
                 </td>
-                <td>{item.title}</td>
+                {/* Decode HTML entities in the title */}
+                <td>{decodeHTML(item.title)}</td>
                 <td>
                   {item.detected_chatbots?.length > 0 ? "Detected" : "None"}
                 </td>

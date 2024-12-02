@@ -1,0 +1,18 @@
+Age: 197339
+Cache-Control: public,max-age=0,must-revalidate
+Cache-Status: "Netlify Edge"; hit
+Content-Encoding: gzip
+Content-Security-Policy: frame-ancestors 'self' https://app.contentful.com https://retail-ipad-apps.netlify.app;
+Content-Type: text/html; charset=utf-8
+Date: Sun, 01 Dec 2024 22:24:42 GMT
+Etag: W/"trnrojq7mkaphz"
+Netlify-Vary: header=x-nextjs-data|x-next-debug-logging|Accept-Encoding,cookie=__prerender_bypass|__next_preview_data
+Server: Netlify
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN https://app.contentful.com https://retail-ipad-apps.netlify.app
+X-Nextjs-Date: Sun, 01 Dec 2024 04:45:52 GMT
+X-Nf-Request-Id: 01JE256X9SYBMXVV3S1C3C9ER5
+X-Powered-By: Next.js
+X-Xss-Protection: 1; mode=block

@@ -1,0 +1,27 @@
+Content-Length: 87
+Date: Sun, 01 Dec 2024 22:24:41 GMT
+Content-Type: text/plain
+Permissions-Policy: geolocation=(), midi=(),sync-xhr=(),accelerometer=(), gyroscope=(), magnetometer=(), camera=(), fullscreen=(self)
+Last-Modified: Thu, 28 Nov 2024 09:57:12 GMT
+Etag: "47-627f61b328e00-gzip"
+Cache-Control: max-age=31536000
+Expires: Mon, 02 Dec 2024 11:05:53 GMT
+Vary: Accept-Encoding
+Content-Encoding: gzip
+Cf-Cache-Status: HIT
+Age: 53705
+Accept-Ranges: bytes
+Server-Timing: cfCacheStatus;desc="HIT"
+Server-Timing: cfL4;desc="?proto=TCP&rtt=16724&min_rtt=15128&rtt_var=6813&sent=4&recv=5&lost=0&retrans=0&sent_bytes=2809&recv_bytes=840&delivery_rate=273664&cwnd=135&unsent_bytes=0&cid=3686432ac807868a&ts=29&x=0"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=pFVdlnGLVj0n%2BzQnxEA9sRsCEIyNeQLQC%2F%2BpdxDhOvUUqo6UUzss2MNkebfS6A4xecehQrcItU0cSnQbNsbtMMqBJD6%2BFwmr5rVIsMCz6NUy4W1KtJQBCzt%2FxxxrFA%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Content-Security-Policy: frame-ancestors 'self' https://mail.google.com chrome-extension://fcinnggknmdfkilogcndkgpojpfojeem;     style-src 'self' 'unsafe-inline' http://*.hiver.space/css/app.css https://cdn.hiverhq.com https://cdnjs.cloudflare.com https://rsms.me https://a.omappapi.com    https://hiverhq.com https://use.typekit.net/pbs3hxh.css https://web-sdk.aptrinsic.com     https://p.typekit.net/p.css https://fonts.googleapis.com https://static.olark.com https://js.chilipiper.com https://static.zohocdn.com https://webfonts.zoho.com;
+Referrer-Policy: strict-origin-when-cross-origin
+X-Access-Control-Allow-Origin: https://mail.google.com
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Cf-Ray: 8eb67d259a54d350-FRA
+Alt-Svc: h3=":443"; ma=86400

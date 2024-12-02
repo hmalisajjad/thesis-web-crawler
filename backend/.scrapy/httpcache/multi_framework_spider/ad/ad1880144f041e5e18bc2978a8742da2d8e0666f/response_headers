@@ -1,0 +1,19 @@
+Content-Length: 208
+Date: Sun, 01 Dec 2024 22:22:23 GMT
+Content-Type: text/plain;charset=UTF-8
+Vary: Accept-Encoding
+Expires: Sun, 01 Dec 2024 22:33:37 GMT
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Content-Encoding: gzip
+Pragma: no-cache
+Cache-Control: no-cache, no-store, must-revalidate, max-age=86400
+X-Cache: hit cached
+Strict-Transport-Security: max-age=16000000; includeSubDomains; preload;
+Cf-Cache-Status: MISS
+Last-Modified: Sun, 01 Dec 2024 22:22:23 GMT
+Accept-Ranges: bytes
+Set-Cookie: __cf_bm=ovF7fAwfn6G85RDVG9K2CeIbxGqspgx6cgZDuE7iIPY-1733091743-1.0.1.1-Pa.PGtD88rl3Frxq8J.SKcw2yc2pIjMtTOPolhiyk0UBzkbLfoNF45v0su3tD0b9O_7YqIrHVIq_IT8Nb0slRg; path=/; expires=Sun, 01-Dec-24 22:52:23 GMT; domain=.ua.puma.com; HttpOnly; Secure; SameSite=None
+Server: cloudflare
+Cf-Ray: 8eb679c4daced289-FRA

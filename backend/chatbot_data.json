@@ -1,5 +1,177 @@
 [
     {
+        "main_url": "https://hiverhq.com/blog/live-chat-widget",
+        "title": "The 10 Best Live Chat Widgets for Your Website",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/b300fc9bd1a4423b8dca8cfa411c3bfe"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Zendesk",
+            "Intercom",
+            "Drift",
+            "Tawk",
+            "LiveChat",
+            "Tawk.to",
+            "HubSpot",
+            "Communication",
+            "chat-widget"
+        ],
+        "date_collected": "2024-12-01 23:52:38"
+    },
+    {
+        "main_url": "https://hiverhq.com/features/live-chat",
+        "title": "Live chat for real-time customer support",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Zendesk",
+            "LiveChat",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2024-12-01 23:52:41"
+    },
+    {
+        "main_url": "https://chat360.io/blog/website-chatbot-examples/",
+        "title": "Top 13 website chatbot examples of 2024 - Chat360",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Dialogflow",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2024-12-01 23:52:44"
+    },
+    {
+        "main_url": "https://www.lg.com/in/",
+        "title": "Consumer & Home Electronics from LG | LG IN",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "LiveChat"
+        ],
+        "date_collected": "2024-12-01 23:52:53"
+    },
+    {
+        "main_url": "https://www.hubspot.com/",
+        "title": "HubSpot | Software & Tools for your Business - Homepage",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://app.hubspot.com/feedback-web-fetcher",
+            "https://play.hubspotvideo.com/v/53/id/164914342160",
+            "https://app.hubspot.com/conversations-visitor/53/threads/utk/08b26bd4a4ef4aa1bc73e63baa41b504"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "HubSpot",
+            "chat-widget"
+        ],
+        "date_collected": "2024-12-01 23:52:57"
+    },
+    {
+        "main_url": "https://www.onepeloton.com/",
+        "title": "Peloton: The ultimate fitness experience",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "live chat",
+            "Drift",
+            "LiveChat",
+            "Communication"
+        ],
+        "date_collected": "2024-12-01 23:53:11"
+    },
+    {
+        "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
+        "title": "IKEA Kontakt & Hilfe - IKEA Deutschland",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot"
+        ],
+        "date_collected": "2024-12-01 23:53:18"
+    },
+    {
+        "main_url": "https://ua.puma.com/uk/",
+        "title": "PUMA - офіційний сайт і каталог інтернет-магазину спортивних товарів ПУМА в Україні",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://secure.livechatinc.com/customer/action/open_chat"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "LiveChat",
+            "chat-widget",
+            "livechat.min.js"
+        ],
+        "date_collected": "2024-12-01 23:53:28"
+    },
+    {
+        "main_url": "https://outgrow.co/",
+        "title": "The Best Quiz maker, calculator builder and chatbot creator for marketers",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "Intercom"
+        ],
+        "date_collected": "2024-12-01 23:53:33"
+    },
+    {
+        "main_url": "https://www.intercom.com/",
+        "title": "Intercom: The best AI agent built on the best customer service platform",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "Zendesk",
+            "Intercom",
+            "HubSpot"
+        ],
+        "date_collected": "2024-12-01 23:53:38"
+    },
+    {
+        "main_url": "https://www.zendesk.de/service/ai/live-chat/",
+        "title": "Live chat | Zendesk",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "Zendesk",
+            "LiveChat"
+        ],
+        "date_collected": "2024-12-01 23:53:41"
+    },
+    {
         "main_url": "https://www.livechat.com/",
         "title": "Business 💬 Live Chat Software for E-commerce | LiveChat",
         "iframe_url": null,
@@ -18,147 +190,7 @@
             "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 15:05:41"
-    },
-    {
-        "main_url": "https://www.lg.com/in/",
-        "title": "Consumer & Home Electronics from LG | LG IN",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "LiveChat"
-        ],
-        "date_collected": "2024-12-01 15:05:49"
-    },
-    {
-        "main_url": "https://www.onepeloton.com/",
-        "title": "Peloton: The ultimate fitness experience",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "live chat",
-            "Drift",
-            "LiveChat",
-            "Communication"
-        ],
-        "date_collected": "2024-12-01 15:05:55"
-    },
-    {
-        "main_url": "https://wotnot.io/",
-        "title": "WotNot | The easy and no-code chatbot platform and partner",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "chat-widget"
-        ],
-        "date_collected": "2024-12-01 15:06:00"
-    },
-    {
-        "main_url": "https://www.zendesk.de/service/ai/live-chat/",
-        "title": "Live chat | Zendesk",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "Zendesk",
-            "LiveChat"
-        ],
-        "date_collected": "2024-12-01 15:06:03"
-    },
-    {
-        "main_url": "https://outgrow.co/",
-        "title": "The Best Quiz maker, calculator builder and chatbot creator for marketers",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "Intercom"
-        ],
-        "date_collected": "2024-12-01 15:06:09"
-    },
-    {
-        "main_url": "https://www.hubspot.com/",
-        "title": "HubSpot | Software & Tools for your Business - Homepage",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.hubspot.com/feedback-web-fetcher",
-            "https://play.hubspotvideo.com/v/53/id/164914342160"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-01 15:06:13"
-    },
-    {
-        "main_url": "https://botsonic.com/",
-        "title": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "customer support",
-            "Zendesk",
-            "Intercom",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-01 15:06:15"
-    },
-    {
-        "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
-        "title": "IKEA Kontakt & Hilfe - IKEA Deutschland",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot"
-        ],
-        "date_collected": "2024-12-01 15:06:18"
-    },
-    {
-        "main_url": "https://ua.puma.com/uk/",
-        "title": "PUMA - офіційний сайт і каталог інтернет-магазину спортивних товарів ПУМА в Україні",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://secure.livechatinc.com/customer/action/open_chat"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "LiveChat",
-            "chat-widget",
-            "livechat.min.js"
-        ],
-        "date_collected": "2024-12-01 15:06:24"
-    },
-    {
-        "main_url": "https://landbot.io/",
-        "title": "AI Chatbot Generator for Conversational Experiences | Landbot",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "customer support",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-01 15:06:26"
+        "date_collected": "2024-12-01 23:53:44"
     },
     {
         "main_url": "https://www.tawk.to/",
@@ -173,64 +205,50 @@
             "Tawk.to",
             "Communication"
         ],
-        "date_collected": "2024-12-01 15:06:30"
+        "date_collected": "2024-12-01 23:53:47"
     },
     {
-        "main_url": "https://www.intercom.com/",
-        "title": "Intercom: The best AI agent built on the best customer service platform",
+        "main_url": "https://wotnot.io/",
+        "title": "WotNot | The easy and no-code chatbot platform and partner",
         "iframe_url": null,
         "detected_chatbots": [],
         "keywords_detected": [
             "chat",
             "chatbot",
             "live chat",
-            "Zendesk",
-            "Intercom",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-01 15:06:33"
-    },
-    {
-        "main_url": "https://hiverhq.com/blog/live-chat-widget",
-        "title": "The 10 Best Live Chat Widgets for Your Website",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/0f0b2571be314021ad5e2e0e6f3c42df"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
             "customer support",
-            "Zendesk",
-            "Intercom",
-            "Drift",
-            "Tawk",
-            "LiveChat",
-            "Tawk.to",
-            "HubSpot",
-            "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 15:06:38"
+        "date_collected": "2024-12-01 23:53:54"
     },
     {
-        "main_url": "https://chat360.io/blog/website-chatbot-examples/",
-        "title": "Top 13 website chatbot examples of 2024 - Chat360",
+        "main_url": "https://landbot.io/",
+        "title": "AI Chatbot Generator for Conversational Experiences | Landbot",
         "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.chat360.io/clientwidget/"
-        ],
+        "detected_chatbots": [],
         "keywords_detected": [
             "chat",
             "chatbot",
-            "live chat",
             "customer support",
-            "Dialogflow",
-            "HubSpot",
-            "Communication"
+            "HubSpot"
         ],
-        "date_collected": "2024-12-01 15:06:42"
+        "date_collected": "2024-12-01 23:53:57"
+    },
+    {
+        "main_url": "https://botsonic.com/",
+        "title": "AI Chatbot for Website - Custom ChatGPT Chat bots - Botsonic",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "customer support",
+            "Zendesk",
+            "Intercom",
+            "Tawk",
+            "HubSpot"
+        ],
+        "date_collected": "2024-12-01 23:54:02"
     },
     {
         "main_url": "https://www.tidio.com/",
@@ -249,26 +267,6 @@
             "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 15:06:46"
-    },
-    {
-        "main_url": "https://hiverhq.com/features/live-chat",
-        "title": "Live chat for real-time customer support",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/0f0b2571be314021ad5e2e0e6f3c42df"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Zendesk",
-            "LiveChat",
-            "HubSpot",
-            "Communication",
-            "chat-widget"
-        ],
-        "date_collected": "2024-12-01 15:06:49"
+        "date_collected": "2024-12-01 23:54:07"
     }
 ]
