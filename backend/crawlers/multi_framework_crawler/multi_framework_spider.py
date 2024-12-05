@@ -37,7 +37,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         'LOG_LEVEL': 'INFO',
     }
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, urls=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
         try:
@@ -59,17 +59,21 @@ class MultiFrameworkSpider(scrapy.Spider):
             self.logger.error("Failed to initialize ChromeDriver", exc_info=True)
             raise RuntimeError("Unable to initialize ChromeDriver.") from e
 
-        seed_path = Path(__file__).parent.parent.parent / "seed_urls.txt"
-        try:
-            with open(seed_path, "r", encoding="utf-8") as f:
-                self.start_urls = [url.strip() for url in f.readlines() if url.strip()]
-                self.logger.info(f"Loaded {len(self.start_urls)} seed URLs from {seed_path}")
-        except FileNotFoundError:
-            self.logger.error(f"Seed file not found at {seed_path}. No URLs will be crawled.")
-            self.start_urls = []
-        except Exception as e:
-            self.logger.error(f"Error loading seed URLs: {e}")
-            self.start_urls = []
+        if urls:
+            self.start_urls = urls
+        else:
+            # Load from seed file
+            seed_path = Path(__file__).parent.parent.parent / "seed_urls.txt"
+            try:
+                with open(seed_path, "r", encoding="utf-8") as f:
+                    self.start_urls = [url.strip() for url in f.readlines() if url.strip()]
+                    self.logger.info(f"Loaded {len(self.start_urls)} seed URLs from {seed_path}")
+            except FileNotFoundError:
+                self.logger.error(f"Seed file not found at {seed_path}. No URLs will be crawled.")
+                self.start_urls = []
+            except Exception as e:
+                self.logger.error(f"Error loading seed URLs: {e}")
+                self.start_urls = []
 
         self.keywords = [
             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
@@ -90,7 +94,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.logger.info(f"Parsing URL: {normalized_url}")
         try:
             self.driver.get(response.url)
-            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             page_source = self.driver.page_source
             soup = BeautifulSoup(page_source, "html.parser")
 
@@ -131,7 +135,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.logger.info(f"Parsing iframe: {normalized_url}")
         try:
             self.driver.get(response.url)
-            WebDriverWait(self.driver, 10).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+            WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
             page_source = self.driver.page_source
             soup = BeautifulSoup(page_source, "html.parser")
 

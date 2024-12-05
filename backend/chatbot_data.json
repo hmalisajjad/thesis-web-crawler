@@ -1,10 +1,30 @@
 [
     {
+        "main_url": "https://hiverhq.com/features/live-chat",
+        "title": "Live chat for real-time customer support",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/3cd9a583cb614cb69b6866a43d156814"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Zendesk",
+            "LiveChat",
+            "HubSpot",
+            "Communication",
+            "chat-widget"
+        ],
+        "date_collected": "2024-12-06 00:05:11"
+    },
+    {
         "main_url": "https://hiverhq.com/blog/live-chat-widget",
         "title": "The 10 Best Live Chat Widgets for Your Website",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/b300fc9bd1a4423b8dca8cfa411c3bfe"
+            "https://app.hubspot.com/conversations-visitor/4265252/threads/utk/3cd9a583cb614cb69b6866a43d156814"
         ],
         "keywords_detected": [
             "chat",
@@ -21,30 +41,15 @@
             "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 23:52:38"
-    },
-    {
-        "main_url": "https://hiverhq.com/features/live-chat",
-        "title": "Live chat for real-time customer support",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Zendesk",
-            "LiveChat",
-            "HubSpot",
-            "Communication"
-        ],
-        "date_collected": "2024-12-01 23:52:41"
+        "date_collected": "2024-12-06 00:05:15"
     },
     {
         "main_url": "https://chat360.io/blog/website-chatbot-examples/",
         "title": "Top 13 website chatbot examples of 2024 - Chat360",
         "iframe_url": null,
-        "detected_chatbots": [],
+        "detected_chatbots": [
+            "https://app.chat360.io/clientwidget/"
+        ],
         "keywords_detected": [
             "chat",
             "chatbot",
@@ -54,7 +59,7 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-01 23:52:44"
+        "date_collected": "2024-12-06 00:05:18"
     },
     {
         "main_url": "https://www.lg.com/in/",
@@ -67,7 +72,7 @@
             "live chat",
             "LiveChat"
         ],
-        "date_collected": "2024-12-01 23:52:53"
+        "date_collected": "2024-12-06 00:05:28"
     },
     {
         "main_url": "https://www.hubspot.com/",
@@ -76,7 +81,7 @@
         "detected_chatbots": [
             "https://app.hubspot.com/feedback-web-fetcher",
             "https://play.hubspotvideo.com/v/53/id/164914342160",
-            "https://app.hubspot.com/conversations-visitor/53/threads/utk/08b26bd4a4ef4aa1bc73e63baa41b504"
+            "https://app.hubspot.com/conversations-visitor/53/threads/utk/e3362b72af894eabaef7123eb987cdeb"
         ],
         "keywords_detected": [
             "chat",
@@ -86,7 +91,7 @@
             "HubSpot",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 23:52:57"
+        "date_collected": "2024-12-06 00:05:33"
     },
     {
         "main_url": "https://www.onepeloton.com/",
@@ -100,7 +105,7 @@
             "LiveChat",
             "Communication"
         ],
-        "date_collected": "2024-12-01 23:53:11"
+        "date_collected": "2024-12-06 00:05:41"
     },
     {
         "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
@@ -111,7 +116,7 @@
             "chat",
             "chatbot"
         ],
-        "date_collected": "2024-12-01 23:53:18"
+        "date_collected": "2024-12-06 00:05:44"
     },
     {
         "main_url": "https://ua.puma.com/uk/",
@@ -127,7 +132,7 @@
             "chat-widget",
             "livechat.min.js"
         ],
-        "date_collected": "2024-12-01 23:53:28"
+        "date_collected": "2024-12-06 00:05:50"
     },
     {
         "main_url": "https://outgrow.co/",
@@ -140,7 +145,7 @@
             "live chat",
             "Intercom"
         ],
-        "date_collected": "2024-12-01 23:53:33"
+        "date_collected": "2024-12-06 00:05:55"
     },
     {
         "main_url": "https://www.intercom.com/",
@@ -155,7 +160,7 @@
             "Intercom",
             "HubSpot"
         ],
-        "date_collected": "2024-12-01 23:53:38"
+        "date_collected": "2024-12-06 00:05:59"
     },
     {
         "main_url": "https://www.zendesk.de/service/ai/live-chat/",
@@ -169,7 +174,7 @@
             "Zendesk",
             "LiveChat"
         ],
-        "date_collected": "2024-12-01 23:53:41"
+        "date_collected": "2024-12-06 00:06:02"
     },
     {
         "main_url": "https://www.livechat.com/",
@@ -190,7 +195,7 @@
             "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 23:53:44"
+        "date_collected": "2024-12-06 00:06:07"
     },
     {
         "main_url": "https://www.tawk.to/",
@@ -205,7 +210,7 @@
             "Tawk.to",
             "Communication"
         ],
-        "date_collected": "2024-12-01 23:53:47"
+        "date_collected": "2024-12-06 00:06:10"
     },
     {
         "main_url": "https://wotnot.io/",
@@ -219,7 +224,7 @@
             "customer support",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 23:53:54"
+        "date_collected": "2024-12-06 00:06:16"
     },
     {
         "main_url": "https://landbot.io/",
@@ -232,7 +237,7 @@
             "customer support",
             "HubSpot"
         ],
-        "date_collected": "2024-12-01 23:53:57"
+        "date_collected": "2024-12-06 00:06:19"
     },
     {
         "main_url": "https://botsonic.com/",
@@ -248,7 +253,7 @@
             "Tawk",
             "HubSpot"
         ],
-        "date_collected": "2024-12-01 23:54:02"
+        "date_collected": "2024-12-06 00:06:23"
     },
     {
         "main_url": "https://www.tidio.com/",
@@ -267,6 +272,6 @@
             "Communication",
             "chat-widget"
         ],
-        "date_collected": "2024-12-01 23:54:07"
+        "date_collected": "2024-12-06 00:06:30"
     }
 ]
