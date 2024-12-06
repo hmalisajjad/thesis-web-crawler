@@ -1,0 +1,23 @@
+Content-Length: 154
+Last-Modified: Fri, 11 Nov 2022 20:25:37 GMT
+Etag: "3437aaddcdf6922d623e172c2d6f9278"
+Cache-Control: max-age=31536000
+Content-Type: text/html; charset=utf-8
+Content-Security-Policy: base-uri 'none'; connect-src 'self' https://r.stripe.com; default-src 'self'; font-src 'none'; form-action 'none'; frame-src https://m.stripe.network; img-src https://q.stripe.com; media-src 'none'; object-src 'none'; script-src 'self'; style-src 'self'; report-uri https://q.stripe.com/csp-report
+Content-Security-Policy-Report-Only: base-uri 'none'; connect-src 'self' https://r.stripe.com; default-src 'self'; font-src 'none'; form-action 'none'; frame-src https://m.stripe.network; img-src https://q.stripe.com; media-src 'none'; object-src 'none'; script-src 'self'; style-src 'self'; report-uri https://q.stripe.com/csp-report
+Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+Access-Control-Allow-Origin: *
+Server: Fastly
+Content-Encoding: br
+Accept-Ranges: bytes
+Date: Fri, 06 Dec 2024 23:42:44 GMT
+Via: 1.1 varnish
+Age: 3370407
+X-Request-Id: b8493b76-46e7-43fb-980e-ea36529aed4c
+X-Served-By: cache-fra-eddf8230148-FRA
+X-Cache: HIT
+X-Cache-Hits: 1088041
+Vary: Accept-Encoding
+Timing-Allow-Origin: *
+Alt-Svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400

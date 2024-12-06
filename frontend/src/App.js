@@ -4,7 +4,6 @@ import ResultsDisplay from "./components/ResultsDisplay";
 import axios from "axios";
 import "./App.css";
 
-// Add a decodeHTML function to handle decoding of HTML entities.
 function decodeHTML(html) {
   const txt = document.createElement("textarea");
   txt.innerHTML = html;
@@ -18,7 +17,6 @@ function App() {
   const [crawlInProgress, setCrawlInProgress] = useState(false);
 
   useEffect(() => {
-    // Poll crawl status every 5 seconds
     const interval = setInterval(() => {
       checkCrawlStatus();
     }, 5000);
@@ -31,7 +29,7 @@ function App() {
       const response = await axios.get("http://localhost:5000/crawl-status");
       setCrawlInProgress(response.data.in_progress);
       if (!response.data.in_progress) {
-        fetchResults(); // Fetch results once the crawl is completed
+        fetchResults();
       }
     } catch (error) {
       console.error("Error checking crawl status:", error);
@@ -42,7 +40,15 @@ function App() {
     setLoading(true);
     setMessage("");
     try {
-      const response = await axios.post("http://localhost:5000/start-crawl");
+      const response = await axios.post(
+        "http://localhost:5000/start-crawl",
+        { dataset_size: 100 },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       if (response.data.success) {
         setMessage("Crawling started successfully!");
       } else {
@@ -60,10 +66,9 @@ function App() {
     try {
       const response = await axios.get("http://localhost:5000/results");
       if (response.data.status === "Success" && response.data.data.length > 0) {
-        // Decode HTML entities before setting the results
         const decodedResults = response.data.data.map((result) => ({
           ...result,
-          title: decodeHTML(result.title), // Decode the title for HTML entities
+          title: decodeHTML(result.title),
         }));
         setResults(decodedResults);
         setMessage("");

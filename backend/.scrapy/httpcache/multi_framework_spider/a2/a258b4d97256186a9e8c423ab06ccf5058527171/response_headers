@@ -1,0 +1,13 @@
+Content-Type: application/xml
+Access-Control-Allow-Origin: *
+Server: Fastly
+Accept-Ranges: bytes
+Date: Fri, 06 Dec 2024 23:42:43 GMT
+Via: 1.1 varnish
+X-Request-Id: 7d47c724-5049-46c2-87a2-d9569d7fa838
+X-Served-By: cache-fra-eddf8230148-FRA
+X-Cache: MISS
+X-Cache-Hits: 0
+Strict-Transport-Security: max-age=31556926; includeSubDomains; preload
+Timing-Allow-Origin: *
+Alt-Svc: h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400

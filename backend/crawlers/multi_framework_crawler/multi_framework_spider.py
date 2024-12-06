@@ -260,6 +260,7 @@ def run_crawler_in_thread():
             reactor.run(installSignalHandlers=False)
 
     def background_task():
+        global reactor_running
         try:
             run_spider()
             if temp_file.exists():
@@ -270,7 +271,7 @@ def run_crawler_in_thread():
         except Exception as e:
             logging.error(f"Error during spider execution: {e}")
         finally:
-            global reactor_running
-            reactor_running = False
+            with reactor_lock:
+                reactor_running = False
 
     threading.Thread(target=background_task, daemon=True).start()
