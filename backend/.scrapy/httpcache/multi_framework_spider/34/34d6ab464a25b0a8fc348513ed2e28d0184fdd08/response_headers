@@ -1,0 +1,13 @@
+Content-Type: text/html; charset=utf-8
+Date: Fri, 06 Dec 2024 19:39:28 GMT
+Server: Kestrel
+Cache-Control: private, max-age=0
+Set-Cookie: uid=dfedd50c-7042-4573-a798-6aa937fcdda8; expires=Wed, 31 Dec 2025 19:39:28 GMT; domain=.criteo.com; path=/; secure; samesite=none
+Set-Cookie: optout=0; expires=Thu, 01 Jan 1970 00:00:00 GMT; domain=.criteo.com; path=/
+X-Robots-Tag: noindex
+Cross-Origin-Resource-Policy: cross-origin
+Cross-Origin-Embedder-Policy: require-corp
+Server-Processing-Duration-In-Ticks: 248526
+Strict-Transport-Security: max-age=31536000; preload;
+Vary: Accept-Encoding
+Content-Encoding: gzip

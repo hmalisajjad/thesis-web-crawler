@@ -1,0 +1,17 @@
+Content-Length: 2170
+Server: CloudFront
+Content-Type: text/html; charset=utf-8
+Date: Fri, 06 Dec 2024 19:54:50 GMT
+Cross-Origin-Resource-Policy: cross-origin
+Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+X-Download-Options: noopen
+X-Content-Type-Options: nosniff
+Referrer-Policy: origin
+Content-Security-Policy: child-src *;connect-src 'self' https://*.smooch.io/ https://vimeo.com/ https://*.ada.support/ https://*.logs.datadoghq.com/ https://*.browser-intake-datadoghq.com https://sentry.io/ wss://*.pusher.com/ https://*.pusher.com wss://*.zopim.com https://*.zopim.com wss://api.smooch.io https://*.zendesk.com wss://*.zendesk.com;frame-ancestors 'self' https://local-www.onepeloton.com:3000 https://www.local.onepeloton.com:3000 https://*:3000 https://*.onepeloton.com https://*.staffbase.com https://*.pelonet.com https://* https://peloton-sales.ada.support file://* filesystem:;frame-src *;img-src * data:;manifest-src 'self' https://*.ada.support/;media-src *;report-uri https://o38990.ingest.sentry.io/api/131249/security/?sentry_key=32e4861491de4e0cb13244c120832580;script-src 'self' 'unsafe-inline' https://*.smooch.io/ https://*.ada.support/ https://*.pusher.com https://fullstory.com https://edge.fullstory.com https://widget-mediator.zopim.com/ https://www.youtube.com https://player.vimeo.com https://*.zendesk.com wss://*.zendesk.com;script-src-elem 'self' 'unsafe-inline' https://*.smooch.io/ https://*.ada.support/ https://*.pusher.com https://fullstory.com https://edge.fullstory.com https://widget-mediator.zopim.com/ https://www.youtube.com https://player.vimeo.com https://*.zendesk.com wss://*.zendesk.com;worker-src blob:;default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';object-src 'none';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests
+Cache-Control: max-age=60, stale-if-error=86400
+Etag: W/"87a-kC/3aoI1W2VCreUGuGpeQh0X1Xk"
+Via: 1.1 12e62b05f63a1a2118cca20014b15012.cloudfront.net (CloudFront)
+Age: 11
+X-Cache: Hit from cloudfront
+X-Amz-Cf-Pop: FRA60-P4
+X-Amz-Cf-Id: SVCMUmfM1rK503L7AwzkzA1hQXIHx8zQSzLAa6b8go93OI4ILJnOqw==

@@ -1,0 +1,17 @@
+Content-Type: text/html
+Date: Fri, 18 Oct 2024 07:42:39 GMT
+Last-Modified: Thu, 16 May 2024 10:06:16 GMT
+Etag: W/"f88aed42bdee295db04fe3259e2814e5"
+X-Amz-Server-Side-Encryption: AES256
+Cache-Control: max-age=31536000, no-transform, public
+Server: AmazonS3
+Content-Encoding: br
+Vary: Accept-Encoding
+Vary: Origin
+X-Cache: Hit from cloudfront
+Via: 1.1 fa8c9f29fb8ef5c537a2a53f4de05240.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: FRA60-P3
+X-Amz-Cf-Id: E2FBZaILhkK6GMel-LIVUoV7Afy2nkCXqG4ReQI9X6XEgj2FIWfNmA==
+Age: 4276607
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

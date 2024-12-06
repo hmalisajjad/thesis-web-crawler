@@ -1,0 +1,17 @@
+Content-Length: 228
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: br
+Vary: *
+Date: Fri, 06 Dec 2024 19:39:54 GMT
+Pragma: no-cache
+Expires: Fri, 01 Jan 1990 00:00:00 GMT
+Cache-Control: no-cache, no-store, must-revalidate
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Cross-Origin-Embedder-Policy: require-corp
+Cross-Origin-Resource-Policy: cross-origin
+Content-Security-Policy-Report-Only: script-src 'none'; form-action 'none'; frame-src 'none'; report-uri https://csp.withgoogle.com/csp/scaffolding/ascgcycc:1128:0
+Cross-Origin-Opener-Policy-Report-Only: same-origin; report-to=coop_reporting
+Report-To: {"group":"coop_reporting","max_age":2592000,"endpoints":[{"url":"https://csp.withgoogle.com/csp/report-to/scaffolding/ascgcycc:1128:0"}],}
+Server: Google Tag Manager
+X-Xss-Protection: 0
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

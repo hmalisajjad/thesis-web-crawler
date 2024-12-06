@@ -1,0 +1,19 @@
+Content-Length: 20758
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Security-Policy: frame-ancestors https://*.livechatinc.com https://*.staging.livechatinc.com https://*.labs.livechatinc.com https://*.livechat.com https://*.staging.livechat.com https://*.labs.livechat.com https://*.helpdesk.com https://*.staging.helpdesk.com https://*.labs.helpdesk.com
+Content-Type: text/html; charset=UTF-8
+Etag: "290762fc5e2e4d542800904fe6fa8fcc"
+Last-Modified: Tue, 19 Nov 2024 12:24:26 GMT
+Permissions-Policy: camera=(), display-capture=(), geolocation=(), microphone=(), storage-access=*
+Referrer-Policy: strict-origin-when-cross-origin
+Server: AmazonS3
+Uber-Trace-Id: 1add01fc4269f276ed9a66955a223d2a:fdc09cd5a5d536c1:0:1
+Vary: Accept-Encoding
+X-Amz-Id-2: MZbNTwXkRri/Ez7fqwxRHCECXlvba1og/kTNIUeUe/jR2XPQVlsL0UKL6jEdTkKHrsjqo2s8nWN8iPX5JHBJyVsCcU0+pPsberlANrS+Dyo=
+X-Amz-Request-Id: FFXXY0VY2Q3D1YKA
+X-Amz-Server-Side-Encryption: AES256
+X-Content-Type-Options: nosniff
+X-Frame-Options: DENY
+Date: Fri, 06 Dec 2024 19:41:05 GMT
+Strict-Transport-Security: max-age=86400 ; includeSubDomains

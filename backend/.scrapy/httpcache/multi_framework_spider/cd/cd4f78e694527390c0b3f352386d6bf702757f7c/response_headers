@@ -1,0 +1,14 @@
+P3P: policyref="https://googleads.g.doubleclick.net/pagead/gcn_p3p_.xml", CP="CURa ADMa DEVa TAIo PSAo PSDo OUR IND UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"
+Timing-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+Vary: Accept-Encoding
+Date: Fri, 06 Dec 2024 19:39:28 GMT
+Expires: Sat, 07 Dec 2024 19:39:28 GMT
+Cache-Control: public, max-age=86400
+Content-Type: text/plain; charset=ISO-8859-1
+Etag: 17494329817555023215
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+Server: cafe
+X-Xss-Protection: 0
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

@@ -1,0 +1,17 @@
+Content-Length: 1601
+Accept-Ranges: bytes
+Content-Encoding: gzip
+Content-Type: text/html; charset=UTF-8
+Etag: "9ffed38739990e235d37794d3332ff19"
+Last-Modified: Tue, 19 Nov 2024 12:24:27 GMT
+Permissions-Policy: camera=(), display-capture=(), geolocation=(), microphone=(), storage-access=*
+Referrer-Policy: strict-origin-when-cross-origin
+Server: AmazonS3
+Uber-Trace-Id: 9072b38643e3238e761445565e6b085a:e2c82fa5f2d81b9a:0:1
+Vary: Accept-Encoding
+X-Amz-Id-2: rGIIykWQN+dB4p+rkUbQWS8qC8E69VmJJjZTsyBwDZQOF6GeQNZb6+lmQGNO8ZEPTpDs+uzZjHpcNw1gVOHn15UwXpwjdUKXbq4iaUrV0us=
+X-Amz-Request-Id: ZYPVPN6X5CR4VA11
+X-Amz-Server-Side-Encryption: AES256
+X-Content-Type-Options: nosniff
+Date: Fri, 06 Dec 2024 19:41:06 GMT
+Strict-Transport-Security: max-age=86400 ; includeSubDomains

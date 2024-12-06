@@ -1,0 +1,32 @@
+Date: Fri, 06 Dec 2024 19:39:26 GMT
+Content-Type: text/html; charset=utf-8
+X-Amz-Replication-Status: COMPLETED
+Last-Modified: Fri, 22 Nov 2024 20:25:01 UTC
+Content-Encoding: gzip
+X-Amz-Server-Side-Encryption: AES256
+X-Amz-Meta-Ao: {"allowIFrame":true}
+X-Amz-Version-Id: GJHTFK1WIPEwCa1fUqrMbm9sHN.ldRjS
+Etag: W/"79c5c45a97133b98f375361cf8d30ff7"
+Vary: origin
+X-Cache: Hit from cloudfront
+Via: 1.1 3042bd56e0ca0a7910df89f6b5e95e9e.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: IAD12-P3
+X-Amz-Cf-Id: Pgwo0hy3JtiUkKO20Zal3-5T97BpWgJvkQEBIezcQr6QUHI-UyRSYA==
+Age: 1082
+Access-Control-Allow-Credentials: false
+Cache-Control: max-age=600
+X-Hs-Target-Asset: video-player-ui/static-1.22652/html/player.html
+X-Content-Type-Options: nosniff
+X-Hs-Cache-Status: HIT
+X-Envoy-Upstream-Service-Time: 2
+X-Evy-Trace-Route-Service-Name: envoyset-translator
+X-Evy-Trace-Virtual-Host: all
+X-Hubspot-Correlation-Id: b10dff02-cb06-4b1c-a0c4-668739c4d527
+X-Evy-Trace-Served-By-Pod: iad02/star-td/envoy-proxy-5695886f75-tl662
+X-Evy-Trace-Listener: listener_https
+X-Evy-Trace-Route-Configuration: listener_https/all
+X-Request-Id: b10dff02-cb06-4b1c-a0c4-668739c4d527
+Cache-Tag: staticjsapp-video-player-ui-web-prod,staticjsapp-prod
+Cf-Cache-Status: DYNAMIC
+Server: cloudflare
+Cf-Ray: 8edebdeeac2ee527-TXL

@@ -1,0 +1,11 @@
+Content-Length: 166
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Location: /robots.txt?client_id=be4ac276b81af255624473a222e1155c&redirect_uri=https%3A%2F%2Faccounts.livechat.com%2Fdispatcher&response_type=code
+Permissions-Policy: camera=(), display-capture=(), geolocation=(), microphone=(), storage-access=*
+Referrer-Policy: strict-origin-when-cross-origin
+Uber-Trace-Id: 227c6b64e8353e6c00e71019c1ee612a:f6233ecae8fe1e61:0:1
+Vary: Accept-Encoding
+X-Content-Type-Options: nosniff
+Date: Fri, 06 Dec 2024 19:40:55 GMT
+Strict-Transport-Security: max-age=86400 ; includeSubDomains

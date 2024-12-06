@@ -1,0 +1,17 @@
+Content-Length: 1250
+Server: CloudFront
+Content-Type: text/html; charset=utf-8
+Date: Fri, 06 Dec 2024 19:39:21 GMT
+Last-Modified: Fri, 06 Dec 2024 16:12:21 GMT
+Accept-Ranges: bytes
+Etag: "67532265-4e2"
+Expires: Thu, 01 Jan 1970 00:00:01 GMT
+Cache-Control: no-cache
+Cache-Control: max-age=0, no-store
+Strict-Transport-Security: max-age=63072000; includeSubdomains; preload
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: default-src 'self' *.launchdarkly.com *.ada.support *.ada-dev.support *.ada-dev2.support *.ada-stage.support headway-widget.net browser-intake-datadoghq.com *.browser-intake-datadoghq.com *.ada.cx; connect-src 'unsafe-inline' *.posthog.com *.launchdarkly.com *.ada.support *.ada-dev.support *.ada-dev2.support *.ada-stage.support *.datadoghq.com datadog.com browser-intake-datadoghq.com *.browser-intake-datadoghq.com *.pusher.com wss://*.pusher.com sentry.io *.sentry.io *.okta.com *.vidyard.com *.ada.cx *.hubapi.com *.hscollectedforms.net *.hubspot.com https://*.chameleon.io; frame-src 'self' ada.cx *.ada.cx *.ada.support *.ada-dev.support *.ada-dev2.support *.ada-stage.support *.okta.com *.vidyard.com *.wistia.com https://fast.wistia.net https://headway-widget.net https://form.typeform.com https://app.svix.com https://*.chameleon.io https://www.youtube.com; base-uri 'self'; block-all-mixed-content; font-src 'self' https: data:; form-action 'self'; frame-ancestors 'self' *.ada.support; img-src 'self' https: data: https://*.chameleon.io blob:; media-src 'self' https: blob:; script-src 'unsafe-inline' *.launchdarkly.com *.ada.support *.ada-dev.support *.ada-dev2.support *.ada-stage.support blob: *.posthog.com *.headwayapp.co https://*.chameleon.io; script-src-attr 'none'; script-src-elem 'unsafe-inline' *.ada.cx *.ada.support *.ada-dev.support *.ada-dev2.support *.ada-stage.support *.posthog.com *.headwayapp.co *.storage.googleapis.com *.hs-scripts.com *.hs-banner.com *.hscollectedforms.net *.hs-analytics.net *.hscollectedforms.net *.hsadspixel.net *.hsleadflows.net https://*.chameleon.io; style-src 'self' https: 'unsafe-inline'; upgrade-insecure-requests; report-uri https://o38990.ingest.sentry.io/api/97224/security/?sentry_key=4e7b13b67aea4b12ada7bf728e8b3a7a;
+Via: 1.1 d81b69368e6f8be2907e338480e58682.cloudfront.net (CloudFront)
+X-Cache: Miss from cloudfront
+X-Amz-Cf-Pop: FRA60-P4
+X-Amz-Cf-Id: tCQV4YjDvZXkDVMzwrOwW8lJbze3ZBFNwaQPruXle9vE7Nks6vDd4g==
