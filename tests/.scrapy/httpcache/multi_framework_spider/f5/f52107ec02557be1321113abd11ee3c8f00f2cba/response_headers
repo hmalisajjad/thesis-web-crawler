@@ -1,0 +1,13 @@
+Date: Sat, 07 Dec 2024 17:28:33 GMT
+Content-Type: text/html
+Location: https://www.zendesk.com/chat/
+Expires: Sun, 08 Dec 2024 17:28:33 GMT
+Cache-Control: public, max-age=86400
+Content-Security-Policy: default-src * wss://*.zopim.com 'unsafe-inline' 'unsafe-eval'; frame-ancestors 'self' app.optimizely.com *.zendesk.com *.zendesk.co.jp *.zendesk.co.uk *.zendesk.com.br *.zendesk.com.mx *.zendesk.de *.zendesk.es *.zendesk.fr *.zendesk.kr *.zendesk.nl *.zendesk.tw *.zendesk.hk; font-src * data:; img-src * data:; media-src * blob:;worker-src 'self' blob:
+Cf-Cache-Status: MISS
+Set-Cookie: __cf_bm=7HQdWyehCoP8FBiK3mytejBM1IuQGN3XNK3AJ6vkdtU-1733592513-1.0.1.1-sIZ1Cu7L5rCKB_I95ycv3PDHz9C6lgFVZr7dWFbPuzfotRgq1H45Y_T6V60oaIfe2l9Dy2ym2AYM7kaMQu_gwQ; path=/; expires=Sat, 07-Dec-24 17:58:33 GMT; domain=.www.zendesk.com; HttpOnly; Secure; SameSite=None
+Set-Cookie: __cfruid=2ed595695570087368fec8e2b423110791513a8f-1733592513; path=/; domain=.www.zendesk.com; HttpOnly; Secure; SameSite=None
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=0; preload
+Server: cloudflare
+Cf-Ray: 8ee63b954be49213-FRA

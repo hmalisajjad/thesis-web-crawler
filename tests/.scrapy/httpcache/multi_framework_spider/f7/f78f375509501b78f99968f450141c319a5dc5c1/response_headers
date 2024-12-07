@@ -1,0 +1,12 @@
+Content-Length: 62
+Alt-Svc: h3=":443"; ma=2592000
+Cache-Control: public, max-age=0, must-revalidate
+Content-Encoding: br
+Content-Type: text/plain
+Date: Sat, 07 Dec 2024 17:05:01 GMT
+Etag: "a0d3890171cd37a0c690f1cbc9d8c31a"
+Last-Modified: Tue, 03 Dec 2024 11:48:58 GMT
+Server: Framer/32b700c
+Server-Timing: region;desc="eu-west-1", cache;desc="cached", ssg-status;desc="optimized", version;desc="32b700c"
+Strict-Transport-Security: max-age=31536000
+Vary: Accept-Encoding

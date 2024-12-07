@@ -1,0 +1,8 @@
+Content-Length: 54
+Alt-Svc: h3=":443"; ma=2592000
+Cache-Control: public, max-age=0, must-revalidate
+Content-Type: text/html; charset=utf-8
+Date: Sat, 07 Dec 2024 17:05:01 GMT
+Location: https://wotnot.io/
+Server: Framer/32b700c
+Strict-Transport-Security: max-age=31536000

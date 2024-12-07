@@ -19,10 +19,30 @@ import time
 from threading import Lock
 from urllib.parse import urlparse, urlunparse
 
+import shutil
+
+# Global toggle for Selenium usage
+selenium_enabled = True
+
+
+def enable_selenium(state: bool):
+    """Enable or disable Selenium for crawling."""
+    global selenium_enabled
+    selenium_enabled = state
+
+
 def normalize_url(url):
     """Normalize URLs for consistent deduplication."""
     parsed = urlparse(url)
     return urlunparse((parsed.scheme, parsed.netloc, parsed.path, '', '', ''))
+
+
+def clear_cache():
+    """Clear HTTP cache."""
+    cache_dir = Path(__file__).parent.parent.parent / "httpcache"
+    if cache_dir.exists():
+        shutil.rmtree(cache_dir)
+    logging.info("Cache cleared.")
 
 class MultiFrameworkSpider(scrapy.Spider):
     name = "multi_framework_spider"
@@ -97,14 +117,14 @@ class MultiFrameworkSpider(scrapy.Spider):
 
         self.logger.warning(f"Parsing URL: {normalized_url}")
         try:
-            # Load page in Selenium driver
-            self.driver.get(response.url)
-            WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-            time.sleep(5)  # Additional delay to ensure late-loading scripts have time to execute
-
-            # Get page source and parse it using BeautifulSoup
-            page_source = self.driver.page_source
-            soup = BeautifulSoup(page_source, "html.parser")
+            if selenium_enabled:
+                self.driver.get(response.url)
+                WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+                time.sleep(5)
+                page_source = self.driver.page_source
+                soup = BeautifulSoup(page_source, "html.parser")
+            else:
+                soup = BeautifulSoup(response.body, "html.parser")
 
             # Extract body text for keyword matching
             body_text = soup.get_text(separator=' ').lower()
@@ -214,7 +234,7 @@ reactor_lock = Lock()
 
 reactor_running = False
 
-def run_crawler_in_thread():
+def run_crawler_in_thread(urls=None):
     """Run the Scrapy spider in a thread-safe manner."""
     global reactor_running
     with reactor_lock:
@@ -259,7 +279,7 @@ def run_crawler_in_thread():
 
         @defer.inlineCallbacks
         def crawl():
-            yield runner.crawl(MultiFrameworkSpider)
+            yield runner.crawl(MultiFrameworkSpider, urls=urls)
             reactor.stop()
 
         if not reactor.running:
@@ -273,8 +293,8 @@ def run_crawler_in_thread():
             if temp_file.exists():
                 with open(temp_file, "r", encoding="utf-8") as f:
                     new_data = json.load(f)
-                temp_file.unlink()
                 merge_data(new_data)
+                temp_file.unlink()
         except Exception as e:
             logging.error(f"Error during spider execution: {e}")
         finally:
