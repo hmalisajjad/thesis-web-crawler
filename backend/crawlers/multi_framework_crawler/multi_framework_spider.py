@@ -132,6 +132,12 @@ class MultiFrameworkSpider(scrapy.Spider):
                             }
                         )
 
+            # Detect unconventional chatbot structures
+            for div in soup.find_all("div", class_="chat-widget"):
+                data_api = div.get("data-api")
+                if data_api and data_api not in detected_chatbots:
+                    detected_chatbots.add(data_api)
+
             # Additional detection in inline scripts
             for script in soup.find_all("script"):
                 if script.string and any(keyword.lower() in script.string.lower() for keyword in self.keywords):
@@ -152,6 +158,7 @@ class MultiFrameworkSpider(scrapy.Spider):
             }
         except Exception as e:
             self.logger.error(f"Error parsing {normalized_url}: {e}")
+
 
     def parse_iframe(self, response):
         normalized_url = normalize_url(response.url)

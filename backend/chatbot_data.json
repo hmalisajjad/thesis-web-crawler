@@ -1,13 +1,5 @@
 [
     {
-        "main_url": "https://hiverhq.com/blog/live-chat-widget",
-        "title": "403 Forbidden",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [],
-        "date_collected": "2024-12-07 00:45:44"
-    },
-    {
         "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
         "title": "IKEA Kontakt & Hilfe - IKEA Deutschland",
         "iframe_url": null,
@@ -17,7 +9,81 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2024-12-07 00:46:33"
+        "date_collected": "2024-12-07 01:37:26"
+    },
+    {
+        "main_url": "https://chat360.io/blog/website-chatbot-examples/",
+        "title": "Top 13 website chatbot examples of 2024 - Chat360",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://chat360.io/blog/website-chatbot-examples/",
+            "https://app.chat360.io/clientwidget/"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Dialogflow",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2024-12-07 01:37:26"
+    },
+    {
+        "main_url": "https://www.lg.com/in/",
+        "title": "Consumer & Home Electronics from LG | LG IN",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://lgelectronics.demdex.net/dest5.html",
+            "https://www.lg.com/in/",
+            "https://live-chat-static.sprinklr.com/assets/chat/session/Z_cZXsXAF/index.html",
+            "https://fledge.as.criteo.com/interest-group",
+            "about:blank",
+            "https://10617119.fls.doubleclick.net/activityi",
+            "https://gum.criteo.com/syncframe"
+        ],
+        "keywords_detected": [
+            "chat",
+            "live chat"
+        ],
+        "date_collected": "2024-12-07 01:39:01"
+    },
+    {
+        "main_url": "https://www.onepeloton.com/",
+        "title": "Peloton: The ultimate fitness experience",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://www.onepeloton.com/",
+            "https://peloton-sales.ada.support/chat/",
+            "https://peloton-sales.ada.support/embed/button/19ec9e2/index.html",
+            "https://peloton-sales.ada.support/embed/x-storage/19ec9e2/index.html"
+        ],
+        "keywords_detected": [
+            "chat",
+            "live chat",
+            "Communication"
+        ],
+        "date_collected": "2024-12-07 01:39:01"
+    },
+    {
+        "main_url": "https://www.hubspot.com/",
+        "title": "HubSpot | Software & Tools for your Business - Homepage",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://www.hubspot.com/",
+            "https://app.hubspot.com/conversations-visitor/53/threads/utk/86c6f58b3bfc4507a0ab1ea115d79f08",
+            "https://play.hubspotvideo.com/v/53/id/164914342160",
+            "https://app.hubspot.com/feedback-web-fetcher"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "HubSpot"
+        ],
+        "date_collected": "2024-12-07 01:39:01"
     },
     {
         "main_url": "https://www.intercom.com/",
@@ -34,80 +100,7 @@
             "Intercom",
             "HubSpot"
         ],
-        "date_collected": "2024-12-07 00:47:29"
-    },
-    {
-        "main_url": "https://chat360.io/blog/website-chatbot-examples/",
-        "title": "Top 13 website chatbot examples of 2024 - Chat360",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.chat360.io/clientwidget/",
-            "https://chat360.io/blog/website-chatbot-examples/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Dialogflow",
-            "HubSpot",
-            "Communication"
-        ],
-        "date_collected": "2024-12-07 00:47:29"
-    },
-    {
-        "main_url": "https://www.lg.com/in/",
-        "title": "Consumer & Home Electronics from LG | LG IN",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "about:blank",
-            "https://10617119.fls.doubleclick.net/activityi",
-            "https://fledge.as.criteo.com/interest-group",
-            "https://live-chat-static.sprinklr.com/assets/chat/session/Z_cZXsXAF/index.html",
-            "https://lgelectronics.demdex.net/dest5.html",
-            "https://www.lg.com/in/",
-            "https://gum.criteo.com/syncframe"
-        ],
-        "keywords_detected": [
-            "chat",
-            "live chat"
-        ],
-        "date_collected": "2024-12-07 00:47:29"
-    },
-    {
-        "main_url": "https://www.hubspot.com/",
-        "title": "HubSpot | Software & Tools for your Business - Homepage",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://app.hubspot.com/conversations-visitor/53/threads/utk/2bf159170bc04db29d5685a5423eab0c",
-            "https://play.hubspotvideo.com/v/53/id/164914342160",
-            "https://www.hubspot.com/",
-            "https://app.hubspot.com/feedback-web-fetcher"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-07 00:47:29"
-    },
-    {
-        "main_url": "https://www.onepeloton.com/",
-        "title": "Peloton: The ultimate fitness experience",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://peloton-sales.ada.support/embed/x-storage/19ec9e2/index.html",
-            "https://www.onepeloton.com/",
-            "https://peloton-sales.ada.support/embed/button/19ec9e2/index.html"
-        ],
-        "keywords_detected": [
-            "chat",
-            "live chat",
-            "Communication"
-        ],
-        "date_collected": "2024-12-07 00:47:29"
+        "date_collected": "2024-12-07 01:39:40"
     },
     {
         "main_url": "https://outgrow.co/",
@@ -125,7 +118,28 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-07 00:47:29"
+        "date_collected": "2024-12-07 01:39:41"
+    },
+    {
+        "main_url": "https://www.livechat.com/",
+        "title": "Business 💬 Live Chat Software for E-commerce | LiveChat",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://secure-lc.livechatinc.com/customer/action/open_chat",
+            "https://www.livechat.com/",
+            "https://accounts.livechat.com/static/hub.html",
+            "https://livechat.containers.piwik.pro/28a0a095-db17-4f24-8d11-19c9de6721cc/noscript.html"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "LiveChat",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2024-12-07 01:40:01"
     },
     {
         "main_url": "https://www.tawk.to/",
@@ -142,28 +156,7 @@
             "Tawk.to",
             "Communication"
         ],
-        "date_collected": "2024-12-07 00:47:46"
-    },
-    {
-        "main_url": "https://www.livechat.com/",
-        "title": "Business 💬 Live Chat Software for E-commerce | LiveChat",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://secure-lc.livechatinc.com/customer/action/open_chat",
-            "https://accounts.livechat.com/static/hub.html",
-            "https://livechat.containers.piwik.pro/28a0a095-db17-4f24-8d11-19c9de6721cc/noscript.html",
-            "https://www.livechat.com/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "LiveChat",
-            "HubSpot",
-            "Communication"
-        ],
-        "date_collected": "2024-12-07 00:47:46"
+        "date_collected": "2024-12-07 01:40:09"
     },
     {
         "main_url": "https://wotnot.io/",
@@ -178,7 +171,7 @@
             "live chat",
             "customer support"
         ],
-        "date_collected": "2024-12-07 00:47:56"
+        "date_collected": "2024-12-07 01:41:48"
     },
     {
         "main_url": "https://landbot.io/",
@@ -192,7 +185,7 @@
             "chatbot",
             "customer support"
         ],
-        "date_collected": "2024-12-07 00:48:03"
+        "date_collected": "2024-12-07 01:41:57"
     },
     {
         "main_url": "https://botsonic.com/",
@@ -207,7 +200,7 @@
             "customer support",
             "Zendesk"
         ],
-        "date_collected": "2024-12-07 00:48:12"
+        "date_collected": "2024-12-07 01:42:06"
     },
     {
         "main_url": "https://www.tidio.com/",
@@ -227,6 +220,6 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-07 00:48:22"
+        "date_collected": "2024-12-07 01:42:16"
     }
 ]
