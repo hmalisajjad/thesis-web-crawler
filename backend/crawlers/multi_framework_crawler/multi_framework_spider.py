@@ -109,20 +109,31 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.visited_urls = set()
 
     def parse(self, response):
-        normalized_url = normalize_url(response.url)
-        if normalized_url in self.visited_urls:
-            self.logger.warning(f"Skipping already visited URL: {normalized_url}")
-            return
-        self.visited_urls.add(normalized_url)
-
-        self.logger.warning(f"Parsing URL: {normalized_url}")
         try:
+            # Handle error responses
+            if response.status >= 400:
+                self.logger.warning(f"Skipping error response: {response.url} with status {response.status}")
+                return  # Skip processing this response
+
+            normalized_url = normalize_url(response.url)
+            if normalized_url in self.visited_urls:
+                self.logger.warning(f"Skipping already visited URL: {normalized_url}")
+                return
+            self.visited_urls.add(normalized_url)
+
+            self.logger.warning(f"Parsing URL: {normalized_url}")
+
             if selenium_enabled:
                 self.driver.get(response.url)
                 WebDriverWait(self.driver, 30).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
                 time.sleep(5)
                 page_source = self.driver.page_source
                 soup = BeautifulSoup(page_source, "html.parser")
+
+                # Check for CAPTCHAs
+                if "captcha" in page_source.lower() or soup.find("div", {"class": "captcha"}):
+                    self.logger.warning(f"CAPTCHA detected on {normalized_url}. Skipping...")
+                    return
             else:
                 soup = BeautifulSoup(response.body, "html.parser")
 
@@ -177,22 +188,36 @@ class MultiFrameworkSpider(scrapy.Spider):
                 "date_collected": time.strftime("%Y-%m-%d %H:%M:%S"),
             }
         except Exception as e:
-            self.logger.error(f"Error parsing {normalized_url}: {e}")
-
-
+            self.logger.error(f"Error parsing {response.url}: {e}")
+    
     def parse_iframe(self, response):
-        normalized_url = normalize_url(response.url)
-        if normalized_url in self.visited_iframe_urls:
-            self.logger.warning(f"Skipping already visited iframe: {normalized_url}")
-            return
-        self.visited_iframe_urls.add(normalized_url)
-
-        self.logger.warning(f"Parsing iframe: {normalized_url}")
         try:
-            self.driver.get(response.url)
-            WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-            page_source = self.driver.page_source
-            soup = BeautifulSoup(page_source, "html.parser")
+            # Handle error responses
+            if response.status >= 400:
+                self.logger.warning(f"Skipping error iframe response: {response.url} with status {response.status}")
+                return  # Skip processing this response
+
+            normalized_url = normalize_url(response.url)
+            if normalized_url in self.visited_iframe_urls:
+                self.logger.warning(f"Skipping already visited iframe: {normalized_url}")
+                return
+            self.visited_iframe_urls.add(normalized_url)
+
+            self.logger.warning(f"Parsing iframe: {normalized_url}")
+
+            if selenium_enabled:
+                self.driver.get(response.url)
+                WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+                time.sleep(5)
+                page_source = self.driver.page_source
+                soup = BeautifulSoup(page_source, "html.parser")
+
+                # Check for CAPTCHAs
+                if "captcha" in page_source.lower() or soup.find("div", {"class": "captcha"}):
+                    self.logger.warning(f"CAPTCHA detected in iframe {normalized_url}. Skipping...")
+                    return
+            else:
+                soup = BeautifulSoup(response.body, "html.parser")
 
             detected_chatbots = set()
 
@@ -223,7 +248,9 @@ class MultiFrameworkSpider(scrapy.Spider):
             }
 
         except Exception as e:
-            self.logger.error(f"Error parsing iframe {normalized_url}: {e}")
+            self.logger.error(f"Error parsing iframe {response.url}: {e}")
+
+
 
     def closed(self, reason):
         """Close WebDriver when the spider stops."""
@@ -234,7 +261,7 @@ reactor_lock = Lock()
 
 reactor_running = False
 
-def run_crawler_in_thread(urls=None):
+def run_crawler_in_thread(urls=None, max_pages=None):
     """Run the Scrapy spider in a thread-safe manner."""
     global reactor_running
     with reactor_lock:
@@ -265,6 +292,9 @@ def run_crawler_in_thread(urls=None):
             item for item in new_data if (item["main_url"], item.get("iframe_url")) not in existing_urls
         ]
         merged_data = existing_data + new_data_filtered
+
+        if max_pages:
+            merged_data = merged_data[:max_pages]
 
         with open(data_file, "w", encoding="utf-8") as f:
             json.dump(merged_data, f, ensure_ascii=False, indent=4)
@@ -302,3 +332,4 @@ def run_crawler_in_thread(urls=None):
                 reactor_running = False
 
     threading.Thread(target=background_task, daemon=True).start()
+
