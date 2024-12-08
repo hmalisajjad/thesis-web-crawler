@@ -14,7 +14,8 @@ class TestEthicalCompliance(unittest.TestCase):
 
     def test_no_personal_data_storage(self):
         sensitive_fields = ["email", "phone", "address"]
-        with open("backend/chatbot_data.json", "r", encoding="utf-8") as file:
+        file_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '../backend/chatbot_data.json'))
+        with open(file_path, "r", encoding="utf-8") as file:
             data = json.load(file)
         for item in data:
             for field in sensitive_fields:

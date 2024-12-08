@@ -5,7 +5,8 @@ BASE_URL = "http://localhost:5000"
 
 class TestAPI(unittest.TestCase):
     def test_start_crawl(self):
-        response = requests.post(f"{BASE_URL}/start-crawl")
+        payload = {"dataset_size": 10}
+        response = requests.post(f"{BASE_URL}/start-crawl", json=payload)  
         self.assertEqual(response.status_code, 200)
 
     def test_get_results(self):

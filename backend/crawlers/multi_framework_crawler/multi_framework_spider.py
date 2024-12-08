@@ -46,21 +46,13 @@ def clear_cache():
 
 class MultiFrameworkSpider(scrapy.Spider):
     name = "multi_framework_spider"
-    custom_settings = {
-        'ROBOTSTXT_OBEY': True,
-        'USER_AGENT': 'ChatbotCrawler (+http://localhost)',
-        'DOWNLOAD_DELAY': 0.2,  # Reduced delay for faster crawling
-        'CONCURRENT_REQUESTS': 8,  # Increased concurrency
-        'CONCURRENT_REQUESTS_PER_DOMAIN': 8,
-        'DEPTH_LIMIT': 3,
-        'HTTPCACHE_ENABLED': True,  # Enable HTTP caching to reduce duplicate requests
-        'LOG_LEVEL': 'WARNING',  # Change log level to WARNING
-    }
 
-    def __init__(self, urls=None, *args, **kwargs):
+    def __init__(self, urls=None, dataset_size=None, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.visited_iframe_urls = set()
         self.visited_chatbot_urls = set()
+        self.dataset_size = dataset_size  # Store the dataset size
+        self.visited_urls = set()
 
         try:
             self.logger.info("Initializing ChromeDriver...")
@@ -84,13 +76,15 @@ class MultiFrameworkSpider(scrapy.Spider):
             raise RuntimeError("Unable to initialize ChromeDriver.") from e
 
         if urls:
-            self.start_urls = urls
+            # Apply dataset size limit
+            self.start_urls = urls[:dataset_size] if dataset_size else urls
         else:
             # Load from seed file
             seed_path = Path(__file__).parent.parent.parent / "seed_urls.txt"
             try:
                 with open(seed_path, "r", encoding="utf-8") as f:
-                    self.start_urls = [url.strip() for url in f.readlines() if url.strip()]
+                    all_urls = [url.strip() for url in f.readlines() if url.strip()]
+                    self.start_urls = all_urls[:dataset_size] if dataset_size else all_urls
                     self.logger.info(f"Loaded {len(self.start_urls)} seed URLs from {seed_path}")
             except FileNotFoundError:
                 self.logger.error(f"Seed file not found at {seed_path}. No URLs will be crawled.")
@@ -261,7 +255,7 @@ reactor_lock = Lock()
 
 reactor_running = False
 
-def run_crawler_in_thread(urls=None, max_pages=None):
+def run_crawler_in_thread(urls=None, dataset_size=None):
     """Run the Scrapy spider in a thread-safe manner."""
     global reactor_running
     with reactor_lock:
@@ -293,9 +287,6 @@ def run_crawler_in_thread(urls=None, max_pages=None):
         ]
         merged_data = existing_data + new_data_filtered
 
-        if max_pages:
-            merged_data = merged_data[:max_pages]
-
         with open(data_file, "w", encoding="utf-8") as f:
             json.dump(merged_data, f, ensure_ascii=False, indent=4)
 
@@ -309,7 +300,8 @@ def run_crawler_in_thread(urls=None, max_pages=None):
 
         @defer.inlineCallbacks
         def crawl():
-            yield runner.crawl(MultiFrameworkSpider, urls=urls)
+            # Pass dataset_size to the spider
+            yield runner.crawl(MultiFrameworkSpider, urls=urls, dataset_size=dataset_size)
             reactor.stop()
 
         if not reactor.running:
@@ -332,4 +324,5 @@ def run_crawler_in_thread(urls=None, max_pages=None):
                 reactor_running = False
 
     threading.Thread(target=background_task, daemon=True).start()
+
 

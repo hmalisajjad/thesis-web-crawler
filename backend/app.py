@@ -12,38 +12,43 @@ CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
 logger = logging.getLogger(__name__)
 
+# Global variable to track crawl status
 crawl_in_progress = False
+lock = threading.Lock()
 
 
 @app.route('/start-crawl', methods=['POST'])
 def start_crawl():
     global crawl_in_progress
 
-    if crawl_in_progress:
-        logger.warning("Crawl already in progress.")
-        return jsonify({"success": False, "status": "Crawl already in progress"}), 400
+    with lock:
+        if crawl_in_progress:
+            logger.warning("Crawl already in progress.")
+            return jsonify({"success": False, "status": "Crawl already in progress"}), 400
 
-    dataset_size = request.json.get('dataset_size', None)
-    if dataset_size is None:
-        return jsonify({"success": False, "status": "Missing dataset size parameter"}), 400
+        dataset_size = request.json.get('dataset_size', None)
+        if dataset_size is None:
+            return jsonify({"success": False, "status": "Missing dataset size parameter"}), 400
 
-    crawl_in_progress = True
+        crawl_in_progress = True
 
     def background_crawl():
         global crawl_in_progress
         try:
-            run_crawler_in_thread()  # Modify this if dataset_size needs to be used
+            logging.info(f"Starting crawl for dataset size: {dataset_size}")
+            run_crawler_in_thread(dataset_size=dataset_size)  # Pass dataset_size here
             logger.info("Crawl completed successfully.")
         except Exception as e:
-            logger.error(f"Error during crawling: {e}")
+            logger.error(f"Error during crawling for dataset size {dataset_size}: {e}")
         finally:
-            crawl_in_progress = False
+            with lock:
+                crawl_in_progress = False
 
     thread = threading.Thread(target=background_crawl)
     thread.daemon = True
     thread.start()
 
-    logger.info("Crawl started in the background.")
+    logger.info(f"Crawl started for dataset size {dataset_size}.")
     return jsonify({"success": True, "status": "Crawl started in background"}), 200
 
 
@@ -71,7 +76,7 @@ def get_results():
 @app.route('/crawl-status', methods=['GET'])
 def crawl_status():
     global crawl_in_progress
-    logger.info(f"Crawl status requested: {'In Progress' if crawl_in_progress else 'Not In Progress'}")
+    logger.info(f"Crawl status requested. In progress: {crawl_in_progress}")
     return jsonify({"in_progress": crawl_in_progress}), 200
 
 
