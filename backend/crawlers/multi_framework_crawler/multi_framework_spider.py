@@ -96,7 +96,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.keywords = [
             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
             "Zendesk", "Intercom", "Drift", "OpenAI", "Tawk", "LiveChat", "Tawk.to",
-            "Botpress", "Dialogflow", "Watson Assistant", "HubSpot", "Kommunicate",
+            "Botpress", "Dialogflow", "Assistant", "HubSpot", "Kommunicate",
             "Communication", "conversational bot", "Microsoft Bot Framework",
             "bot.js", "chatbot.js", "chat-widget", "livechat.min.js", "webchat"
         ]
