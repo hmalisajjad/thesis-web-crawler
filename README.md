@@ -1,107 +1,107 @@
-#**Web Crawler for Chatbot Detection**<br><br>
+#**Web Crawler for Chatbot Detection**<br>
 Chatbots are becoming increasingly popular on websites as they offer automated customer support. However, there is a lack of comprehensive datasets that document the various chatbot implementations across different websites. Existing datasets are often limited to specific types of chatbots or interactions, making them less useful for general research. This thesis aims to fill this gap by developing a web crawler capable of discovering and gathering different chatbots in websites. The objective is to create a dataset covering a wide range of chatbot implementations ‘in the wild’, as a basis for further research
 
-##**Prerequisites**
-Before running the project, ensure you have the following installed:
+##**Prerequisites**<br>
+Before running the project, ensure you have the following installed:<br>
 
-Python 3.12+
-Scrapy
-Flask
-BeautifulSoap
-Selenium
-Node.js and npm
-Google Chrome
-ChromeDriver
-Download ChromeDriver and Update the ChromeDriver path in multi_framework_spider.py under the Service initialization:
-###**chrome_service = Service("C:\\WebDrivers\\chromedriver-win64\\chromedriver.exe")**
+Python 3.12+<br>
+Scrapy<br>
+Flask<br>
+BeautifulSoap<br>
+Selenium<br>
+Node.js and npm<br>
+Google Chrome<br>
+ChromeDriver<br>
+Download ChromeDriver and Update the ChromeDriver path in multi_framework_spider.py under the Service initialization:<br>
+###**chrome_service = Service("C:\\WebDrivers\\chromedriver-win64\\chromedriver.exe")**<br>
 
-#**Important Notes**
-Please make sure ChromeDriver is installed and the path is correctly configured in multi_framework_spider.py.
-So that you will achieve successful dynamic crawling, 
-###**update the ChromeDriver location:**
-chrome_service = Service("C:\\Path\\To\\chromedriver.exe")
+#**Important Notes**<br>
+Please make sure ChromeDriver is installed and the path is correctly configured in multi_framework_spider.py.<br>
+So that you will achieve successful dynamic crawling, <br>
+###**update the ChromeDriver location:**<br>
+chrome_service = Service("C:\\Path\\To\\chromedriver.exe")<br>
 
-##**Installation**
+##**Installation**<br>
 
-###**Backend Setup**
-Clone the repository:(
-    git clone <repository_url>
-    cd thesis-web-crawler
-)
+###**Backend Setup**<br>
+Clone the repository:(<br>
+    git clone <repository_url><br>
+    cd thesis-web-crawler<br>
+)<br>
 
-Navigate to the Backend directory:
-cd backend
+Navigate to the Backend directory:<br>
+cd backend<br>
 
-###**Set up a virtual environment:**
-python -m venv venv
+###**Set up a virtual environment:**<br>
+python -m venv venv<br>
 
-###**Activate the virtual environment:**
-venv\Scripts\activate
+###**Activate the virtual environment:**<br>
+venv\Scripts\activate<br>
 
-###**Install the required Python packages:**
-pip install -r requirements.txt
+###**Install the required Python packages:**<br>
+pip install -r requirements.txt<br>
 
-###**Frontend Setup**
-Navigate to the frontend directory:
-cd frontend
+###**Frontend Setup**<br>
+Navigate to the frontend directory:<br>
+cd frontend<br>
 
-###**Install dependencies:**
-npm install
+###**Install dependencies:**<br>
+npm install<br>
 
-##**How to Run Crawler**
+##**How to Run Crawler**<br>
 
-###**For Backend**
-Navigate to the Backend directory:
-cd backend
+###**For Backend**<br>
+Navigate to the Backend directory:<br>
+cd backend<br>
 
-###**Activate the virtual environment:**
-venv\Scripts\activate
+###**Activate the virtual environment:**<br>
+venv\Scripts\activate<br>
 
-###**Start the Flask server:**
-python app.py
-The backend will run on http://localhost:5000.
+###**Start the Flask server:**<br>
+python app.py<br>
+The backend will run on http://localhost:5000.<br>
 
-###**For Frontend**
-Navigate to the frontend directory:
-cd frontend
+###**For Frontend**<br>
+Navigate to the frontend directory:<br>
+cd frontend<br>
 
-###**Start the React application:**
-npm start
-The frontend will run on http://localhost:3000.
+###**Start the React application:**<br>
+npm start<br>
+The frontend will run on http://localhost:3000.<br>
 
-##**Testing**
+##**Testing**<br>
 
-###**Set up a virtual environment:**
-python -m venv venv
+###**Set up a virtual environment:**<br>
+python -m venv venv<br>
 
-##**Activate the virtual environment:**
-venv\Scripts\activate
+##**Activate the virtual environment:**<br>
+venv\Scripts\activate<br>
 
-Navigate to the test directory:
-cd tests
+Navigate to the test directory:<br>
+cd tests<br>
 
-##**Run the tests using pytest:**
+##**Run the tests using pytest:**<br>
 
-###**For Accuracy**
-pytest test_accuracy.py
+###**For Accuracy**<br>
+pytest test_accuracy.py<br>
 
-###**For Scalability**
-pytest test_scalability.py
+###**For Scalability**<br>
+pytest test_scalability.py<br>
 
-###**For Flexibility**
-pytest test_flexibility.py
+###**For Flexibility**<br>
+pytest test_flexibility.py<br>
 
-###**For Metadata**
-pytest test_metadata.py
+###**For Metadata**<br>
+pytest test_metadata.py<br>
 
-###**For Efficiency**
-pytest test_efficiency.py
+###**For Efficiency**<br>
+pytest test_efficiency.py<br>
 
-###**For Robustness**
-pytest test_robustness.py
+###**For Robustness**<br>
+pytest test_robustness.py<br>
 
-###**For Ethical_compliance**
-pytest test_ethical_compliance.py
+###**For Ethical_compliance**<br>
+pytest test_ethical_compliance.py<br>
 
-###**For API**
-pytest test_api.py
+###**For API**<br>
+pytest test_api.py<br>
