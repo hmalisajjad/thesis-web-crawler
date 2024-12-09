@@ -1,4 +1,4 @@
-#**Web Crawler for Chatbot Detection**
+#**Web Crawler for Chatbot Detection**<br><br>
 Chatbots are becoming increasingly popular on websites as they offer automated customer support. However, there is a lack of comprehensive datasets that document the various chatbot implementations across different websites. Existing datasets are often limited to specific types of chatbots or interactions, making them less useful for general research. This thesis aims to fill this gap by developing a web crawler capable of discovering and gathering different chatbots in websites. The objective is to create a dataset covering a wide range of chatbot implementations ‘in the wild’, as a basis for further research
 
 ##**Prerequisites**
