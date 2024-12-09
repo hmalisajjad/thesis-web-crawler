@@ -26,19 +26,16 @@ selenium_enabled = True
 
 
 def enable_selenium(state: bool):
-    """Enable or disable Selenium for crawling."""
     global selenium_enabled
     selenium_enabled = state
 
 
 def normalize_url(url):
-    """Normalize URLs for consistent deduplication."""
     parsed = urlparse(url)
     return urlunparse((parsed.scheme, parsed.netloc, parsed.path, '', '', ''))
 
 
 def clear_cache():
-    """Clear HTTP cache."""
     cache_dir = Path(__file__).parent.parent.parent / "httpcache"
     if cache_dir.exists():
         shutil.rmtree(cache_dir)
@@ -51,7 +48,7 @@ class MultiFrameworkSpider(scrapy.Spider):
         super().__init__(*args, **kwargs)
         self.visited_iframe_urls = set()
         self.visited_chatbot_urls = set()
-        self.dataset_size = dataset_size  # Store the dataset size
+        self.dataset_size = dataset_size 
         self.visited_urls = set()
 
         try:
@@ -66,17 +63,16 @@ class MultiFrameworkSpider(scrapy.Spider):
             options.add_argument("--disable-blink-features=AutomationControlled")
             options.add_argument("--allow-running-insecure-content")
             options.add_argument("--disable-web-security")
-            options.add_argument("--ignore-ssl-errors")  # Ignore SSL errors
-            options.add_argument("--ignore-certificate-errors")  # Ignore certificate errors
-            options.add_argument("--disable-software-rasterizer")  # Fix pixel format errors
-            options.add_argument("--enable-unsafe-swiftshader")  # Swiftshader fallback for rendering
+            options.add_argument("--ignore-ssl-errors")  
+            options.add_argument("--ignore-certificate-errors")  
+            options.add_argument("--disable-software-rasterizer")  
+            options.add_argument("--enable-unsafe-swiftshader")  
             self.driver = webdriver.Chrome(service=chrome_service, options=options)
         except Exception as e:
             self.logger.error("Failed to initialize ChromeDriver", exc_info=True)
             raise RuntimeError("Unable to initialize ChromeDriver.") from e
 
         if urls:
-            # Apply dataset size limit
             self.start_urls = urls[:dataset_size] if dataset_size else urls
         else:
             # Load from seed file
@@ -107,7 +103,7 @@ class MultiFrameworkSpider(scrapy.Spider):
             # Handle error responses
             if response.status >= 400:
                 self.logger.warning(f"Skipping error response: {response.url} with status {response.status}")
-                return  # Skip processing this response
+                return  
 
             normalized_url = normalize_url(response.url)
             if normalized_url in self.visited_urls:
@@ -163,7 +159,6 @@ class MultiFrameworkSpider(scrapy.Spider):
                 if data_api and data_api not in detected_chatbots:
                     detected_chatbots.add(data_api)
 
-            # Additional detection in inline scripts
             for script in soup.find_all("script"):
                 if script.string and any(keyword.lower() in script.string.lower() for keyword in self.keywords):
                     self.logger.debug(f"Detected chatbot-related keyword in script tag.")
@@ -189,7 +184,7 @@ class MultiFrameworkSpider(scrapy.Spider):
             # Handle error responses
             if response.status >= 400:
                 self.logger.warning(f"Skipping error iframe response: {response.url} with status {response.status}")
-                return  # Skip processing this response
+                return
 
             normalized_url = normalize_url(response.url)
             if normalized_url in self.visited_iframe_urls:
@@ -256,7 +251,6 @@ reactor_lock = Lock()
 reactor_running = False
 
 def run_crawler_in_thread(urls=None, dataset_size=None):
-    """Run the Scrapy spider in a thread-safe manner."""
     global reactor_running
     with reactor_lock:
         if reactor_running:

@@ -115,7 +115,7 @@ class TestAccuracy(unittest.TestCase):
             <iframe src="{url}/chatbot-widget"></iframe>
             </body></html>
             '''
-            self.spider.driver.page_source = html  # Update the mocked page_source here
+            self.spider.driver.page_source = html 
 
             response = HtmlResponse(url=url, body=html, encoding='utf-8')
             results = list(self.spider.parse(response))

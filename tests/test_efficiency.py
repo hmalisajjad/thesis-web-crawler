@@ -39,7 +39,7 @@ class TestEfficiency(unittest.TestCase):
         process = Process(target=crawl_task, args=(urls,))
         process.start()
         start_time = time.time()
-        process.join()  # Wait for the process to finish
+        process.join()  
         end_time = time.time()
         return end_time - start_time
 

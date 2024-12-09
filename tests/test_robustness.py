@@ -25,7 +25,7 @@ class TestRobustness(unittest.TestCase):
     def test_logging_and_recovery(self):
         """Test if the spider logs errors and continues crawling."""
         problematic_url = "http://example.com/problematic"
-        response = HtmlResponse(url=problematic_url, status=403)  # Simulating a forbidden response
+        response = HtmlResponse(url=problematic_url, status=403)  
         try:
             list(self.spider.parse(response))
             # Check for logging (mock the logging or verify expected behavior)

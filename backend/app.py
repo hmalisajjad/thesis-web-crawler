@@ -36,7 +36,7 @@ def start_crawl():
         global crawl_in_progress
         try:
             logging.info(f"Starting crawl for dataset size: {dataset_size}")
-            run_crawler_in_thread(dataset_size=dataset_size)  # Pass dataset_size here
+            run_crawler_in_thread(dataset_size=dataset_size) 
             logger.info("Crawl completed successfully.")
         except Exception as e:
             logger.error(f"Error during crawling for dataset size {dataset_size}: {e}")
