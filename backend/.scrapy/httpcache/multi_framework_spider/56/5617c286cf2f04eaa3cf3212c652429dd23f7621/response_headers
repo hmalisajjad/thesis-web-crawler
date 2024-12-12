@@ -1,0 +1,26 @@
+Date: Thu, 12 Dec 2024 21:54:48 GMT
+Content-Type: text/plain; charset=UTF-8
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Methods: GET,OPTIONS,PATCH,DELETE,POST,PUT
+Access-Control-Allow-Headers: X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version
+Cache-Control: public, max-age=0
+Last-Modified: Wed, 11 Dec 2024 15:47:39 GMT
+Etag: W/"82-193b6678978"
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+Cf-Cache-Status: BYPASS
+Set-Cookie: INGRESSCOOKIE=1734040489.766.1104.808837|2d4400dda9ef353039083b69b4e647c2; Path=/; Secure; HttpOnly
+Server-Timing: cfCacheStatus;desc="BYPASS"
+Server-Timing: cfL4;desc="?proto=TCP&rtt=7254&min_rtt=6914&rtt_var=2613&sent=5&recv=5&lost=0&retrans=0&sent_bytes=2893&recv_bytes=842&delivery_rate=437354&cwnd=198&unsent_bytes=0&cid=445b34fbdb26e5d1&ts=155&x=0"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=3q6A3kL7RIU0pd6TprIP0P8mlKPSw%2FlPRSqIcmZFdFRw%2Bh0%2FPev3OnUiFyUimmVwQD2V7tMLZjxt9GPetUHNzU%2FfXmJWsrxQzCFUh7809gB7nqbLKZk%2FzwRjwg%3D%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Expect-Ct: max-age=86400, enforce
+Referrer-Policy: same-origin
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 1; mode=block
+Server: cloudflare
+Cf-Ray: 8f10f47e5c08e52d-TXL
+Content-Encoding: br
+Alt-Svc: h3=":443"; ma=86400

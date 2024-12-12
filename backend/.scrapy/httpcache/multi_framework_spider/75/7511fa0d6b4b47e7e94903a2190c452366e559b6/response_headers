@@ -1,0 +1,21 @@
+Server: nginx
+Date: Thu, 12 Dec 2024 21:54:49 GMT
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Set-Cookie: pll_language=deleted; expires=Thu, 01 Jan 1970 00:00:01 GMT; Max-Age=0
+Set-Cookie: pll_language=en; expires=Fri, 13 Dec 2024 21:54:48 GMT; Max-Age=86400; path=/; secure; SameSite=Lax
+Set-Cookie: pll_language=en; expires=Fri, 12 Dec 2025 21:54:48 GMT; Max-Age=31536000; secure; SameSite=Lax
+Content-Security-Policy: default-src https: data: 'self' vimeo.com youtube.com googletagmanager.com analytics.tiktok.com consent.cookiebot.com ade.googlesyndication.com google-analytics.com consentcdn.cookiebot.com region1.google-analytics.comservice.giosg.com2548.clients.giosgusercontent.com cdn.giosgusercontent.com maps.hoas.fi imghoas.fi npcmu07k9q-dsn.algolia.net; script-src https: 'self' 'unsafe-inline' 'unsafe-eval'; style-src https: 'self' 'unsafe-inline'; img-src https: 'self' data: ; report-uri /csp/csp-report
+Link: <https://hoas.fi/>; rel=shortlink
+X-Container: hoas_acf843
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+Referrer-Policy: strict-origin-when-cross-origin
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Content-Type-Options: nosniff
+Content-Encoding: gzip
+X-Proxy-Cache: MISS P: A: N: H:0 O: S:
+X-Frame-Options: SAMEORIGIN
+X-Edge-Location: FI-H1
+X-Powered-By: Seravo
+X-Seravo-Request-Id: 97278a941bda3851630a7f3bba1a4443

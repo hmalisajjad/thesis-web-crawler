@@ -1,0 +1,9 @@
+Date: Thu, 12 Dec 2024 22:14:40 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+Access-Control-Allow-Methods: GET, PUT, POST, DELETE, PATCH, OPTIONS
+Access-Control-Allow-Headers: DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization
+Cache-Control: no-cache
+Content-Encoding: br

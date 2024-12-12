@@ -1,0 +1,16 @@
+Content-Type: text/html
+Last-Modified: Tue, 03 Dec 2024 12:30:22 GMT
+Content-Encoding: gzip
+X-Amz-Server-Side-Encryption: AES256
+Server: AmazonS3
+Date: Thu, 12 Dec 2024 21:54:48 GMT
+Cache-Control: public, max-age=0, must-revalidate
+Etag: W/"f88aed42bdee295db04fe3259e2814e5"
+Vary: accept-encoding
+Vary: Origin
+X-Cache: Hit from cloudfront
+Via: 1.1 b43c04a791e8dcb8ddb6bb0847fcf95a.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: FRA60-P3
+X-Amz-Cf-Id: FX5ohe2HdcssLFnqL9q4CO6x-WFM-Qyt7muXGr5un77brbmRrXfUmA==
+X-Content-Type-Options: nosniff
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

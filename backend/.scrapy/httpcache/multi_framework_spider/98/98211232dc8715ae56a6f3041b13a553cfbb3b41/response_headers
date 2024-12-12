@@ -1,0 +1,12 @@
+Content-Length: 74
+Accept-Ranges: bytes
+Age: 0
+Cache-Control: public,max-age=0,must-revalidate
+Cache-Status: "Netlify Edge"; fwd=miss
+Content-Security-Policy: frame-ancestors 'self' *.chatbot.com;
+Content-Type: text/plain; charset=UTF-8
+Date: Thu, 12 Dec 2024 22:13:38 GMT
+Etag: "005796a06df1b90e4f063d73bc088b34-ssl"
+Server: Netlify
+Strict-Transport-Security: max-age=31536000
+X-Nf-Request-Id: 01JEYEYHJTHPGBCYCGAREHQN4N

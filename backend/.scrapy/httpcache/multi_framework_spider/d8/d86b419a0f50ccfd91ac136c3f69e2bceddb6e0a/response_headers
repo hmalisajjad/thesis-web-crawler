@@ -1,0 +1,22 @@
+Date: Thu, 12 Dec 2024 22:13:45 GMT
+Content-Type: text/html; charset=utf-8
+Cache-Control: private
+Vary: Accept-Encoding
+X-Aspnetmvc-Version: 5.2
+App-Cache: https://chatbottle.co/bots
+App-Cache: 12/12/2024
+App-Cache: 12/1/2024-12/1/2024
+App-Cache: -bm_c
+X-Frame-Options: SAMEORIGIN
+X-Frame-Options: DENY
+Set-Cookie: __RequestVerificationToken=_gtvTHVslQptOlrZ7Ru9sQ3oFVxp3sKb11bmDxDIbcVQFS7G0DcxaM5MKLqQq7kwLF6NVqRu1NUmz4jFHgCd4yL3OGizIRH9q_36cMhGWCI1; path=/; HttpOnly
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+Cf-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=9sF0Vy89nw5NuQVf8cUTDbwZUzt9Qc4ZMIedmhpSK8BKt6DX3hgWk68urgAngVosX4h83PYarKbcQywySdnEEKoXix3TQgGwHNE%2BhJT1dh9%2BtkACXXZ8mlY7aoBktYaR"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 8f111038ef5dca95-HAM
+Content-Encoding: br
+Alt-Svc: h3=":443"; ma=86400
+Server-Timing: cfL4;desc="?proto=TCP&rtt=16834&min_rtt=16719&rtt_var=4909&sent=8&recv=7&lost=0&retrans=0&sent_bytes=4485&recv_bytes=1085&delivery_rate=242176&cwnd=223&unsent_bytes=0&cid=db3bf9bf49d9654f&ts=7158&x=0"

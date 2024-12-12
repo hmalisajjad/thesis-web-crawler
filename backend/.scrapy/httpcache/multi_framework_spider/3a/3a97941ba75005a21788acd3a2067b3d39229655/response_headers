@@ -1,0 +1,38 @@
+Date: Thu, 12 Dec 2024 21:54:49 GMT
+Content-Type: text/plain; charset=utf-8
+X-Sorting-Hat-Podid: 253
+X-Sorting-Hat-Shopid: 7298908230
+X-Storefront-Renderer-Rendered: 1
+Set-Cookie: keep_alive=db4e3d13-2245-4b91-ab04-34b735aad110; path=/; expires=Thu, 12 Dec 2024 22:24:49 GMT; HttpOnly; SameSite=Lax
+Set-Cookie: secure_customer_sig=; path=/; expires=Fri, 12 Dec 2025 21:54:49 GMT; secure; HttpOnly; SameSite=Lax
+Set-Cookie: localization=US; path=/; expires=Fri, 12 Dec 2025 21:54:49 GMT; SameSite=Lax
+Set-Cookie: _tracking_consent=%7B%22con%22%3A%7B%22CMP%22%3A%7B%22a%22%3A%22%22%2C%22m%22%3A%22%22%2C%22p%22%3A%22%22%2C%22s%22%3A%22%22%7D%7D%2C%22v%22%3A%222.1%22%2C%22region%22%3A%22DESN%22%2C%22reg%22%3A%22%22%2C%22purposes%22%3A%7B%22p%22%3Atrue%2C%22a%22%3Atrue%2C%22m%22%3Atrue%2C%22t%22%3Atrue%7D%2C%22display_banner%22%3Afalse%2C%22sale_of_data_region%22%3Afalse%2C%22consent_id%22%3A%227B3C4234-a102-490E-9b20-a760c7ab7965%22%7D; domain=jamieandi.myshopify.com; path=/; expires=Fri, 12 Dec 2025 21:54:49 GMT; SameSite=Lax
+Set-Cookie: _shopify_y=092a489e-ac8a-4bed-ba9b-dcfcce679da7; Expires=Fri, 12-Dec-25 21:54:49 GMT; Domain=jamieandi.myshopify.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_s=a3b6298b-b6d8-4fd6-998a-2d080a76d1af; Expires=Thu, 12-Dec-24 22:24:49 GMT; Domain=jamieandi.myshopify.com; Path=/; SameSite=Lax
+X-Shopify-Nginx-No-Cookies: 0
+Link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin
+Etag: "cacheable:1f27b82fba1ebbe143b9ff42c62c2385"
+Content-Encoding: br
+X-Cache: miss
+X-Frame-Options: DENY
+Content-Security-Policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+Strict-Transport-Security: max-age=7889238
+X-Shopid: 7298908230
+X-Shardid: 253
+Vary: Accept
+Content-Language: en-US
+Powered-By: Shopify
+Server-Timing: processing;dur=17, db;dur=4, db_async;dur=2.0, asn;desc="680", edge;desc="HAM", country;desc="DE", theme;desc="124668248237", servedBy;desc="qspf", requestID;desc="85fa2787-8979-431f-9ecd-859b47992759-1734040488"
+Server-Timing: cfRequestDuration;dur=61.000109
+X-Dc: gcp-europe-west4,gcp-europe-west1,gcp-europe-west1
+X-Request-Id: 85fa2787-8979-431f-9ecd-859b47992759-1734040488
+Alt-Svc: h3=":443"; ma=86400
+Cf-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=LMsArX%2BQDqGb96qwCVXNF3lMP8a1A86DVDRYuBvVvD%2BymQSFfohRTUtzd9T%2FjuQ6%2BASzkhtXNseWD5xLhfuctS%2BQ1EUgj%2FJdIYbZfPyjIJp7QklAtKr4Ws7AP89Yh8mtrLluqIUadLSz"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+Cf-Ray: 8f10f480285262c1-HAM

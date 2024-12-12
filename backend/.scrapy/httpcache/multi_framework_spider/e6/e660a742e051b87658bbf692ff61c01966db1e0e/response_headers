@@ -1,0 +1,15 @@
+Content-Length: 406
+Server: AkamaiGHost
+Mime-Version: 1.0
+Content-Type: text/html
+X-Reference-Error: 18.32d53e17.1734040488.67ab27c
+Expires: Thu, 12 Dec 2024 21:54:48 GMT
+Date: Thu, 12 Dec 2024 21:54:48 GMT
+Set-Cookie: akainst=AM; path=/; domain=.www2.hm.com
+Set-Cookie: akamref=en_us; path=/; domain=www2.hm.com
+Set-Cookie: akavpau_www2_en_us=1734040788~id=1dce6836831efd0094b5f97062c3dd36; Path=/; HttpOnly; Secure; SameSite=None
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=1
+Server-Timing: ak_p; desc="1734040488679_389993778_108704380_26_50473_12_15_-";dur=1
+Link: <https://fabric.hmgroup.com>;rel="preconnect",<https://s1-cdn.hm.com>;rel="preconnect"
+Strict-Transport-Security: max-age=31536000; includeSubDomains

@@ -1,0 +1,15 @@
+Date: Thu, 12 Dec 2024 22:13:44 GMT
+Content-Type: text/html; charset=utf-8
+X-Frame-Options: SAMEORIGIN
+Set-Cookie: visitorId=6ecc70ca-1dc1-45b1-a20c-edcae8e63943; Path=/; Expires=Fri, 12 Dec 2025 22:13:44 GMT; Max-Age=31536000; Domain=manychat.com
+Set-Cookie: mchtClientId=6ecc70ca-1dc1-45b1-a20c-edcae8e63943; Path=/; Expires=Fri, 12 Dec 2025 22:13:44 GMT; Max-Age=31536000; Domain=manychat.com
+X-Ab-Experiment-Group: 12
+X-Ab-Experiment-Name: none
+X-Csrf-Token: M2NjMjM4NDMxODhmMzUwMTlhNDQuMTczNDEyODAyNDQ3Mw==
+X-Middleware-Set-Cookie: visitorId=6ecc70ca-1dc1-45b1-a20c-edcae8e63943; Path=/; Expires=Fri, 12 Dec 2025 22:13:44 GMT; Max-Age=31536000; Domain=manychat.com,mchtClientId=6ecc70ca-1dc1-45b1-a20c-edcae8e63943; Path=/; Expires=Fri, 12 Dec 2025 22:13:44 GMT; Max-Age=31536000; Domain=manychat.com
+X-Visitor-Id: 6ecc70ca-1dc1-45b1-a20c-edcae8e63943
+Vary: RSC, Next-Router-State-Tree, Next-Router-Prefetch, Accept-Encoding
+X-Powered-By: Next.js
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Content-Encoding: gzip
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload

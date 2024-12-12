@@ -43,6 +43,16 @@ def clear_cache():
 
 class MultiFrameworkSpider(scrapy.Spider):
     name = "multi_framework_spider"
+    custom_settings = {
+        'ROBOTSTXT_OBEY': True,
+        'USER_AGENT': 'ChatbotCrawler (+http://localhost)',
+        'DOWNLOAD_DELAY': 0.2,  # Reduced delay for faster crawling
+        'CONCURRENT_REQUESTS': 8,  # Increased concurrency
+        'CONCURRENT_REQUESTS_PER_DOMAIN': 8,
+        'DEPTH_LIMIT': 3,
+        'HTTPCACHE_ENABLED': True,  # Enable HTTP caching to reduce duplicate requests
+        'LOG_LEVEL': 'WARNING',  # Change log level to WARNING
+    }
 
     def __init__(self, urls=None, dataset_size=None, *args, **kwargs):
         super().__init__(*args, **kwargs)

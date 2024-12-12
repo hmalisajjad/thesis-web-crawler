@@ -1,0 +1,17 @@
+Date: Thu, 12 Dec 2024 22:13:45 GMT
+Content-Type: text/html; charset=utf-8
+X-Powered-By: Next.js
+Cache-Control: private, no-cache, no-store, max-age=0, must-revalidate
+Vary: Accept-Encoding
+Strict-Transport-Security: max-age=15724800; includeSubDomains
+Set-Cookie: region=Saxony; Path=/; Domain=chatfuel.com
+Set-Cookie: country=DE; Path=/; Domain=chatfuel.com
+Set-Cookie: city=Chemnitz; Path=/; Domain=chatfuel.com
+Cf-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=Qx9FmghA%2FjXx%2F9nyi7NSfNwL8TR56LggZvS6R%2BOSQEePr0iXT0MSm5T4%2FGopEvA8INdb0DY%2F2EgbBu%2BFOXW%2F%2FWP3VNBuzV2XbqnxQqnOsloI1wVD1%2BUNGBOJDn8YZTg%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 8f111038ece4dcba-FRA
+Content-Encoding: br
+Alt-Svc: h3=":443"; ma=86400
+Server-Timing: cfL4;desc="?proto=TCP&rtt=11779&min_rtt=11311&rtt_var=3135&sent=9&recv=7&lost=0&retrans=0&sent_bytes=4652&recv_bytes=1133&delivery_rate=354907&cwnd=238&unsent_bytes=0&cid=3d3943f050edefd8&ts=7073&x=0"

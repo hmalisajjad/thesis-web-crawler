@@ -1,0 +1,13 @@
+Content-Length: 377
+Server: AkamaiGHost
+Mime-Version: 1.0
+Content-Type: text/html
+X-Reference-Error: 18.32d53e17.1734040488.67ab210
+Expires: Thu, 12 Dec 2024 21:54:48 GMT
+Date: Thu, 12 Dec 2024 21:54:48 GMT
+Set-Cookie: akainst=EU1; path=/; domain=.www2.hm.com
+Set-Cookie: AKA_A2=A; expires=Thu, 12-Dec-2024 22:54:48 GMT; path=/; domain=hm.com; secure; HttpOnly
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=1
+Server-Timing: ak_p; desc="1734040488584_389993778_108704272_29_16897_13_18_-";dur=1
+Strict-Transport-Security: max-age=31536000; includeSubDomains

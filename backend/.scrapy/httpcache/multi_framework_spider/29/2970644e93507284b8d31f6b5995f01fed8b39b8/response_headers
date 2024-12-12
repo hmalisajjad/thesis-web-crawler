@@ -1,0 +1,30 @@
+Content-Length: 17993
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Frame-Options: SAMEORIGIN
+Accept-Ch: sec-ch-ua-model,sec-ch-ua-platform-version,sec-ch-ua-full-version
+Content-Type: text/html; charset=utf-8
+Rlogid: t6q4pnmjbb66ehmq%3C%3Dq4pnmjbb66ehmq%2B1%3A0%3E%3Eaa20%3B(1c47q-193bcf039a8-0x2307
+Content-Encoding: gzip
+X-Envoy-Upstream-Service-Time: 928
+X-Ebay-Mesh-Server-Pod-Ip: 10.185.232.198
+X-Ebay-Mesh-Server-Duration: 737
+X-Ebay-Mesh-Server-Start: 2024-12-12T22:14:40.294Z
+X-Ebay-Mesh-Server-Response-Flag: -
+Server: ebay-proxy-server
+X-Ebay-Mesh-Gw-Name: istioingressgateway-production-slcaz03-05
+X-Ebay-Mesh-Gw-Pod-Name: istio-ingressgateway-05-5dfcddf96b-7qkqj
+X-Ebay-Mesh-Gw-Pod-Ip: 10.90.42.13
+X-Ebay-Mesh-Gw-Upstream-Duration: 741
+X-Ebay-Mesh-Gw-Duration: 742
+X-Ebay-Mesh-Gw-Start: 2024-12-12T22:14:40.290Z
+X-Ebay-Mesh-Gw-Response-Flag: -
+X-Ebay-Tlb-Host: Not Found
+X-Ebay-Tlb-Duration: 201
+Strict-Transport-Security: max-age=31536000
+Date: Thu, 12 Dec 2024 22:14:41 GMT
+Vary: Accept-Encoding
+Set-Cookie: dp1=bbl/DE6b1dc750^; Domain=.ebay.de; Path=/; Expires=Sat, 12 Dec 2026 22:14:41 GMT; Secure
+Set-Cookie: nonsession=BAQAAAZJU03gwAAaAADMABWk8k9AwOTEyNgDKACBrHcdQYmNmMDM5YmYxOTMwYWI5ZThjNjIxODE5ZmZlZjM2OTgAywABZ1tnWDHxNd0xcABX7XoO0KIivXBFR4bxHQ**; Domain=.ebay.de; Path=/; Expires=Sat, 12 Dec 2026 22:14:41 GMT; HttpOnly; Secure
+Set-Cookie: s=CgAD4ACBnXLHQYmNmMDM5YmYxOTMwYWI5ZThjNjIxODE5ZmZlZjM2OTg50+0w; Domain=.ebay.de; Path=/; HttpOnly; Secure
+Set-Cookie: ebay=%5Esbf%3D%23000000%5E; Domain=.ebay.de; Path=/; Secure

@@ -1,0 +1,39 @@
+Date: Thu, 12 Dec 2024 21:54:56 GMT
+Content-Type: text/html; charset=utf-8
+X-Sorting-Hat-Podid: 253
+X-Sorting-Hat-Shopid: 7298908230
+X-Storefront-Renderer-Rendered: 1
+Set-Cookie: keep_alive=35153f34-1340-4f04-be1c-9be79b298336; path=/; expires=Thu, 12 Dec 2024 22:24:56 GMT; HttpOnly; SameSite=Lax
+Set-Cookie: secure_customer_sig=; path=/; expires=Fri, 12 Dec 2025 21:54:56 GMT; secure; HttpOnly; SameSite=Lax
+Set-Cookie: localization=US; path=/; expires=Fri, 12 Dec 2025 21:54:56 GMT
+Set-Cookie: _shopify_y=092a489e-ac8a-4bed-ba9b-dcfcce679da7; Expires=Fri, 12-Dec-25 21:54:56 GMT; Domain=jamieandi.myshopify.com; Path=/; SameSite=Lax
+Set-Cookie: _shopify_s=a3b6298b-b6d8-4fd6-998a-2d080a76d1af; Expires=Thu, 12-Dec-24 22:24:56 GMT; Domain=jamieandi.myshopify.com; Path=/; SameSite=Lax
+Set-Cookie: _orig_referrer=; Expires=Thu, 26-Dec-24 21:54:56 GMT; Domain=jamieandi.myshopify.com; Path=/; HttpOnly; SameSite=Lax
+Set-Cookie: _landing_page=%2F; Expires=Thu, 26-Dec-24 21:54:56 GMT; Domain=jamieandi.myshopify.com; Path=/; HttpOnly; SameSite=Lax
+Etag: "cacheable:c68f602fe96bbffac989bb9176c4c19e"
+Content-Encoding: br
+Link: <https://cdn.shopify.com>; rel="preconnect", <https://cdn.shopify.com>; rel="preconnect"; crossorigin
+X-Shopify-Nginx-No-Cookies: 0
+X-Cache: hit, server
+X-Frame-Options: DENY
+Content-Security-Policy: block-all-mixed-content; frame-ancestors 'none'; upgrade-insecure-requests;
+Strict-Transport-Security: max-age=7889238
+X-Shopid: 7298908230
+X-Shardid: 253
+Vary: Accept
+Content-Language: en-US
+Powered-By: Shopify
+Server-Timing: processing;dur=15, db;dur=3, db_async;dur=1.712, asn;desc="680", edge;desc="HAM", country;desc="DE", theme;desc="124668248237", pageType;desc="index", servedBy;desc="sbns", requestID;desc="700386c3-3d51-40ed-b013-256f8a06699d-1734040496"
+Server-Timing: cfRequestDuration;dur=56.999922
+X-Dc: gcp-europe-west4,gcp-europe-west1,gcp-europe-west1
+X-Request-Id: 700386c3-3d51-40ed-b013-256f8a06699d-1734040496
+Alt-Svc: h3=":443"; ma=86400
+Cf-Cache-Status: DYNAMIC
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v4?s=AziYOP3ttxa0iTA7HFESEk8kOx2J%2F%2BEffEJ5kKxB%2ByBt7Ple5EnvdFoQ94cL2BY%2BBo7dXTdxxJq60l%2FYCpQcgudefybbPptgQFqZvLO0dATGVBj%2BuIQgINK4rPxU9y7AtnL5JetKAUqB"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+X-Xss-Protection: 1; mode=block
+X-Content-Type-Options: nosniff
+X-Permitted-Cross-Domain-Policies: none
+X-Download-Options: noopen
+Server: cloudflare
+Cf-Ray: 8f10f4aca88562c1-HAM

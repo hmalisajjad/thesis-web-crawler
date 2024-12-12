@@ -1,0 +1,17 @@
+Content-Length: 6211
+Mime-Version: 1.0
+Cache-Control: no-cache, no-store, must-revalidate
+Cache-Control: max-age=600
+Pragma: no-cache
+Expires: 0
+Expires: Thu, 12 Dec 2024 22:04:49 GMT
+Content-Type: text/html
+Content-Encoding: gzip
+Date: Thu, 12 Dec 2024 21:54:49 GMT
+Vary: Accept-Encoding
+Set-Cookie: AKA_A2=A; expires=Thu, 12-Dec-2024 22:54:49 GMT; path=/; domain=lufthansa.com; secure; HttpOnly
+Server-Timing: cdn-cache; desc=HIT
+Server-Timing: edge; dur=110
+Server-Timing: ak_p; desc="1734040489142_35009677_4827577_10976_8575_8_19_-";dur=1
+Content-Security-Policy: frame-ancestors 'self' *.lufthansa.com *.miles-and-more.com *.swiss.com *.amadeus.com *.amadeus.net *.brusselsairlines.com *.austrian.com; script-src *.slgnt.eu *.exactag.com *.quantummetric.com *.monetate.net *.doubleclick.net *.googleadservices.com *.tiqcdn.com *.tealiumiq.com *.google-analytics.com *.analytics.google.com *.googletagmanager.com *.usabilla.com *.artefact.com *.skyscanner.net *.skyscanner.net *.facebook.com *.facebook.net *.kayak.com *.amadeus.com *.lufthansa-group.com *.austrian.com *.lufthansa.com *.swiss.com *.brusselsairlines.com *.go-mpulse.net *.techlab-cdn.com *.instagram.com *.akamaihd.net *.akstat.io *.cloudfront.net *.cognigy.cloud *.googleapis.com *.gstatic.com *.sheerid.com *.meili.travel bat.bing.com *.dwin1.com lhopa01.custhelp.com 'unsafe-inline' 'unsafe-eval'; object-src 'none'; worker-src blob: *.lufthansa.com;
+Strict-Transport-Security: max-age=31536000 ; preload
