@@ -4,49 +4,51 @@
         "title": "Top 13 website chatbot examples of 2024 - Chat360",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://www.googletagmanager.com/ns.html",
+            "https://app.chat360.io/clientwidget/",
             "https://chat360.io/blog/website-chatbot-examples/",
-            "https://app.chat360.io/clientwidget/"
+            "https://www.googletagmanager.com/ns.html"
         ],
         "keywords_detected": [
             "chat",
             "chatbot",
             "live chat",
             "customer support",
+            "dish",
             "Dialogflow",
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-12 22:52:10"
+        "date_collected": "2025-02-01 00:40:23"
     },
     {
         "main_url": "https://www.lg.com/in/",
         "title": "Consumer & Home Electronics from LG | LG IN",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://gum.criteo.com/syncframe",
-            "https://lgelectronics.demdex.net/dest5.html",
+            "https://10617119.fls.doubleclick.net/activityi",
+            "https://fledge.as.criteo.com/interest-group",
             "https://live-chat-static.sprinklr.com/chat/assets/html/crossOriginCrossSiteStorage.html",
             "https://www.lg.com/in/",
-            "https://fledge.as.criteo.com/interest-group",
-            "https://10617119.fls.doubleclick.net/activityi",
-            "about:blank"
+            "https://gum.criteo.com/syncframe",
+            "about:blank",
+            "https://lgelectronics.demdex.net/dest5.html"
         ],
         "keywords_detected": [
             "chat",
-            "live chat"
+            "live chat",
+            "dish"
         ],
-        "date_collected": "2024-12-12 22:52:33"
+        "date_collected": "2025-02-01 00:40:51"
     },
     {
         "main_url": "https://www.hubspot.com/",
         "title": "HubSpot | Software & Tools for your Business - Homepage",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://www.hubspot.com/",
-            "https://app.hubspot.com/conversations-visitor/53/threads/utk/7a4d6b7ee22a4821bff2c29ba1bdea16",
             "https://play.hubspotvideo.com/v/53/id/164914342160",
-            "https://app.hubspot.com/feedback-web-fetcher"
+            "https://app.hubspot.com/feedback-web-fetcher",
+            "https://www.hubspot.com/",
+            "https://app.hubspot.com/conversations-visitor/53/threads/utk/186564742cc64aab80da1a9656191dac"
         ],
         "keywords_detected": [
             "chat",
@@ -56,7 +58,7 @@
             "Assistant",
             "HubSpot"
         ],
-        "date_collected": "2024-12-12 22:52:33"
+        "date_collected": "2025-02-01 00:40:51"
     },
     {
         "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
@@ -68,7 +70,24 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2024-12-12 22:52:53"
+        "date_collected": "2025-02-01 00:41:13"
+    },
+    {
+        "main_url": "https://www.intercom.com/",
+        "title": "Intercom: The best AI agent built on the best customer service platform",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://www.intercom.com/"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "Zendesk",
+            "Intercom",
+            "Assistant"
+        ],
+        "date_collected": "2025-02-01 00:42:10"
     },
     {
         "main_url": "https://outgrow.co/",
@@ -87,25 +106,7 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-12 22:53:34"
-    },
-    {
-        "main_url": "https://www.intercom.com/",
-        "title": "Intercom: The best AI agent built on the best customer service platform",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://www.intercom.com/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "Zendesk",
-            "Intercom",
-            "Assistant",
-            "HubSpot"
-        ],
-        "date_collected": "2024-12-12 22:53:42"
+        "date_collected": "2025-02-01 00:42:10"
     },
     {
         "main_url": "https://www.tawk.to/",
@@ -123,17 +124,16 @@
             "Assistant",
             "Communication"
         ],
-        "date_collected": "2024-12-12 22:54:10"
+        "date_collected": "2025-02-01 00:42:38"
     },
     {
         "main_url": "https://www.livechat.com/",
-        "title": "Business 💬 Live Chat Software for E-commerce | LiveChat",
+        "title": "Business AI Live Chat Software for E-commerce | LiveChat® | LiveChat.com",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://www.livechat.com/",
-            "https://livechat.containers.piwik.pro/28a0a095-db17-4f24-8d11-19c9de6721cc/noscript.html",
             "https://secure-lc.livechatinc.com/customer/action/open_chat",
-            "https://accounts.livechat.com/static/hub.html"
+            "https://accounts.livechat.com/static/hub.html",
+            "https://www.livechat.com/"
         ],
         "keywords_detected": [
             "chat",
@@ -145,7 +145,7 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2024-12-12 22:54:10"
+        "date_collected": "2025-02-01 00:42:38"
     },
     {
         "main_url": "https://wotnot.io/",
@@ -161,7 +161,7 @@
             "customer support",
             "Assistant"
         ],
-        "date_collected": "2024-12-12 22:54:21"
+        "date_collected": "2025-02-01 00:42:49"
     },
     {
         "main_url": "https://landbot.io/",
@@ -176,7 +176,7 @@
             "customer support",
             "Assistant"
         ],
-        "date_collected": "2024-12-12 22:54:29"
+        "date_collected": "2025-02-01 00:43:00"
     },
     {
         "main_url": "https://botsonic.com/",
@@ -192,19 +192,7 @@
             "Zendesk",
             "Assistant"
         ],
-        "date_collected": "2024-12-12 22:54:38"
-    },
-    {
-        "main_url": "https://howly.com/info/contact-us/",
-        "title": "Howly contacts",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://howly.com/info/contact-us/"
-        ],
-        "keywords_detected": [
-            "chat"
-        ],
-        "date_collected": "2024-12-12 22:54:56"
+        "date_collected": "2025-02-01 00:43:10"
     },
     {
         "main_url": "https://hoas.fi/en/",
@@ -216,18 +204,75 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2024-12-12 22:55:15"
+        "date_collected": "2025-02-01 00:43:29"
+    },
+    {
+        "main_url": "https://howly.com/info/contact-us/",
+        "title": "Howly contacts",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://howly.com/info/contact-us/"
+        ],
+        "keywords_detected": [
+            "chat"
+        ],
+        "date_collected": "2025-02-01 00:43:36"
+    },
+    {
+        "main_url": "https://jamieandi.myshopify.com",
+        "title": "Create an Ecommerce Website and Sell Online! Ecommerce Software by Shopify",
+        "iframe_url": null,
+        "detected_chatbots": [],
+        "keywords_detected": [],
+        "date_collected": "2025-02-01 00:43:58"
+    },
+    {
+        "main_url": "https://aws.amazon.com/chatbot/",
+        "title": "Chatops - AWS Chatbot - AWS",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://aws.amazon.com/chatbot/",
+            "https://www.youtube-nocookie.com/embed/0jUSEfHbTYk"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "customer support",
+            "Assistant",
+            "Communication"
+        ],
+        "date_collected": "2025-02-01 00:44:17"
     },
     {
         "main_url": "https://www.dishdragon.ai/",
         "title": "Dish Dragon AI - Data Science for Dinner | What goes well with what?",
         "iframe_url": null,
         "detected_chatbots": [
+            "https://www.dishdragon.ai/",
             "https://pagead2.googlesyndication.com/pagead/ads",
-            "https://pagead2.googlesyndication.com/pagead/html/r20241210/r20190131/zrt_lookup.html"
+            "https://pagead2.googlesyndication.com/pagead/html/r20250129/r20190131/zrt_lookup.html"
         ],
-        "keywords_detected": [],
-        "date_collected": "2024-12-12 23:13:44"
+        "keywords_detected": [
+            "dish"
+        ],
+        "date_collected": "2025-02-01 00:44:34"
+    },
+    {
+        "main_url": "https://chatfuel.com/",
+        "title": "Chatfuel | AI agents for automated sales | Meta’s partner",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://chatfuel.com/"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2025-02-01 00:44:51"
     },
     {
         "main_url": "https://www.chatbot.com/",
@@ -245,57 +290,6 @@
             "LiveChat",
             "Communication"
         ],
-        "date_collected": "2024-12-12 23:13:51"
-    },
-    {
-        "main_url": "https://aws.amazon.com/chatbot/",
-        "title": "Chatops - AWS Chatbot - AWS",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://www.youtube-nocookie.com/embed/0jUSEfHbTYk",
-            "https://aws.amazon.com/chatbot/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "customer support",
-            "Assistant",
-            "Communication"
-        ],
-        "date_collected": "2024-12-12 23:14:05"
-    },
-    {
-        "main_url": "https://chatfuel.com/",
-        "title": "Chatfuel | AI agents for automated sales | Meta’s partner",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://chatfuel.com/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "HubSpot",
-            "Communication"
-        ],
-        "date_collected": "2024-12-12 23:14:29"
-    },
-    {
-        "main_url": "https://snatchbot.me/",
-        "title": "SnatchBot: Free Chatbot Solutions, Intelligent Bots Service and Artificial Intelligence",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://snatchbot.me/",
-            "https://webbot.me/3c93dc29be762468845964202a0790f47c448d8197b94c7cb4106bc61ede620a"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Communication"
-        ],
-        "date_collected": "2024-12-12 23:14:40"
+        "date_collected": "2025-02-01 00:44:51"
     }
 ]

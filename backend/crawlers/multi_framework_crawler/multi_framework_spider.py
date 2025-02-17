@@ -76,7 +76,8 @@ class MultiFrameworkSpider(scrapy.Spider):
             options.add_argument("--ignore-ssl-errors")  
             options.add_argument("--ignore-certificate-errors")  
             options.add_argument("--disable-software-rasterizer")  
-            options.add_argument("--enable-unsafe-swiftshader")  
+            options.add_argument("--enable-unsafe-swiftshader")
+            options.add_argument("--disable-software-gl")  
             self.driver = webdriver.Chrome(service=chrome_service, options=options)
         except Exception as e:
             self.logger.error("Failed to initialize ChromeDriver", exc_info=True)
@@ -102,9 +103,8 @@ class MultiFrameworkSpider(scrapy.Spider):
         self.keywords = [
             "chat", "chatbot", "live chat", "customer support", "virtual assistant",
             "Zendesk", "Intercom", "Drift", "OpenAI", "Tawk", "LiveChat", "Tawk.to",
-            "Botpress", "Dialogflow", "Assistant", "HubSpot", "Kommunicate",
-            "Communication", "conversational bot", "Microsoft Bot Framework",
-            "bot.js", "chatbot.js", "chat-widget", "livechat.min.js", "webchat"
+            "Botpress", "Dialogflow", "Assistant", "HubSpot", "Kommunicate","Communication", 
+            "conversational bot","bot.js", "chatbot.js", "chat-widget", "livechat.min.js", "webchat"
         ]
         self.visited_urls = set()
 

@@ -1,0 +1,16 @@
+Content-Length: 4498
+P3P: policyref="https://www.googleadservices.com/pagead/p3p.xml", CP="NOI DEV PSA PSD IVA IVD OTP OUR OTR IND OTC"
+Timing-Allow-Origin: *
+Cross-Origin-Resource-Policy: cross-origin
+X-Content-Type-Options: nosniff
+Content-Encoding: br
+Server: cafe
+X-Xss-Protection: 0
+Date: Fri, 31 Jan 2025 19:51:28 GMT
+Expires: Fri, 14 Feb 2025 19:51:28 GMT
+Cache-Control: public, max-age=1209600
+Age: 14033
+Etag: 17077127707859076473
+Content-Type: text/html; charset=UTF-8
+Vary: Accept-Encoding
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
