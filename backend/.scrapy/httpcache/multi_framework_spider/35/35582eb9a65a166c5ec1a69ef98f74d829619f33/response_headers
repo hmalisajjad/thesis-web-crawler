@@ -1,0 +1,20 @@
+Content-Length: 1361
+Content-Type: text/html; charset=utf-8
+Date: Thu, 20 Feb 2025 14:12:26 GMT
+Cache-Control: max-age=300
+Content-Encoding: br
+Content-Security-Policy: default-src * data: blob: 'unsafe-inline' 'unsafe-eval'; report-uri https://sentry.io/api/2963040/security/?sentry_key=05dcfd8152434a7385d322f28af36f66
+Cross-Origin-Resource-Policy: same-origin
+Link: <https://api.framer.com>; rel=preconnect
+Referrer-Policy: strict-origin-when-cross-origin
+Report-To: {"group":"default","max_age":86400,"endpoints":[{"url":"https://framer.report-uri.com/a/t/g"}],"include_subdomains":true}
+Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+Vary: Accept-Encoding
+X-Cache: Hit from cloudfront
+Via: 1.1 68b2682a924ac399aa2724b5b439e75c.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: FRA60-P3
+Alt-Svc: h3=":443"; ma=86400
+X-Amz-Cf-Id: XFnGfYJidZLYBLZQsM1YiEPQISh4pwRWTSZyPEGyNsLqoj1RsSnumw==
+Age: 99

@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="11.627" timestamp="2024-12-15T22:40:30.864618+01:00" hostname="Ali"><testcase classname="test_flexibility.TestFlexibility" name="test_iframe_detection" time="5.125" /><testcase classname="test_flexibility.TestFlexibility" name="test_unconventional_structure" time="5.009" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite name="pytest" errors="0" failures="0" skipped="0" tests="2" time="11.627" timestamp="2024-12-15T22:40:30.864618+01:00" hostname="Ali">
+<testcase classname="test_flexibility.TestFlexibility" name="test_iframe_detection" time="5.125" />
+<testcase classname="test_flexibility.TestFlexibility" name="test_unconventional_structure" time="5.009" />
+</testsuite>
+</testsuites>

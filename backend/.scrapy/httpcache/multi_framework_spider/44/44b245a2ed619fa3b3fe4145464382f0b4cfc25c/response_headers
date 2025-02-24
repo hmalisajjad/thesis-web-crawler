@@ -1,0 +1,10 @@
+Content-Type: text/html; charset=UTF-8
+Content-Disposition: inline
+Date: Thu, 20 Feb 2025 14:15:22 GMT
+Expires: Thu, 20 Feb 2025 14:15:22 GMT
+Cache-Control: private, max-age=3600
+Content-Security-Policy: object-src 'none';base-uri 'self';script-src 'nonce-WytPFbv1AZOSCtyZl3xVAA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other
+Content-Encoding: gzip
+Server: gws
+X-Xss-Protection: 0
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000

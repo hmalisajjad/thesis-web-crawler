@@ -4,61 +4,20 @@
         "title": "Top 13 website chatbot examples of 2024 - Chat360",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://app.chat360.io/clientwidget/",
+            "https://www.googletagmanager.com/ns.html",
             "https://chat360.io/blog/website-chatbot-examples/",
-            "https://www.googletagmanager.com/ns.html"
+            "https://app.chat360.io/clientwidget/"
         ],
         "keywords_detected": [
             "chat",
             "chatbot",
             "live chat",
             "customer support",
-            "dish",
             "Dialogflow",
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2025-02-01 00:40:23"
-    },
-    {
-        "main_url": "https://www.lg.com/in/",
-        "title": "Consumer & Home Electronics from LG | LG IN",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://10617119.fls.doubleclick.net/activityi",
-            "https://fledge.as.criteo.com/interest-group",
-            "https://live-chat-static.sprinklr.com/chat/assets/html/crossOriginCrossSiteStorage.html",
-            "https://www.lg.com/in/",
-            "https://gum.criteo.com/syncframe",
-            "about:blank",
-            "https://lgelectronics.demdex.net/dest5.html"
-        ],
-        "keywords_detected": [
-            "chat",
-            "live chat",
-            "dish"
-        ],
-        "date_collected": "2025-02-01 00:40:51"
-    },
-    {
-        "main_url": "https://www.hubspot.com/",
-        "title": "HubSpot | Software & Tools for your Business - Homepage",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://play.hubspotvideo.com/v/53/id/164914342160",
-            "https://app.hubspot.com/feedback-web-fetcher",
-            "https://www.hubspot.com/",
-            "https://app.hubspot.com/conversations-visitor/53/threads/utk/186564742cc64aab80da1a9656191dac"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Assistant",
-            "HubSpot"
-        ],
-        "date_collected": "2025-02-01 00:40:51"
+        "date_collected": "2025-02-20 16:19:56"
     },
     {
         "main_url": "https://www.ikea.com/de/de/customer-service/contact-us/",
@@ -70,7 +29,65 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2025-02-01 00:41:13"
+        "date_collected": "2025-02-20 16:20:13"
+    },
+    {
+        "main_url": "https://www.lg.com/in/",
+        "title": "Consumer & Home Electronics from LG | LG IN",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://www.lg.com/in/",
+            "https://live-chat-static.sprinklr.com/chat/assets/html/crossOriginCrossSiteStorage.html",
+            "https://lgelectronics.demdex.net/dest5.html",
+            "about:blank",
+            "https://10617119.fls.doubleclick.net/activityi",
+            "https://gum.criteo.com/syncframe",
+            "https://fledge.as.criteo.com/interest-group"
+        ],
+        "keywords_detected": [
+            "chat",
+            "live chat"
+        ],
+        "date_collected": "2025-02-20 16:20:28"
+    },
+    {
+        "main_url": "https://www.hubspot.com/",
+        "title": "HubSpot | Software & Tools for your Business - Homepage",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://app.hubspot.com/feedback-web-fetcher",
+            "https://www.hubspot.com/",
+            "https://play.hubspotvideo.com/v/53/id/164914342160",
+            "https://app.hubspot.com/conversations-visitor/53/threads/utk/47fe305634db474693e770bcdc8eadd6"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Assistant",
+            "HubSpot"
+        ],
+        "date_collected": "2025-02-20 16:20:40"
+    },
+    {
+        "main_url": "https://outgrow.co/",
+        "title": "The Best Quiz maker, calculator builder and chatbot creator for marketers",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://outgrow.co/",
+            "https://consentcdn.cookiebot.com/sdk/bc-v4.min.html"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "Intercom",
+            "Assistant",
+            "HubSpot",
+            "Communication"
+        ],
+        "date_collected": "2025-02-20 16:21:22"
     },
     {
         "main_url": "https://www.intercom.com/",
@@ -82,31 +99,11 @@
         "keywords_detected": [
             "chat",
             "chatbot",
-            "live chat",
             "Zendesk",
             "Intercom",
             "Assistant"
         ],
-        "date_collected": "2025-02-01 00:42:10"
-    },
-    {
-        "main_url": "https://outgrow.co/",
-        "title": "The Best Quiz maker, calculator builder and chatbot creator for marketers",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://consentcdn.cookiebot.com/sdk/bc-v4.min.html",
-            "https://outgrow.co/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "Intercom",
-            "Assistant",
-            "HubSpot",
-            "Communication"
-        ],
-        "date_collected": "2025-02-01 00:42:10"
+        "date_collected": "2025-02-20 16:21:30"
     },
     {
         "main_url": "https://www.tawk.to/",
@@ -124,16 +121,16 @@
             "Assistant",
             "Communication"
         ],
-        "date_collected": "2025-02-01 00:42:38"
+        "date_collected": "2025-02-20 16:22:01"
     },
     {
         "main_url": "https://www.livechat.com/",
         "title": "Business AI Live Chat Software for E-commerce | LiveChat® | LiveChat.com",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://secure-lc.livechatinc.com/customer/action/open_chat",
-            "https://accounts.livechat.com/static/hub.html",
-            "https://www.livechat.com/"
+            "https://secure.livechatinc.com/customer/action/open_chat",
+            "https://www.livechat.com/",
+            "https://accounts.livechat.com/static/hub.html"
         ],
         "keywords_detected": [
             "chat",
@@ -145,23 +142,7 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2025-02-01 00:42:38"
-    },
-    {
-        "main_url": "https://wotnot.io/",
-        "title": "WotNot | The easy and no-code chatbot platform and partner",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://wotnot.io/"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "Assistant"
-        ],
-        "date_collected": "2025-02-01 00:42:49"
+        "date_collected": "2025-02-20 16:22:01"
     },
     {
         "main_url": "https://landbot.io/",
@@ -176,7 +157,24 @@
             "customer support",
             "Assistant"
         ],
-        "date_collected": "2025-02-01 00:43:00"
+        "date_collected": "2025-02-20 16:22:21"
+    },
+    {
+        "main_url": "https://wotnot.io/",
+        "title": "WotNot | The easy and no-code chatbot platform and partner",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://edit.framer.com/",
+            "https://wotnot.io/"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "Assistant"
+        ],
+        "date_collected": "2025-02-20 16:22:21"
     },
     {
         "main_url": "https://botsonic.com/",
@@ -192,7 +190,7 @@
             "Zendesk",
             "Assistant"
         ],
-        "date_collected": "2025-02-01 00:43:10"
+        "date_collected": "2025-02-20 16:22:31"
     },
     {
         "main_url": "https://hoas.fi/en/",
@@ -204,7 +202,7 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2025-02-01 00:43:29"
+        "date_collected": "2025-02-20 16:22:50"
     },
     {
         "main_url": "https://howly.com/info/contact-us/",
@@ -216,23 +214,15 @@
         "keywords_detected": [
             "chat"
         ],
-        "date_collected": "2025-02-01 00:43:36"
-    },
-    {
-        "main_url": "https://jamieandi.myshopify.com",
-        "title": "Create an Ecommerce Website and Sell Online! Ecommerce Software by Shopify",
-        "iframe_url": null,
-        "detected_chatbots": [],
-        "keywords_detected": [],
-        "date_collected": "2025-02-01 00:43:58"
+        "date_collected": "2025-02-20 16:22:57"
     },
     {
         "main_url": "https://aws.amazon.com/chatbot/",
         "title": "Chatops - AWS Chatbot - AWS",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://aws.amazon.com/chatbot/",
-            "https://www.youtube-nocookie.com/embed/0jUSEfHbTYk"
+            "https://www.youtube-nocookie.com/embed/0jUSEfHbTYk",
+            "https://aws.amazon.com/chatbot/"
         ],
         "keywords_detected": [
             "chat",
@@ -241,21 +231,48 @@
             "Assistant",
             "Communication"
         ],
-        "date_collected": "2025-02-01 00:44:17"
+        "date_collected": "2025-02-20 16:23:33"
     },
     {
         "main_url": "https://www.dishdragon.ai/",
-        "title": "Dish Dragon AI - Data Science for Dinner | What goes well with what?",
+        "title": "dishdragon.ai",
         "iframe_url": null,
         "detected_chatbots": [
-            "https://www.dishdragon.ai/",
-            "https://pagead2.googlesyndication.com/pagead/ads",
-            "https://pagead2.googlesyndication.com/pagead/html/r20250129/r20190131/zrt_lookup.html"
+            "https://syndicatedsearch.goog/afs/ads"
+        ],
+        "keywords_detected": [],
+        "date_collected": "2025-02-20 16:23:33"
+    },
+    {
+        "main_url": "https://chatbottle.co/",
+        "title": "43 Featured Bots - ChatBottle",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://chatbottle.co/"
         ],
         "keywords_detected": [
-            "dish"
+            "chat",
+            "chatbot"
         ],
-        "date_collected": "2025-02-01 00:44:34"
+        "date_collected": "2025-02-20 16:23:42"
+    },
+    {
+        "main_url": "https://www.chatbot.com/",
+        "title": "ChatBot | AI Chat Bot Software for Your Website",
+        "iframe_url": null,
+        "detected_chatbots": [
+            "https://cdn.openwidget.com/widget/openwidget.html",
+            "https://www.chatbot.com/"
+        ],
+        "keywords_detected": [
+            "chat",
+            "chatbot",
+            "live chat",
+            "customer support",
+            "LiveChat",
+            "Communication"
+        ],
+        "date_collected": "2025-02-20 16:23:49"
     },
     {
         "main_url": "https://chatfuel.com/",
@@ -272,24 +289,6 @@
             "HubSpot",
             "Communication"
         ],
-        "date_collected": "2025-02-01 00:44:51"
-    },
-    {
-        "main_url": "https://www.chatbot.com/",
-        "title": "ChatBot | AI Chat Bot Software for Your Website",
-        "iframe_url": null,
-        "detected_chatbots": [
-            "https://www.chatbot.com/",
-            "https://cdn.openwidget.com/widget/staging/openwidget.html"
-        ],
-        "keywords_detected": [
-            "chat",
-            "chatbot",
-            "live chat",
-            "customer support",
-            "LiveChat",
-            "Communication"
-        ],
-        "date_collected": "2025-02-01 00:44:51"
+        "date_collected": "2025-02-20 16:23:59"
     }
 ]

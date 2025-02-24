@@ -1,1 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="11.302" timestamp="2024-12-15T22:42:03.783561+01:00" hostname="Ali"><testcase classname="test_robustness.TestRobustness" name="test_dynamic_content" time="7.246" /><testcase classname="test_robustness.TestRobustness" name="test_logging_and_recovery" time="1.368" /><testcase classname="test_robustness.TestRobustness" name="test_server_error" time="1.265" /></testsuite></testsuites>
+<?xml version="1.0" encoding="utf-8"?>
+<testsuites>
+<testsuite name="pytest" errors="0" failures="0" skipped="0" tests="3" time="11.302" timestamp="2024-12-15T22:42:03.783561+01:00" hostname="Ali">
+<testcase classname="test_robustness.TestRobustness" name="test_dynamic_content" time="7.246" />
+<testcase classname="test_robustness.TestRobustness" name="test_logging_and_recovery" time="1.368" />
+<testcase classname="test_robustness.TestRobustness" name="test_server_error" time="1.265" />
+</testsuite>
+</testsuites>
